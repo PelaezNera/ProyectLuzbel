@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 4, 123, 0.49);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: gray;
+    height: 40px;
+}
+
+header div img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 200px;
+    top: 2px;
+}
+
+header ul {
+    display: inline;
+    float: right;
+    padding-right: 35px;
+    padding-top: 3px;
+}
+
+header ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.pnow {
+    background-color: orange;
+    padding-left: 40px;
+    height: 40px;
+}
