@@ -16,7 +16,7 @@ header {
     height: 40px;
 }
 
-header div img {
+.header-main img {
     width: 40px;
     height: 40px;
     position: relative;
@@ -28,17 +28,12 @@ header ul {
     display: inline;
     float: right;
     padding-right: 35px;
-    padding-top: 3px;
 }
 
 header ul a {
-    text-decoration: none;
+    position: relative;
+    bottom: 38px;
     color: white;
+    text-decoration: none;
     font-size: 25px;
-}
-
-.pnow {
-    background-color: orange;
-    padding-left: 40px;
-    height: 40px;
 }
