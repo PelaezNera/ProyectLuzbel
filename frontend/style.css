@@ -29,6 +29,7 @@ header ul {
     display: inline;
     float: right;
     padding-right: 35px;
+    background-color: gold;
 }
 
 header ul a {
@@ -46,12 +47,7 @@ header ul a {
 }
 
 .descarga h1 {
-    color: white;
     text-align: center;
-    position: relative;
-    left: 525px;
-    font-size: 50px;
-    padding-top: 20px;
 }
 
 .descarga h2 {
