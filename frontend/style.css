@@ -17,6 +17,10 @@ header {
     height: 40px;
 }
 
+.header-main {
+    display: flex;
+}
+
 .header-main img {
     width: 40px;
     height: 40px;
@@ -29,13 +33,11 @@ header ul {
     display: inline;
     float: right;
     padding-right: 35px;
-    background-color: gold;
 }
 
 header ul a {
     position: relative;
-    bottom: 38px;
-    color: white;
+    color: red;
     text-decoration: none;
     font-size: 25px;
 }
