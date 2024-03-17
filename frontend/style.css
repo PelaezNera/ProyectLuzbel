@@ -6,8 +6,10 @@
 }
 
 :root{
-    --color-p: red;
+    --color-p: rgb(50, 183, 236);
+    --color-btnj: rgb(100, 183, 236)
 }
+
 
 html {
     box-sizing: border-box;
@@ -36,12 +38,13 @@ header {
     top: 2px;
 }
 
+
 .header-main button{
     padding: 1rem;
     cursor: pointer;
     border: none;
     position: relative;
-    bottom: 1rem;
+    bottom: 1.3rem;
     left: 19rem;
     margin: 0 1rem;
     font-size: 1.3rem;
@@ -56,6 +59,19 @@ header {
     transition: 0.5s;
 }
 
+.header-main .btn {
+    background-color: var(--color-p);
+    border-radius: 1rem;
+}
+
+.header-main .btn:hover {
+    background-color: var(--color-btnj);
+    color: rgb(43, 43, 43);
+}
+
+
+
+
 
 .descarga {
     background-color: rgba(0, 4, 123, 0.49);
@@ -65,6 +81,16 @@ header {
 
 .descarga h1 {
     text-align: center;
+    font-size: 5rem;
+    color: rgb(57, 16, 57);
+}
+
+.descarga .title-clr1{
+    color: rgb(0, 0, 0);
+}
+
+.descarga .title-clr2{
+    color: rgb(255, 255, 255);
 }
 
 .descarga h2 {
