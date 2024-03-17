@@ -5,6 +5,17 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
+:root{
+    --color-p: red;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 body {
     background-color: rgba(0, 4, 123, 0.49);
     background-size: cover;
@@ -14,32 +25,26 @@ body {
 
 header {
     background-color: gray;
-    height: 40px;
-}
-
-.header-main {
-    display: flex;
+    width: 100%;
+    padding: 1.5rem;
 }
 
 .header-main img {
-    width: 40px;
-    height: 40px;
+    width: 4rem;
     position: relative;
-    left: 200px;
+    left: 1.5rem;
     top: 2px;
 }
 
-header ul {
-    display: inline;
-    float: right;
-    padding-right: 35px;
-}
-
-header ul a {
+button{
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
     position: relative;
-    color: red;
-    text-decoration: none;
-    font-size: 25px;
+    bottom: 1rem;
+    left: 20rem;
+    margin: 0 2rem;
+    background-color: gray;
 }
 
 .descarga {
