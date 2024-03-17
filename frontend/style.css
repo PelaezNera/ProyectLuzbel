@@ -36,16 +36,26 @@ header {
     top: 2px;
 }
 
-button{
+.header-main button{
     padding: 1rem;
     cursor: pointer;
     border: none;
     position: relative;
     bottom: 1rem;
-    left: 20rem;
-    margin: 0 2rem;
+    left: 19rem;
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    text-align: center;
     background-color: gray;
 }
+
+.header-main button:hover{
+    background-color: rgb(119, 37, 23);
+    color: white;
+    border-radius: 1rem;
+    transition: 0.5s;
+}
+
 
 .descarga {
     background-color: rgba(0, 4, 123, 0.49);
