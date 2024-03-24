@@ -66,7 +66,6 @@
         color: white;
     }
 
-    /* Dropdown Menu */
     .header-main button {
         padding: 10px 20px;
         border: none;
@@ -103,7 +102,7 @@
     display: none;
 }
 
-.dropdown-noticias {
+.desplegable-noticias {
     position: relative;
     display: inline-block;
     padding: 0px;
@@ -111,7 +110,7 @@
     width: fit-content;
 }
 
-.dropdown-menu {
+.desplegable-menu {
     z-index: 1;
     box-sizing: border-box;
     display: hidden;
@@ -126,27 +125,27 @@
     list-style: none;
 }
 
-.dropdown-menu button {
+.desplegable-menu button {
     width: 150px;
 }
 
-.dropdown-menu ul {
+.desplegable-menu ul {
     display: hidden;
     list-style: none;
     flex-direction: column;
 }
 
-.dropdown-menu li {
+.desplegable-menu li {
     padding: 1px;
     padding-left: 0%;
     padding-right: 0%;
 }
 
-.dropdown-menu .sub-dropdown-noticias {
+.desplegable-menu .sub-desplegable-noticias {
     position: relative;
 }
 
-.dropdown-menu .sub-dropdown-noticias .sub-dropdown-menu {
+.desplegable-menu .sub-desplegable-noticias .sub-desplegable-menu {
     display: none;
     position: absolute;
     top: 0;
@@ -160,33 +159,33 @@
     z-index: 2;
 }
 
-.dropdown-menu .sub-dropdown-noticias .sub-dropdown-menu button {
+.desplegable-menu .sub-desplegable-noticias .sub-desplegable-menu button {
     width: 150px;
 }
 
-.dropdown-menu .sub-dropdown-menu ul {
+.desplegable-menu .sub-desplegable-menu ul {
     list-style: none;
     flex-direction: column;
 }
-.sub-dropdown-menu ul {
+.sub-desplegable-menu ul {
 display: flex;
 }
 
-.dropdown-menu .sub-dropdown-menu li {
+.desplegable-menu .sub-desplegable-menu li {
     padding: 1px;
     padding-left: 0%;
     padding-right: 0%;
 }
 
-.dropdown-noticias:hover .dropdown-menu {
+.desplegable-noticias:hover .desplegable-menu {
     display: block;
 }
 
-.dropdown-noticias .sub-dropdown-noticias:hover .sub-dropdown-menu {
+.desplegable-noticias .sub-desplegable-noticias:hover .sub-desplegable-menu {
     display: block;
 }
 
-.dropdown-menu {
+.desplegable-menu {
     display: hidden;
 }
 
