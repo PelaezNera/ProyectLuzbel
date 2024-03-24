@@ -59,6 +59,10 @@ header {
     transition: 0.5s;
 }
 
+.header-main a {
+    text-align: center;
+}
+
 .header-main .btn {
     background-color: var(--color-p);
     border-radius: 1rem;
@@ -82,15 +86,7 @@ header {
 .descarga h1 {
     text-align: center;
     font-size: 5rem;
-    color: rgb(57, 16, 57);
-}
-
-.descarga .title-clr1{
-    color: rgb(0, 0, 0);
-}
-
-.descarga .title-clr2{
-    color: rgb(255, 255, 255);
+    color: rgb(233, 80, 80);
 }
 
 .descarga h2 {
@@ -112,7 +108,7 @@ header {
 }
 
 .descarga button{
-    background-color: rgb(255, 159, 159);
+    background-color: rgba(41, 41, 186, 0);
     border: none;
     display: flex;
     text-align: center;
