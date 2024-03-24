@@ -160,7 +160,7 @@
     z-index: 2;
 }
 
-<<<<<<< HEAD
+
 .header-main a {
     text-align: center;
 }
@@ -168,10 +168,9 @@
 .header-main .btn {
     background-color: var(--color-p);
     border-radius: 1rem;
-=======
+}
 .dropdown-menu .sub-dropdown-noticias .sub-dropdown-menu button {
     width: 150px;
->>>>>>> b1534bb66587af697cbe9b63f2e0f786b32423d8
 }
 
 .dropdown-menu .sub-dropdown-menu ul {
