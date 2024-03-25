@@ -201,24 +201,40 @@ main {
 }
 
 .descarga {
-    background-image:url(../img/background1.jpg);
     height: 650px;
     display: flexbox;
     justify-content: center;
     align-items: center;
-    animation: Carrusel 10s infinite;
+    animation: Carrusel 3s infinite;
 }
 
 @keyframes Carrusel {
     0% {
-        background-image:url(../img/background2.jpg);
+        background-image:url(../img/background1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform:(translateX(20rem));
+    }
+    /* 15% {
+        background-image: url(../img/background2.jpg);
+        background-size: cover;
+    }
+    25% {
+        background-image: url(../img/9.jpg);
+        background-size: cover;
     }
     50% {
-        background-image: url(../img/background1.jpg);
+        background-image: url(../img/10.jpg);
+        background-size: cover;
+    }
+    75% {
+        background-image: url(../img/11.jpg);
+        background-size: cover;
     }
     100% {
-        background-image: url(../img/background2.jpg);
-    }
+        background-image: url(../img/6.jpg);
+        background-size: cover;
+    } */
 }
 
 .descarga h1 {
@@ -255,7 +271,7 @@ main {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    left: 670px;
+    left: 760px;
     font-size: 40px;
     padding: 10px;
     margin-top: 10px;
@@ -266,18 +282,7 @@ main {
 
 .descarga button:hover {
     transition: .3s ease;
-    border-style: solid solid solid solid;
-    border-color: gray black black gray;
-    border-width: 5px;
-    background-color: lightcoral;
-    color: thistle;
-}
-
-.descarga button:active {
-    border-color: black grey grey black;
-    transition: .4s ease-in-out;
-    background-color: tomato;
-    color: violet;
+   background-color: blue;
 }
 
 
