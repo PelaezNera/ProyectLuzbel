@@ -206,36 +206,47 @@ main {
     justify-content: center;
     align-items: center;
     animation: Carrusel 3s infinite;
+    background-image: url(../img/1.jpg);
 }
 
-@keyframes Carrusel {
+/* @keyframes Carrusel {
     0% {
         background-image:url(../img/background1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        transform:(translateX(20rem));
+        transform: translateX(-10rem);
     }
-    /* 15% {
-        background-image: url(../img/background2.jpg);
+     15% {
+        background-image: url(../img/background1.jpg);
         background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateX(-20rem);
     }
     25% {
-        background-image: url(../img/9.jpg);
+        background-image: url(../img/background1.jpg);
         background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateX(-30rem);
     }
     50% {
-        background-image: url(../img/10.jpg);
+        background-image: url(../img/background1.jpg);
         background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateX(-40rem);
     }
     75% {
-        background-image: url(../img/11.jpg);
+        background-image: url(../img/background1.jpg);
         background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateX(-50rem);
     }
     100% {
-        background-image: url(../img/6.jpg);
+        background-image: url(../img/background1.jpg);
         background-size: cover;
-    } */
-}
+        background-repeat: no-repeat;
+        transform: translateX(-60rem);
+    }
+} */
 
 .descarga h1 {
     text-align: center;
