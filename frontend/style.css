@@ -201,12 +201,24 @@ main {
 }
 
 .descarga {
-    background-color: rgba(0, 4, 123, 0.49);
-    background-attachment: fixed;
+    background-image:url(../img/background1.jpg);
     height: 650px;
     display: flexbox;
     justify-content: center;
     align-items: center;
+    animation: Carrusel 10s infinite;
+}
+
+@keyframes Carrusel {
+    0% {
+        background-image:url(../img/background2.jpg);
+    }
+    50% {
+        background-image: url(../img/background1.jpg);
+    }
+    100% {
+        background-image: url(../img/background2.jpg);
+    }
 }
 
 .descarga h1 {
