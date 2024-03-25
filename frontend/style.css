@@ -205,48 +205,59 @@ main {
     display: flexbox;
     justify-content: center;
     align-items: center;
-    animation: Carrusel 3s infinite;
-    background-image: url(../img/1.jpg);
 }
 
-/* @keyframes Carrusel {
+.slider {
+    overflow: hidden;
+}
+
+.slider figure {
+    position: absolute;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+.slider figure img {
+    float: left;
+    width: 20%;
+    height: 40rem;
+    margin: 5px;
+    opacity: 0.5;
+}
+
+
+@keyframes slider {
     0% {
-        background-image:url(../img/background1.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        transform: translateX(-10rem);
+        left: 0;
     }
-     15% {
-        background-image: url(../img/background1.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        transform: translateX(-20rem);
+    10% {
+        left: 0;
     }
     25% {
-        background-image: url(../img/background1.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        transform: translateX(-30rem);
+        left: -100%;
+    }
+    35% {
+        left: -100%;
     }
     50% {
-        background-image: url(../img/background1.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        transform: translateX(-40rem);
+        left: -200%;
+    }
+    60% {
+        left: -200%;
     }
     75% {
-        background-image: url(../img/background1.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        transform: translateX(-50rem);
+        left: -300%;
+    }
+    85% {
+        left: -300%;
     }
     100% {
-        background-image: url(../img/background1.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        transform: translateX(-60rem);
+        left: 0%;
     }
-} */
+}
+
 
 .descarga h1 {
     text-align: center;
@@ -295,6 +306,7 @@ main {
     transition: .3s ease;
    background-color: blue;
 }
+
 
 
 article{
