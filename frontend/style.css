@@ -193,6 +193,11 @@ display: flex;
 /* TODO: algo */
 
 
+.main-descarga {
+    position: relative;
+    z-index: 3;
+}
+
 main {
     height: 100vh;
     display: flexbox;
@@ -219,12 +224,12 @@ main {
     animation: 20s slider infinite;
 }
 
+
 .slider figure img {
     float: left;
     width: 20%;
     height: 40rem;
-    margin: 5px;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 
@@ -324,6 +329,20 @@ article h4 {
 article p {
     text-align: justify;
 }
+
+/*INFO DEL JUEGO*/
+
+.info {
+    background-color: rgba(186, 11, 255, 0.526);
+}
+
+.info .info-2 {
+    float: left;
+}
+
+
+
+/*FOOTER*/
 
 footer {
     position: fixed;
