@@ -201,6 +201,7 @@ header {
 /* boton de descarga:*/
 
 .descarga {
+    height: 650px;
     background-color: rgba(0, 4, 123, 0.49);
     background-attachment: fixed;
     min-height: 650px;
@@ -212,6 +213,7 @@ header {
 .descarga h1 {
     text-align: center;
     font-size: 5rem;
+    color: rgb(233, 80, 80);
     color: rgb(57, 16, 57);
 }
 
