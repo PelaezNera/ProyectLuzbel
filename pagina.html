@@ -194,6 +194,14 @@
       <h6>Dahsboard</h6>
     </a>
   </footer>
+
+  <!-- Pequeño javascript para que la barra de navegación no tape los id-->
+
+  <script type="module" src="">
+    window.addEventListener("hashchange", function () {
+      window.scrollTo(window.scrollX, window.scrollY - 25);
+    });
+  </script>
 </body>
 
 </html>

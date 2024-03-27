@@ -28,12 +28,21 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 25px;
+    padding-top: 25px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
     overflow-x: hidden;
 }
 
 /* Cabecera (header): */
+
+:target::before {
+    content: "";
+    display: block;
+    height: 25px;
+    margin: -25px 0 0;
+}
 
 header {
     position: fixed;
@@ -247,7 +256,6 @@ header {
 
 .slider {
     overflow: hidden;
-    
 }
 
 .slider figure {
@@ -270,39 +278,39 @@ header {
 
 @keyframes slider {
     0% {
-        left: 0%;
+        left: -5px;
     }
 
     10% {
-        left: 0;
+        left: -5px;
     }
 
     25% {
-        left: calc(-100% - 10px);
+        left: calc(-100% - 16px);
     }
 
     35% {
-        left: calc(-100% - 10px);
+        left: calc(-100% - 16px);
     }
 
     50% {
-        left: calc(-200% - 20px);
+        left: calc(-200% - 26px);
     }
 
     60% {
-        left: calc(-200% - 20px);
+        left: calc(-200% - 26px);
     }
 
     75% {
-        left: calc(-300% - 30px);
+        left: calc(-300% - 36px);
     }
 
     85% {
-        left: calc(-300% - 30px);
+        left: calc(-300% - 36px);
     }
 
     100% {
-        left: 0;
+        left: -5px;
     }
 }
 
@@ -686,6 +694,8 @@ header {
 
 
 main {
+    margin-left: 10px;
+    margin-right: 10px;
     display: flexbox;
     justify-content: center;
     align-items: center;
