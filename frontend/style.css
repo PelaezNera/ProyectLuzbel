@@ -247,7 +247,7 @@ header {
 
 .slider {
     overflow: hidden;
-    z-index: 0;
+    
 }
 
 .slider figure {
@@ -257,14 +257,14 @@ header {
     left: 0;
     animation: 20s slider infinite;
     -webkit-animation: 20s slider infinite;
+    z-index: -2;
 }
 
 .slider figure img {
     float: left;
     width: 20%;
-    height: 40rem;
+    height: 49rem;
     margin: 5px;
-    opacity: 0.5;
 }
 
 
@@ -311,14 +311,11 @@ header {
 
 .descarga {
     min-height: 650px;
-    background-color: rgba(0, 4, 123, 0.49);
     background-attachment: fixed;
     min-height: 650px;
     display: flexbox;
     justify-content: center;
     align-items: center;
-    /* animation: Carrusel 3s infinite;
-    background-image: url(../img/1.jpg); */
 }
 
 .descarga h1 {
@@ -705,8 +702,6 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
-    background-color: rgba(222, 184, 135, 0.5);
     padding: 1rem;
     margin-bottom: 1rem;
 }
