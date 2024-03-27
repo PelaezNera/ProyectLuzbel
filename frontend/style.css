@@ -420,6 +420,41 @@ header {
     top: 50%;
 }
 
+.info-content {
+    width: 700px;
+    height: auto;
+}
+
+.info-content {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 50px;
+    position: relative;
+    bottom: 110px;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.info img {
+    margin-top: 100px;
+    width: 600px;
+    height: 400px;
+}
+
+
+/* .info {
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px auto 500px;
+    grid-template-rows: 100px 150px auto 300px;
+    grid-gap: 10px;
+    grid-row-gap: 30px;
+} */
+
 @keyframes efecto {
     from {
         transform: rotate(0deg);
@@ -740,6 +775,9 @@ article p {
 pre {
     text-align: center;
 }
+
+
+
 
 /* Footer (pie de pagina): */
 
