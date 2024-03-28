@@ -789,6 +789,17 @@ pre {
 
 
 
+.news {
+    background-color: rgba(0, 4, 123, 0.49);
+}
+
+
+.news img {
+    width: 400px;
+    height: 400px;
+}
+
+
 /* Footer (pie de pagina): */
 
 footer {
