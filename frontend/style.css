@@ -56,6 +56,7 @@ html {
 }
 
 body {
+    display: flexbox;
     background-color: rgba(0, 4, 123, 0.49);
     background-size: cover;
     background-repeat: no-repeat;
@@ -65,6 +66,9 @@ body {
     margin-bottom: 25px;
     padding-bottom: 25px;
     overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Cabecera (header): */
@@ -908,19 +912,31 @@ pre {
     background-color: rgba(0, 4, 123, 0.49);
 }
 
-.news h2, h3, h4 {
+.news h2,
+h3,
+h4 {
     color: white;
 }
 
-.news h4 { 
+.news h4 {
     font-size: 25px;
 }
 
 .news p {
     color: wheat;
     font-size: 20px;
-    text-align: center;
+    text-align: justify;
     width: 500px;
+}
+
+.news p {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 
 .news img {
