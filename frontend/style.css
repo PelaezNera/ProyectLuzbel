@@ -1,14 +1,14 @@
 /* Fuentes e iconos: */
 
-/* .material-symbols-outlined {
+.material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
         'wght' 0,
         'GRAD' 0,
         'opsz' 24
-} */
+}
 
-/* .material-symbols-outlined {
+.material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
     font-style: normal;
@@ -20,9 +20,84 @@
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-} */
+
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Anek Latin', serif;
+}
+
+p {
+    font-family: 'Cute Font', cursive;
+}
 
 /* Estilos globales y algunas configuraciones: */
+
 * {
     margin: 0;
     padding: 0;
@@ -116,6 +191,16 @@ header {
     float: left;
 }
 
+.logo-imagen {
+    width: 50px;
+    margin-right: 80px;
+    transition: filter 0.3s ease;
+}
+
+.logo-imagen:hover {
+    filter: brightness(0.7);
+}
+
 .header-main a {
     text-decoration: none;
     color: white;
@@ -131,7 +216,7 @@ header {
     color: gray;
 }
 
-.header-main button {
+.header-main button:not(.switch) {
     padding: 10px 20px;
     border: hidden;
     border-radius: 0;
@@ -145,17 +230,17 @@ header {
     -o-border-radius: 0;
 }
 
-.header-main button:link {
+.header-main button:link:not(.switch) {
     background-color: rgb(184, 184, 184);
     color: bisque;
 }
 
-.header-main button:visited {
+.header-main button:visited:not(.switch) {
     background-color: rgb(104, 104, 104);
     color: rgb(255, 218, 173);
 }
 
-.header-main button:focus {
+.header-main button:focus:not(.switch) {
     border-radius: 2rem;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem;
@@ -163,7 +248,7 @@ header {
     -o-border-radius: 2rem;
 }
 
-.header-main button:hover {
+.header-main button:hover:not(.switch) {
     background-color: rgb(119, 37, 23);
     color: bisque;
     border-radius: 0.9rem;
@@ -178,7 +263,7 @@ header {
     -o-transition: 0.5s ease;
 }
 
-.header-main button:active {
+.header-main button:active:not(.switch) {
     background-color: rgb(255, 123, 0);
     color: rgb(119, 37, 23);
     border-radius: 2rem;
@@ -190,7 +275,15 @@ header {
 }
 
 .header-main {
-    display: flexbox;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
@@ -224,7 +317,7 @@ header {
     list-style: none;
 }
 
-.desplegable-menu button {
+.desplegable-menu button:not(.switch) {
     width: 150px;
 }
 
@@ -293,17 +386,36 @@ header {
     font-variation-settings: 'FILL' 0, 'wght' 0, 'GRAD' 0, 'opsz' 48;
 } */
 
+/* #tem_form {
+    pointer-events: all;
+    user-select: all;
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    -o-user-select: all;
+    touch-action: auto;
+    will-change: contents;
+    overflow: auto;
+    z-index: 2;
+} */
+
+/* Boton para el modo oscuro: */
+
 #tema {
     display: none;
 }
 
-/* #la_tema {
-    font-weight: 100;
-} */
-
 .pulso {
     animation: pulso 3s infinite;
     -webkit-animation: pulso 3s infinite;
+    -moz-animation: pulso 3s infinite;
+    -ms-animation: pulso 3s infinite;
+    -o-animation: pulso 3s infinite;
+    transition: 1s ease;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -ms-transition: 1s ease;
+    -o-transition: 1s ease;
 }
 
 @keyframes pulso {
@@ -316,7 +428,7 @@ header {
     }
 
     100% {
-        font-variation-settings: 'FILL' 0.8, 'wght' 100, 'GRAD' 200, 'opsz' 30;
+        font-variation-settings: 'FILL' 1, 'wght' 100, 'GRAD' 200, 'opsz' 30;
     }
 }
 
@@ -328,14 +440,76 @@ header {
     -ms-animation-play-state: paused;
     animation: none;
     -webkit-animation: none;
-    font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 48;
-    transition: all 5s ease;
-    -webkit-transition: all 5s ease;
-    -moz-transition: all 5s ease;
-    -ms-transition: all 5s ease;
-    -o-transition: all 5s ease;
-    font-size: 48px;
-    font-variation-settings: 'OPSZ' 48;
+    -moz-animation: none;
+    -o-animation: none;
+    -ms-animation: none;
+    font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 200, 'opsz' 32;
+    font-size: 32px;
+    font-weight: 700;
+    filter: brightness(1.2);
+    -webkit-filter: brightness(1.2);
+    -moz-filter: brightness(1.2);
+    -ms-filter: brightness(1.2);
+    -o-filter: brightness(1.2);
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.switch {
+    background: #5f75bb;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    outline: none;
+}
+
+.switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #ffc9c9;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    transition: .3s ease all;
+    -webkit-transition: .3s ease all;
+    -moz-transition: .3s ease all;
+    -ms-transition: .3s ease all;
+    -o-transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+    background: orange;
+    color: #000;
+}
+
+.switch.active::after {
+    right: 0;
+    left: unset;
+}
+
+.switch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    color: #fff;
 }
 
 /* Slider (carrusel): */
@@ -359,6 +533,11 @@ header {
     width: 20%;
     height: 49rem;
     margin: 5px;
+    transition: filter 1.5s ease;
+    -webkit-transition: filter 1.5s ease;
+    -moz-transition: filter 1.5s ease;
+    -ms-transition: filter 1.5s ease;
+    -o-transition: filter 1.5s ease;
 }
 
 
@@ -426,6 +605,11 @@ span[class="fondo"] {
     width: min-content;
     background-color: rgba(222, 184, 135, 0.2);
     max-height: max-content;
+    transition: background-color 1.5s ease;
+    -webkit-transition: background-color 1.5s ease;
+    -moz-transition: background-color 1.5s ease;
+    -ms-transition: background-color 1.5s ease;
+    -o-transition: background-color 1.5s ease;
 }
 
 .descarga .title-clr1 {
@@ -789,7 +973,7 @@ span[class="fondo"] {
 }
 
 .info-content {
-    color: white;
+    color: black;
     text-align: center;
     font-size: 20px;
     padding-top: 50px;
@@ -818,6 +1002,47 @@ span[class="fondo"] {
     grid-row-gap: 30px;
 } */
 
+
+/* Sección de noticias: */
+
+.news {
+    background-color: rgba(0, 4, 123, 0.49);
+}
+
+.news h2,
+h3,
+h4 {
+    color: black;
+}
+
+.news h4 {
+    font-size: 25px;
+}
+
+.news p {
+    color: black;
+    font-size: 20px;
+    text-align: justify;
+    width: 500px;
+}
+
+.news p {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.news img {
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* TODO: todo lo demás */
 /* FIXME: mejorar la pagina */
@@ -906,48 +1131,6 @@ pre {
 }
 
 
-
-
-.news {
-    background-color: rgba(0, 4, 123, 0.49);
-}
-
-.news h2,
-h3,
-h4 {
-    color: white;
-}
-
-.news h4 {
-    font-size: 25px;
-}
-
-.news p {
-    color: wheat;
-    font-size: 20px;
-    text-align: justify;
-    width: 500px;
-}
-
-.news p {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-}
-
-.news img {
-    width: 400px;
-    height: 400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
 /* Footer (pie de pagina): */
 
 footer {
@@ -994,4 +1177,141 @@ footer a {
 footer address {
     position: relative;
     top: 0;
+}
+
+/* Modo oscuro */
+
+.dark-mode {
+    background-color: black;
+    color: white;
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+}
+
+.light-mode {
+    background-color: rgba(0, 4, 123, 0.49);
+    color: black;
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+}
+
+.light-mode .news {
+    background-color: rgba(67, 73, 255, 0.49);
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+}
+
+.news,
+.info {
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+}
+
+.dark-mode .news *,
+.dark-mode .info * {
+    text-decoration-color: white;
+    text-emphasis-color: white;
+    color: white;
+    transition: color 1.5s ease;
+    -webkit-transition: color 1.5s ease;
+    -moz-transition: color 1.5s ease;
+    -ms-transition: color 1.5s ease;
+    -o-transition: color 1.5s ease;
+    -moz-text-decoration-color: white;
+}
+
+.dark-mode span[class="fondo"] {
+    background-color: rgba(110, 81, 44, 0.5);
+    transition: background-color 1.5s ease;
+    -webkit-transition: background-color 1.5s ease;
+    -moz-transition: background-color 1.5s ease;
+    -ms-transition: background-color 1.5s ease;
+    -o-transition: background-color 1.5s ease;
+}
+
+.dark-mode .slider figure img {
+    filter: brightness(0.7);
+    -webkit-filter: brightness(0.7);
+    -moz-filter: brightness(0.7);
+    -ms-filter: brightness(0.7);
+    -o-filter: brightness(0.7);
+    transition: filter 1.5s ease;
+    -webkit-transition: filter 1.5s ease;
+    -moz-transition: filter 1.5s ease;
+    -ms-transition: filter 1.5s ease;
+    -o-transition: filter 1.5s ease;
+}
+
+header,
+footer {
+    transition: background-color 1.5s ease;
+    -webkit-transition: background-color 1.5s ease;
+    -moz-transition: background-color 1.5s ease;
+    -ms-transition: background-color 1.5s ease;
+    -o-transition: background-color 1.5s ease;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: rgb(71, 71, 71);
+    transition: background-color 1.5s ease;
+    -webkit-transition: background-color 1.5s ease;
+    -moz-transition: background-color 1.5s ease;
+    -ms-transition: background-color 1.5s ease;
+    -o-transition: background-color 1.5s ease;
+}
+
+.header-main button:not(.switch) {
+    transition: background-color 1.5s ease;
+    -webkit-transition: background-color 1.5s ease;
+    -moz-transition: background-color 1.5s ease;
+    -ms-transition: background-color 1.5s ease;
+    -o-transition: background-color 1.5s ease;
+}
+
+.dark-mode .header-main button:not(.switch) {
+    background-color: rgb(71, 71, 71);
+    transition: background-color 1.5s ease;
+    -webkit-transition: background-color 1.5s ease;
+    -moz-transition: background-color 1.5s ease;
+    -ms-transition: background-color 1.5s ease;
+    -o-transition: background-color 1.5s ease;
+}
+
+.dark-mode .header-main button:hover:not(.switch) {
+    background-color: rgb(119, 37, 23);
+    color: bisque;
+    border-radius: 0.9rem;
+    transition: 0.5s ease;
+    -webkit-border-radius: 0.9rem;
+    -moz-border-radius: 0.9rem;
+    -ms-border-radius: 0.9rem;
+    -o-border-radius: 0.9rem;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.dark-mode .header-main button:active:not(.switch) {
+    background-color: rgb(255, 123, 0);
+    color: rgb(119, 37, 23);
+    border-radius: 2rem;
+    transition: 0.5s ease;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
