@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("hashchange", function () {
+        const excludedSections = ["info", "records"];
+        const hash = window.location.hash.substring(1);
+
+        if (!excludedSections.includes(hash)) {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        }
+    });
+});
+
 window.addEventListener("DOMContentLoaded", function () {
     let tema = document.getElementById('tema');
     let switchButton = document.getElementById('switch');
