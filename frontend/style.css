@@ -157,7 +157,7 @@ body {
 
 header {
     position: fixed;
-    background-color: gray;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     padding: 1rem;
     top: 0;
@@ -222,8 +222,8 @@ header {
     padding: 10px 20px;
     border: hidden;
     border-radius: 0;
-    background-color: grey;
-    color: white;
+    background-color: white;
+    color: black;
     cursor: pointer;
     font-size: 20px;
     -webkit-border-radius: 0;
@@ -251,12 +251,11 @@ header {
 }
 
 .header-main button:hover:not(.switch) {
-    background-color: rgb(119, 37, 23);
-    color: bisque;
+    background-color: rgb(86, 3, 93);
+    color: rgb(225, 225, 225);
     border-radius: 0.9rem;
     transition: 0.5s ease;
     -webkit-border-radius: 0.9rem;
-    -moz-border-radius: 0.9rem;
     -ms-border-radius: 0.9rem;
     -o-border-radius: 0.9rem;
     -webkit-transition: 0.5s ease;
@@ -1066,7 +1065,7 @@ div[class="fondo"] {
 
 hr[class~="separador"] {
     color: whitesmoke;
-    background-color: antiquewhite;
+    background-color: purple;
     border: #ffffff 1px dotted;
     position: relative;
     margin-top: 5px;
@@ -1135,7 +1134,7 @@ pre {
 
 footer {
     position: fixed;
-    background-color: gray;
+    background-color: white;
     width: 100%;
     padding: 0 10px;
     bottom: 0;
@@ -1145,7 +1144,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    color: #fff;
+    color: black;
     padding: 0 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 100;
@@ -1154,7 +1153,7 @@ footer {
 footer h2,
 footer h3,
 footer h4 {
-    color: #ffffff;
+    color: black;
     text-decoration: underline;
     text-align: center;
     margin: 0;
@@ -1194,7 +1193,7 @@ address h4 {
 }
 
 address a {
-    color: #fff;
+    color: black;
     text-decoration: none;
 }
 
