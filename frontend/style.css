@@ -1,3 +1,140 @@
+/* Modo oscuro */
+
+.modo-oscuro {
+    background-color: black;
+    color: white;
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+}
+
+.modo-claro {
+    background-color: rgba(0, 4, 123, 0.49);
+    color: black;
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+}
+
+.modo-claro .news {
+    background-color: rgba(67, 73, 255, 0.49);
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+}
+
+.news,
+.info {
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+}
+
+.modo-oscuro .news *,
+.modo-oscuro .info * {
+    text-decoration-color: white;
+    text-emphasis-color: white;
+    color: white;
+    transition: color 1.5s ease;
+    -webkit-transition: color 1.5s ease;
+    -moz-transition: color 1.5s ease;
+    -ms-transition: color 1.5s ease;
+    -o-transition: color 1.5s ease;
+    -moz-text-decoration-color: white;
+}
+
+.modo-oscuro span[class="fondo"] {
+    background-color: rgba(110, 81, 44, 0.5);
+    transition: background-color 1.5s ease;
+    -webkit-transition: background-color 1.5s ease;
+    -moz-transition: background-color 1.5s ease;
+    -ms-transition: background-color 1.5s ease;
+    -o-transition: background-color 1.5s ease;
+}
+
+.modo-oscuro .slider figure img {
+    filter: brightness(0.7);
+    -webkit-filter: brightness(0.7);
+    -moz-filter: brightness(0.7);
+    -ms-filter: brightness(0.7);
+    -o-filter: brightness(0.7);
+    transition: filter 1.5s ease;
+    -webkit-transition: filter 1.5s ease;
+    -moz-transition: filter 1.5s ease;
+    -ms-transition: filter 1.5s ease;
+    -o-transition: filter 1.5s ease;
+}
+
+header,
+footer {
+    transition: background-color 1.5s ease;
+    -webkit-transition: background-color 1.5s ease;
+    -moz-transition: background-color 1.5s ease;
+    -ms-transition: background-color 1.5s ease;
+    -o-transition: background-color 1.5s ease;
+}
+
+.modo-oscuro header,
+.modo-oscuro footer {
+    background-color: rgb(71, 71, 71);
+    transition: background-color 1.5s ease;
+    -webkit-transition: background-color 1.5s ease;
+    -moz-transition: background-color 1.5s ease;
+    -ms-transition: background-color 1.5s ease;
+    -o-transition: background-color 1.5s ease;
+}
+
+.header-main button:not(.switch) {
+    transition: background-color 1.5s ease;
+    -webkit-transition: background-color 1.5s ease;
+    -moz-transition: background-color 1.5s ease;
+    -ms-transition: background-color 1.5s ease;
+    -o-transition: background-color 1.5s ease;
+}
+
+.modo-oscuro .header-main button:not(.switch) {
+    background-color: rgb(71, 71, 71);
+    transition: background-color 1.5s ease;
+    -webkit-transition: background-color 1.5s ease;
+    -moz-transition: background-color 1.5s ease;
+    -ms-transition: background-color 1.5s ease;
+    -o-transition: background-color 1.5s ease;
+}
+
+.modo-oscuro .header-main button:hover:not(.switch) {
+    background-color: rgb(119, 37, 23);
+    color: bisque;
+    border-radius: 0.9rem;
+    transition: 0.5s ease;
+    -webkit-border-radius: 0.9rem;
+    -moz-border-radius: 0.9rem;
+    -ms-border-radius: 0.9rem;
+    -o-border-radius: 0.9rem;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.modo-oscuro .header-main button:active:not(.switch) {
+    background-color: rgb(255, 123, 0);
+    color: rgb(119, 37, 23);
+    border-radius: 2rem;
+    transition: 0.5s ease;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
 /* Fuentes e iconos: */
 
 .material-symbols-outlined {
@@ -28,7 +165,6 @@
     font-weight: normal;
     font-style: normal;
     font-size: 24px;
-    /* Preferred icon size */
     display: inline-block;
     line-height: 1;
     text-transform: none;
@@ -36,20 +172,12 @@
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-
-    /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
-
-    /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
-
-    /* Support for IE. */
     font-feature-settings: 'liga';
 }
 
-/* Rules for sizing the icon. */
 .material-icons.md-18 {
     font-size: 18px;
 }
@@ -66,7 +194,6 @@
     font-size: 48px;
 }
 
-/* Rules for using icons as black on a light background. */
 .material-icons.md-dark {
     color: rgba(0, 0, 0, 0.54);
 }
@@ -75,7 +202,6 @@
     color: rgba(0, 0, 0, 0.26);
 }
 
-/* Rules for using icons as white on a dark background. */
 .material-icons.md-light {
     color: rgba(255, 255, 255, 1);
 }
@@ -1249,18 +1375,18 @@ address a:hover {
     display: block;
 }
 
-.social-icons {
+.logos_redes {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.social-icons li {
+.logos_redes li {
     display: inline-block;
     margin-right: 10px;
 }
 
-.social-icons a {
+.logos_redes a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1268,11 +1394,11 @@ address a:hover {
     text-decoration: none;
 }
 
-.social-icons a:hover {
+.logos_redes a:hover {
     opacity: 0.8;
 }
 
-.social-icons b {
+.logos_redes b {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1282,7 +1408,7 @@ address a:hover {
     z-index: 1;
 }
 
-.social-icons b::before {
+.logos_redes b::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -1309,20 +1435,20 @@ address a:hover {
     -o-transition: background-color 0.3s;
 }
 
-.social-icons .icon-XT b::before {
+.logos_redes .icono-XT b::before {
     width: 35px;
     height: 35px;
 }
 
-.social-icons b:hover::before,
-.social-icons b:focus::before,
-.social-icons b:active::before {
+.logos_redes b:hover::before,
+.logos_redes b:focus::before,
+.logos_redes b:active::before {
     background-color: #333;
     border: 2px solid;
 }
 
-.social-icons i,
-.social-icons .icon-XT i {
+.logos_redes i,
+.logos_redes .icono-XT i {
     position: relative;
     z-index: 2;
     margin: 0;
@@ -1331,15 +1457,15 @@ address a:hover {
     line-height: 0;
 }
 
-.social-icons a:hover .circulo::before,
-.social-icons a:focus .circulo::before,
-.social-icons a:active .circulo::before {
+.logos_redes a:hover .circulo::before,
+.logos_redes a:focus .circulo::before,
+.logos_redes a:active .circulo::before {
     background-color: #333;
     border: 1px solid #a1a1a1;
 }
 
 /* Estilos para el texto debajo de los iconos */
-.icon-text {
+.logos_texto {
     position: relative;
     display: block;
     font-size: 12px;
@@ -1360,181 +1486,185 @@ address a:hover {
 }
 
 /* Estilos para la lista de redes sociales */
-.social-icons ul {
+.logos_redes ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.social-icons li {
+.logos_redes li {
     display: inline-block;
     margin-right: 10px;
 }
 
-.social-icons i,
-.icon-text,
+.logos_redes i,
+.logos_texto,
 .fab {
     z-index: 5;
 }
 
-.social-icons .gmail b::before {
+.logos_redes .gmail b::before {
     color: #fff;
 }
 
-.icon-text.facebook {
+.logos_texto.facebook {
     color: #1877f2;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.social-icons .facebook b::before {
+.logos_redes .facebook b::before {
     background-color: #1877f2;
 }
 
-.social-icons .facebook b::before {
+.logos_redes .facebook b::before {
     color: #fff;
 }
 
-.icon-text.whatsapp {
+.logos_texto.whatsapp {
     color: #25d366;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.social-icons .whatsapp b::before {
+.logos_redes .whatsapp b::before {
     background-color: #25d366;
 }
 
-.social-icons .whatsapp b::before {
+.logos_redes .whatsapp b::before {
     color: #fff;
 }
 
-.icon-text.instagram {
+.logos_texto.instagram {
     color: #fd5e53;
     font-family: 'Billabong', 'Brush Script MT', cursive;
 }
 
-.social-icons .instagram b::before {
+.logos_redes .instagram b::before {
     background-color: #fd5e53;
 }
 
-.social-icons .instagram b::before {
+.logos_redes .instagram b::before {
     color: #fff;
 }
 
-.icon-text.twitter {
+.logos_texto.twitter {
     color: #1da1f2;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.social-icons .twitter b::before {
+.logos_redes .twitter b::before {
     background-color: #1da1f2;
 }
 
-.social-icons .twitter b::before {
+.logos_redes .twitter b::before {
     color: #fff;
 }
 
-.icon-text.youtube {
+.logos_texto.youtube {
     color: #ff0000;
     font-family: 'YouTube Sans', Arial, sans-serif;
 }
 
-.social-icons .youtube b::before {
+.logos_redes .youtube b::before {
     background-color: #ff0000;
 }
 
-.social-icons .youtube b::before {
+.logos_redes .youtube b::before {
     color: #fff;
 }
 
-.icon-text.tiktok {
+.logos_texto.tiktok {
     color: #009da8;
     background-color: white;
     font-family: 'Gilroy', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.social-icons .tiktok b::before {
+.logos_redes .tiktok b::before {
     background-color: #009da8;
 }
 
-.social-icons .tiktok b::before {
+.logos_redes .tiktok b::before {
     color: #fff;
 }
 
-.icon-text.github {
+.logos_texto.github {
     color: #333333;
 }
 
-.social-icons .github b::before {
+.logos_redes .github b::before {
     background-color: #333333;
 }
 
-.social-icons .github b::before {
+.logos_redes .github b::before {
     color: #fff;
 }
 
-.icon-text.discord {
+.logos_texto.discord {
     color: #7289da;
     font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.social-icons .discord b::before {
+.logos_redes .discord b::before {
     background-color: #7289da;
 }
 
-.social-icons .discord b::before {
+.logos_redes .discord b::before {
     color: #fff;
 }
 
-.icon-text.reddit {
+.logos_texto.reddit {
     color: #ff4500;
     font-family: 'Arial Narrow', Arial, sans-serif;
 }
 
-.social-icons .reddit b::before {
+.logos_redes .reddit b::before {
     background-color: #ff4500;
 }
 
-.social-icons .reddit b::before {
+.logos_redes .reddit b::before {
     color: #fff;
 }
 
-.icon-text.pinterest {
+.logos_texto.pinterest {
     color: #bd081c;
     font-family: 'Roboto', sans-serif;
 }
 
-.social-icons .pinterest b::before {
+.logos_redes .pinterest b::before {
     background-color: #bd081c;
 }
 
-.social-icons .pinterest b::before {
+.logos_redes .pinterest b::before {
     color: #fff;
 }
 
-.icon-text.linkedin {
+.logos_texto.linkedin {
     color: #0077b5;
     font-family: 'Arial', sans-serif;
 }
 
-.social-icons .linkedin b::before {
+.logos_redes .linkedin b::before {
     background-color: #0077b5;
 }
 
-.social-icons .linkedin b::before {
+.logos_redes .linkedin b::before {
     color: #fff;
 }
 
-.icon-text.blogger {
+.logos_texto.blogger {
     color: #f57d00;
     font-family: 'Roboto', sans-serif;
 }
 
-.social-icons .blogger b::before {
+.logos_redes .blogger b::before {
     background-color: #f57d00;
 }
 
-.social-icons .blogger b::before {
+.logos_redes .blogger b::before {
     color: #fff;
+}
+
+.fa-x-twitter {
+    color: black;
 }
 
 
@@ -1617,142 +1747,4 @@ address a:hover {
     -o-border-radius: 25%;
     margin: 0;
     margin-right: 0;
-}
-
-
-/* Modo oscuro */
-
-.dark-mode {
-    background-color: black;
-    color: white;
-    transition: all 1.5s ease;
-    -webkit-transition: all 1.5s ease;
-    -moz-transition: all 1.5s ease;
-    -ms-transition: all 1.5s ease;
-    -o-transition: all 1.5s ease;
-}
-
-.light-mode {
-    background-color: rgba(0, 4, 123, 0.49);
-    color: black;
-    transition: all 1.5s ease;
-    -webkit-transition: all 1.5s ease;
-    -moz-transition: all 1.5s ease;
-    -ms-transition: all 1.5s ease;
-    -o-transition: all 1.5s ease;
-}
-
-.light-mode .news {
-    background-color: rgba(67, 73, 255, 0.49);
-    transition: all 1.5s ease;
-    -webkit-transition: all 1.5s ease;
-    -moz-transition: all 1.5s ease;
-    -ms-transition: all 1.5s ease;
-    -o-transition: all 1.5s ease;
-}
-
-.news,
-.info {
-    transition: all 1.5s ease;
-    -webkit-transition: all 1.5s ease;
-    -moz-transition: all 1.5s ease;
-    -ms-transition: all 1.5s ease;
-    -o-transition: all 1.5s ease;
-}
-
-.dark-mode .news *,
-.dark-mode .info * {
-    text-decoration-color: white;
-    text-emphasis-color: white;
-    color: white;
-    transition: color 1.5s ease;
-    -webkit-transition: color 1.5s ease;
-    -moz-transition: color 1.5s ease;
-    -ms-transition: color 1.5s ease;
-    -o-transition: color 1.5s ease;
-    -moz-text-decoration-color: white;
-}
-
-.dark-mode span[class="fondo"] {
-    background-color: rgba(110, 81, 44, 0.5);
-    transition: background-color 1.5s ease;
-    -webkit-transition: background-color 1.5s ease;
-    -moz-transition: background-color 1.5s ease;
-    -ms-transition: background-color 1.5s ease;
-    -o-transition: background-color 1.5s ease;
-}
-
-.dark-mode .slider figure img {
-    filter: brightness(0.7);
-    -webkit-filter: brightness(0.7);
-    -moz-filter: brightness(0.7);
-    -ms-filter: brightness(0.7);
-    -o-filter: brightness(0.7);
-    transition: filter 1.5s ease;
-    -webkit-transition: filter 1.5s ease;
-    -moz-transition: filter 1.5s ease;
-    -ms-transition: filter 1.5s ease;
-    -o-transition: filter 1.5s ease;
-}
-
-header,
-footer {
-    transition: background-color 1.5s ease;
-    -webkit-transition: background-color 1.5s ease;
-    -moz-transition: background-color 1.5s ease;
-    -ms-transition: background-color 1.5s ease;
-    -o-transition: background-color 1.5s ease;
-}
-
-.dark-mode header,
-.dark-mode footer {
-    background-color: rgb(71, 71, 71);
-    transition: background-color 1.5s ease;
-    -webkit-transition: background-color 1.5s ease;
-    -moz-transition: background-color 1.5s ease;
-    -ms-transition: background-color 1.5s ease;
-    -o-transition: background-color 1.5s ease;
-}
-
-.header-main button:not(.switch) {
-    transition: background-color 1.5s ease;
-    -webkit-transition: background-color 1.5s ease;
-    -moz-transition: background-color 1.5s ease;
-    -ms-transition: background-color 1.5s ease;
-    -o-transition: background-color 1.5s ease;
-}
-
-.dark-mode .header-main button:not(.switch) {
-    background-color: rgb(71, 71, 71);
-    transition: background-color 1.5s ease;
-    -webkit-transition: background-color 1.5s ease;
-    -moz-transition: background-color 1.5s ease;
-    -ms-transition: background-color 1.5s ease;
-    -o-transition: background-color 1.5s ease;
-}
-
-.dark-mode .header-main button:hover:not(.switch) {
-    background-color: rgb(119, 37, 23);
-    color: bisque;
-    border-radius: 0.9rem;
-    transition: 0.5s ease;
-    -webkit-border-radius: 0.9rem;
-    -moz-border-radius: 0.9rem;
-    -ms-border-radius: 0.9rem;
-    -o-border-radius: 0.9rem;
-    -webkit-transition: 0.5s ease;
-    -moz-transition: 0.5s ease;
-    -ms-transition: 0.5s ease;
-    -o-transition: 0.5s ease;
-}
-
-.dark-mode .header-main button:active:not(.switch) {
-    background-color: rgb(255, 123, 0);
-    color: rgb(119, 37, 23);
-    border-radius: 2rem;
-    transition: 0.5s ease;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
 }
