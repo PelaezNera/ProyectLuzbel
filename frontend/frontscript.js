@@ -17,18 +17,18 @@ window.addEventListener("DOMContentLoaded", function () {
     // Función para cambiar el modo
     function cambiarModo(checked) {
         if (checked) {
-            document.body.classList.add('light-mode');
-            document.body.classList.remove('dark-mode');
+            document.body.classList.add('modo-claro');
+            document.body.classList.remove('modo-oscuro');
             label_tema.innerHTML = 'wb_sunny';
             switchButton.classList.add('active');
         } else {
-            document.body.classList.remove('light-mode');
-            document.body.classList.add('dark-mode');
+            document.body.classList.remove('modo-claro');
+            document.body.classList.add('modo-oscuro');
             label_tema.innerHTML = 'dark_mode';
             switchButton.classList.remove('active');
         }
         // Guardamos el modo en localstorage.
-        localStorage.setItem('dark-mode', checked.toString());
+        localStorage.setItem('modo-oscuro', checked.toString());
     }
 
     // Cambiar el modo cuando se haga clic en el botón
@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 
     // Obtener el modo almacenado en el local storage y aplicarlo
-    const modoGuardado = localStorage.getItem('dark-mode');
+    const modoGuardado = localStorage.getItem('modo-oscuro');
     if (modoGuardado !== null) {
         cambiarModo(modoGuardado === 'true');
     } else {
@@ -56,12 +56,12 @@ window.addEventListener("DOMContentLoaded", function () {
 
 //     function cambiarModo(checked) {
 //         if (checked) {
-//             document.body.classList.add('light-mode');
-//             document.body.classList.remove('dark-mode');
+//             document.body.classList.add('modo-claro');
+//             document.body.classList.remove('modo-oscuro');
 //             label_tema.innerHTML = 'wb_sunny';
 //         } else {
-//             document.body.classList.remove('light-mode');
-//             document.body.classList.add('dark-mode');
+//             document.body.classList.remove('modo-claro');
+//             document.body.classList.add('modo-oscuro');
 //             label_tema.innerHTML = 'dark_mode';
 //         }
 //     }
@@ -77,14 +77,14 @@ window.addEventListener("DOMContentLoaded", function () {
 //     let label_tema = document.getElementById('la_tema');
 //     let btnSwitch = document.getElementById('switch');
 //     function cambiarModo(checked) {
-//         document.body.classList.toggle('dark-mode');
+//         document.body.classList.toggle('modo-oscuro');
 //         if (checked) {
-//             document.body.classList.add('light-mode');
-//             document.body.classList.remove('dark-mode');
+//             document.body.classList.add('modo-claro');
+//             document.body.classList.remove('modo-oscuro');
 //             label_tema.innerHTML = '<span class="material-symbols-outlined pulso" id="tema_icono">dark_mode</span>';
 //         } else {
-//             document.body.classList.remove('light-mode');
-//             document.body.classList.add('dark-mode');
+//             document.body.classList.remove('modo-claro');
+//             document.body.classList.add('modo-oscuro');
 //             label_tema.innerHTML = '<span class="material-symbols-outlined pulso" id="tema_icono_2">wb_sunny</span>';
 //             btnSwitch.classList.toggle('active');
 //         }
@@ -96,13 +96,13 @@ window.addEventListener("DOMContentLoaded", function () {
 //     let switchButton = document.getElementById('switch');
 
 //     function cambiarModo() {
-//         if (document.body.classList.contains('light-mode')) {
-//             document.body.classList.remove('light-mode');
-//             document.body.classList.add('dark-mode');
+//         if (document.body.classList.contains('modo-claro')) {
+//             document.body.classList.remove('modo-claro');
+//             document.body.classList.add('modo-oscuro');
 //             switchButton.innerHTML = '<span class="material-symbols-outlined pulso" id="tema_icono">dark_mode</span>';
 //         } else {
-//             document.body.classList.add('light-mode');
-//             document.body.classList.remove('dark-mode');
+//             document.body.classList.add('modo-claro');
+//             document.body.classList.remove('modo-oscuro');
 //             switchButton.innerHTML = '<span class="material-symbols-outlined pulso" id="tema_icono_2">wb_sunny</span>';
 //         }
 //     }

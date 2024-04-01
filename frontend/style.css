@@ -1351,19 +1351,12 @@ address a:hover {
 
 .submenu {
     display: none;
-    /* Ocultar el submenu por defecto */
     position: absolute;
-    /* Posición absoluta para alinear con respecto al footer */
     top: -100%;
-    /* Colocar arriba del título "Redes sociales:" */
     left: 0;
-    /* Alinear a la izquierda */
     width: 100%;
-    /* Ancho completo */
     background-color: gray;
-    /* Color de fondo */
     padding: 10px;
-    /* Espaciado interno */
 }
 
 #redes_sociales:hover+.submenu,
@@ -1503,7 +1496,7 @@ address a:hover {
     z-index: 5;
 }
 
-.logos_redes .gmail b::before {
+.logos_redes b::before {
     color: #fff;
 }
 
@@ -1516,10 +1509,6 @@ address a:hover {
     background-color: #1877f2;
 }
 
-.logos_redes .facebook b::before {
-    color: #fff;
-}
-
 .logos_texto.whatsapp {
     color: #25d366;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1527,10 +1516,6 @@ address a:hover {
 
 .logos_redes .whatsapp b::before {
     background-color: #25d366;
-}
-
-.logos_redes .whatsapp b::before {
-    color: #fff;
 }
 
 .logos_texto.instagram {
@@ -1542,10 +1527,6 @@ address a:hover {
     background-color: #fd5e53;
 }
 
-.logos_redes .instagram b::before {
-    color: #fff;
-}
-
 .logos_texto.twitter {
     color: #1da1f2;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1555,10 +1536,6 @@ address a:hover {
     background-color: #1da1f2;
 }
 
-.logos_redes .twitter b::before {
-    color: #fff;
-}
-
 .logos_texto.youtube {
     color: #ff0000;
     font-family: 'YouTube Sans', Arial, sans-serif;
@@ -1566,10 +1543,6 @@ address a:hover {
 
 .logos_redes .youtube b::before {
     background-color: #ff0000;
-}
-
-.logos_redes .youtube b::before {
-    color: #fff;
 }
 
 .logos_texto.tiktok {
@@ -1582,20 +1555,12 @@ address a:hover {
     background-color: #009da8;
 }
 
-.logos_redes .tiktok b::before {
-    color: #fff;
-}
-
 .logos_texto.github {
     color: #333333;
 }
 
 .logos_redes .github b::before {
     background-color: #333333;
-}
-
-.logos_redes .github b::before {
-    color: #fff;
 }
 
 .logos_texto.discord {
@@ -1607,10 +1572,6 @@ address a:hover {
     background-color: #7289da;
 }
 
-.logos_redes .discord b::before {
-    color: #fff;
-}
-
 .logos_texto.reddit {
     color: #ff4500;
     font-family: 'Arial Narrow', Arial, sans-serif;
@@ -1618,10 +1579,6 @@ address a:hover {
 
 .logos_redes .reddit b::before {
     background-color: #ff4500;
-}
-
-.logos_redes .reddit b::before {
-    color: #fff;
 }
 
 .logos_texto.pinterest {
@@ -1633,10 +1590,6 @@ address a:hover {
     background-color: #bd081c;
 }
 
-.logos_redes .pinterest b::before {
-    color: #fff;
-}
-
 .logos_texto.linkedin {
     color: #0077b5;
     font-family: 'Arial', sans-serif;
@@ -1646,10 +1599,6 @@ address a:hover {
     background-color: #0077b5;
 }
 
-.logos_redes .linkedin b::before {
-    color: #fff;
-}
-
 .logos_texto.blogger {
     color: #f57d00;
     font-family: 'Roboto', sans-serif;
@@ -1657,10 +1606,6 @@ address a:hover {
 
 .logos_redes .blogger b::before {
     background-color: #f57d00;
-}
-
-.logos_redes .blogger b::before {
-    color: #fff;
 }
 
 .fa-x-twitter {
