@@ -74,7 +74,8 @@
 }
 
 header,
-footer {
+footer,
+.submenu_redes {
     transition: background-color 1.5s ease;
     -webkit-transition: background-color 1.5s ease;
     -moz-transition: background-color 1.5s ease;
@@ -83,7 +84,8 @@ footer {
 }
 
 .modo-oscuro header,
-.modo-oscuro footer {
+.modo-oscuro footer,
+.modo-oscuro .submenu_redes {
     background-color: rgb(71, 71, 71);
     transition: background-color 1.5s ease;
     -webkit-transition: background-color 1.5s ease;
@@ -1340,7 +1342,7 @@ address a:hover {
 
 /* Iconos de las redes sociales: */
 
-.submenu {
+.submenu_redes {
     display: none;
 }
 
@@ -1351,22 +1353,22 @@ address a:hover {
     justify-content: center;
 }
 
-.submenu {
+.submenu_redes {
     display: none;
     position: absolute;
     top: -100%;
     left: 0;
     width: 100%;
-    background-color: gray;
+    background-color: var(--color-headfoot);
     padding: 10px;
 }
 
-#redes_sociales:hover+.submenu,
-#redes_sociales:hover+.submenu,
-#redes_sociales:active+.submenu,
-.submenu:hover,
-.submenu:focus,
-.submenu:active {
+#redes_sociales:hover+.submenu_redes,
+#redes_sociales:hover+.submenu_redes,
+#redes_sociales:active+.submenu_redes,
+.submenu_redes:hover,
+.submenu_redes:focus,
+.submenu_redes:active {
     display: block;
 }
 
