@@ -1137,15 +1137,16 @@ footer {
     position: fixed;
     background-color: gray;
     width: 100%;
-    padding: 1rem;
+    padding: 0 10px;
     bottom: 0;
+    left: 0;
     z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 50px;
     color: #fff;
-    padding: 0 20px;
+    padding: 0 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 100;
 }
@@ -1156,30 +1157,101 @@ footer h4 {
     color: #ffffff;
     text-decoration: underline;
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-footer address h3 {
-    font-size: 18px;
-}
-
-footer address h4 {
-    font-size: 13px;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: underline;
-    margin-left: 20px;
-}
-
-footer address {
+/* Estilos para la sección de dirección */
+address {
     position: relative;
-    top: 0;
+    text-align: left;
+    margin: 0;
+    right: 30px;
 }
+
+address h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+address li {
+    margin-bottom: 0;
+    font-size: 14px;
+    display: inline;
+}
+
+address h4 {
+    font-size: 14px;
+    text-align: left;
+}
+
+address a {
+    color: #fff;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+#contactenos {
+    position: relative;
+    display: inline-flex;
+    float: right;
+    margin: 0;
+    left: 30px;
+}
+
 
 /* Iconos de las redes sociales: */
+
+.submenu {
+    display: none;
+}
+
+#redes_sociales {
+    cursor: pointer;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#redes_sociales h2 {}
+
+.submenu {
+    display: none;
+    /* Ocultar el submenu por defecto */
+    position: absolute;
+    /* Posición absoluta para alinear con respecto al footer */
+    top: -100%;
+    /* Colocar arriba del título "Redes sociales:" */
+    left: 0;
+    /* Alinear a la izquierda */
+    width: 100%;
+    /* Ancho completo */
+    background-color: gray;
+    /* Color de fondo */
+    padding: 10px;
+    /* Espaciado interno */
+}
+
+#redes_sociales:hover+.submenu,
+#redes_sociales:hover+.submenu,
+#redes_sociales:active+.submenu,
+.submenu:hover,
+.submenu:focus,
+.submenu:active {
+    display: block;
+}
+
 .social-icons {
     list-style: none;
     padding: 0;
@@ -1203,12 +1275,352 @@ footer address {
     opacity: 0.8;
 }
 
+.social-icons b {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.social-icons b::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    z-index: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+}
+
+.social-icons .icon-XT b::before {
+    width: 35px;
+    height: 35px;
+}
+
+.social-icons b:hover::before,
+.social-icons b:focus::before,
+.social-icons b:active::before {
+    background-color: #333;
+    border: 2px solid;
+}
+
+.social-icons i,
+.social-icons .icon-XT i {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 0;
+}
+
+.social-icons a:hover .circulo::before,
+.social-icons a:focus .circulo::before,
+.social-icons a:active .circulo::before {
+    background-color: #333;
+    border: 1px solid #a1a1a1;
+}
+
+/* Estilos para el texto debajo de los iconos */
 .icon-text {
+    position: relative;
     display: block;
     font-size: 12px;
     text-align: center;
+    margin-top: 0px;
+    top: 14px;
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
 
+.XT {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 0px;
+    top: 5px;
+}
+
+/* Estilos para la lista de redes sociales */
+.social-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons i,
+.icon-text,
+.fab {
+    z-index: 5;
+}
+
+.social-icons .gmail b::before {
+    color: #fff;
+}
+
+.icon-text.facebook {
+    color: #1877f2;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.social-icons .facebook b::before {
+    background-color: #1877f2;
+}
+
+.social-icons .facebook b::before {
+    color: #fff;
+}
+
+.icon-text.whatsapp {
+    color: #25d366;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.social-icons .whatsapp b::before {
+    background-color: #25d366;
+}
+
+.social-icons .whatsapp b::before {
+    color: #fff;
+}
+
+.icon-text.instagram {
+    color: #fd5e53;
+    font-family: 'Billabong', 'Brush Script MT', cursive;
+}
+
+.social-icons .instagram b::before {
+    background-color: #fd5e53;
+}
+
+.social-icons .instagram b::before {
+    color: #fff;
+}
+
+.icon-text.twitter {
+    color: #1da1f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.social-icons .twitter b::before {
+    background-color: #1da1f2;
+}
+
+.social-icons .twitter b::before {
+    color: #fff;
+}
+
+.icon-text.youtube {
+    color: #ff0000;
+    font-family: 'YouTube Sans', Arial, sans-serif;
+}
+
+.social-icons .youtube b::before {
+    background-color: #ff0000;
+}
+
+.social-icons .youtube b::before {
+    color: #fff;
+}
+
+.icon-text.tiktok {
+    color: #009da8;
+    background-color: white;
+    font-family: 'Gilroy', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.social-icons .tiktok b::before {
+    background-color: #009da8;
+}
+
+.social-icons .tiktok b::before {
+    color: #fff;
+}
+
+.icon-text.github {
+    color: #333333;
+}
+
+.social-icons .github b::before {
+    background-color: #333333;
+}
+
+.social-icons .github b::before {
+    color: #fff;
+}
+
+.icon-text.discord {
+    color: #7289da;
+    font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.social-icons .discord b::before {
+    background-color: #7289da;
+}
+
+.social-icons .discord b::before {
+    color: #fff;
+}
+
+.icon-text.reddit {
+    color: #ff4500;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.social-icons .reddit b::before {
+    background-color: #ff4500;
+}
+
+.social-icons .reddit b::before {
+    color: #fff;
+}
+
+.icon-text.pinterest {
+    color: #bd081c;
+    font-family: 'Roboto', sans-serif;
+}
+
+.social-icons .pinterest b::before {
+    background-color: #bd081c;
+}
+
+.social-icons .pinterest b::before {
+    color: #fff;
+}
+
+.icon-text.linkedin {
+    color: #0077b5;
+    font-family: 'Arial', sans-serif;
+}
+
+.social-icons .linkedin b::before {
+    background-color: #0077b5;
+}
+
+.social-icons .linkedin b::before {
+    color: #fff;
+}
+
+.icon-text.blogger {
+    color: #f57d00;
+    font-family: 'Roboto', sans-serif;
+}
+
+.social-icons .blogger b::before {
+    background-color: #f57d00;
+}
+
+.social-icons .blogger b::before {
+    color: #fff;
+}
+
+
+.hub {
+    background-color: black;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.hub span {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+#first-hub {
+    margin: 0;
+}
+
+.hub span:nth-child(2) {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    background: #FF9900;
+    color: #000000;
+    border-radius: 1vw;
+    padding: 0 2px 0 2px;
+    display: inline-block;
+    -webkit-border-radius: 1vw;
+    -moz-border-radius: 1vw;
+    -ms-border-radius: 1vw;
+    -o-border-radius: 1vw;
+    margin: 0;
+    margin-right: 0;
+}
+
+.tube {
+    background-color: white;
+    display: block;
+    font-size: 12px;
+}
+
+#first-tube {
+    margin: 0;
+}
+
+.tube span:nth-child(2) {
+    background: red;
+    color: white;
+    border-radius: 1vw;
+    padding: 0 2px 0 2px;
+    display: inline-block;
+    -webkit-border-radius: 1vw;
+    -moz-border-radius: 1vw;
+    -ms-border-radius: 1vw;
+    -o-border-radius: 1vw;
+    margin: 0;
+    margin-right: 0;
+}
+
+.ink {
+    background-color: white;
+    display: block;
+    font-size: 12px;
+}
+
+#first-ink {
+    margin: 0;
+}
+
+.ink span:nth-child(2) {
+    background: rgb(0, 132, 255);
+    color: white;
+    border-radius: 25%;
+    padding: 0 2px 0 2px;
+    display: inline-block;
+    -webkit-border-radius: 25%;
+    -moz-border-radius: 25%;
+    -ms-border-radius: 25%;
+    -o-border-radius: 25%;
+    margin: 0;
+    margin-right: 0;
+}
 
 
 /* Modo oscuro */
