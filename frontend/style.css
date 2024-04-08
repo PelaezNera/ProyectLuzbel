@@ -29,6 +29,14 @@
     -o-transition: all 1.5s ease;
 }
 
+.modo-claro .descargador {
+    transition: filter 1.5s ease;
+    -webkit-transition: filter 1.5s ease;
+    -moz-transition: filter 1.5s ease;
+    -ms-transition: filter 1.5s ease;
+    -o-transition: filter 1.5s ease;
+}
+
 .news,
 .info {
     transition: all 1.5s ease;
@@ -60,17 +68,13 @@
     -o-transition: background-color 1.5s ease;
 }
 
-.modo-oscuro .slider figure img {
+.modo-oscuro .slider figure img,
+.modo-oscuro .descargador {
     filter: brightness(0.7);
     -webkit-filter: brightness(0.7);
     -moz-filter: brightness(0.7);
     -ms-filter: brightness(0.7);
     -o-filter: brightness(0.7);
-    transition: filter 1.5s ease;
-    -webkit-transition: filter 1.5s ease;
-    -moz-transition: filter 1.5s ease;
-    -ms-transition: filter 1.5s ease;
-    -o-transition: filter 1.5s ease;
 }
 
 header,
@@ -138,79 +142,6 @@ footer,
 }
 
 /* Fuentes e iconos: */
-
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 0,
-        'GRAD' 0,
-        'opsz' 24
-}
-
-.material-symbols-outlined {
-    font-family: 'Material Symbols Outlined';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-
-}
-
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
-}
-
-.material-icons.md-18 {
-    font-size: 18px;
-}
-
-.material-icons.md-24 {
-    font-size: 24px;
-}
-
-.material-icons.md-36 {
-    font-size: 36px;
-}
-
-.material-icons.md-48 {
-    font-size: 48px;
-}
-
-.material-icons.md-dark {
-    color: rgba(0, 0, 0, 0.54);
-}
-
-.material-icons.md-dark.md-inactive {
-    color: rgba(0, 0, 0, 0.26);
-}
-
-.material-icons.md-light {
-    color: rgba(255, 255, 255, 1);
-}
-
-.material-icons.md-light.md-inactive {
-    color: rgba(255, 255, 255, 0.3);
-}
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -513,23 +444,6 @@ header {
     display: hidden;
 }
 
-/* .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 0, 'GRAD' 0, 'opsz' 48;
-} */
-
-/* #tem_form {
-    pointer-events: all;
-    user-select: all;
-    -webkit-user-select: all;
-    -moz-user-select: all;
-    -ms-user-select: all;
-    -o-user-select: all;
-    touch-action: auto;
-    will-change: contents;
-    overflow: auto;
-    z-index: 2;
-} */
-
 /* Boton para el modo oscuro: */
 
 #tema {
@@ -714,16 +628,15 @@ header {
 /*Sección de descarga y boton de descarga:*/
 
 .descarga {
-    min-height: 650px;
     background-attachment: fixed;
-    min-height: 650px;
+    height: 49rem;
     display: flexbox;
-    justify-content: center;
     align-items: center;
-    margin: 0;
+    justify-content: center;
 }
 
 .descarga h1 {
+    margin-top: 100px;
     text-align: center;
     font-size: 5rem;
     color: rgb(233, 80, 80);
@@ -762,43 +675,25 @@ span[class="fondo"] {
     color: white;
     text-align: center;
     font-size: 20px;
-    padding-top: 30px;
-}
-
-.rebote-contenedor {
-    background-color: black;
-    border: 5px red solid;
-    width: 50%;
-    height: 400px;
-    position: relative;
-    overflow: hidden;
-    display: flexbox;
-    box-sizing: border-box;
-    white-space: nowrap;
-    flex-shrink: 0;
-    margin-top: 30px;
-    left: 50%;
-    padding: 0%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    animation: cambioColor 5s infinite linear alternate;
-    -webkit-animation: cambioColor 5s infinite linear alternate;
-    -moz-animation: cambioColor 5s infinite linear alternate;
-    -o-animation: cambioColor 5s infinite linear alternate;
-    -ms-animation: cambioColor 5s infinite linear alternate;
+    padding-top: 50px;
 }
 
 .descarga button {
-    background-color: rgb(255, 159, 159);
+    display: flexbox;
+    position: relative;
+    background-color: rgb(255, 0, 0);
     border: 0.1px black solid;
     display: flex;
     position: relative;
     font-size: 40px;
     padding: 10px;
     color: rgb(131, 131, 131);
+    margin-top: 10px;
+    text-align: center;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 }
 
 .descarga button:hover,
@@ -807,8 +702,13 @@ span[class="fondo"] {
     border-style: solid solid solid solid;
     border-color: gray black black gray;
     border-width: 5px;
-    background-color: lightcoral;
-    color: rgb(255, 0, 255);
+    background-color: rgb(255, 100, 0);
+    color: rgb(255, 106, 255);
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
     -ms-transition: .3s ease;
@@ -816,6 +716,11 @@ span[class="fondo"] {
 }
 
 .descarga button:active {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
     border-color: black grey grey black;
     background-color: tomato;
     color: violet;
@@ -829,13 +734,6 @@ span[class="fondo"] {
     -moz-animation: efecto .2s ease;
     -o-animation: efecto .2s ease;
     -ms-animation: efecto .2s ease;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    top: 50%;
 }
 
 @keyframes efecto {
@@ -854,246 +752,6 @@ span[class="fondo"] {
         -ms-transform: rotate(360deg);
         -o-transform: rotate(360deg);
     }
-}
-
-@keyframes ver-movement {
-
-    0%,
-    100% {
-        top: 0%;
-        background-color: red;
-        color: white;
-    }
-
-    0%,
-    9%,
-    100% {
-        background-color: red;
-        color: white;
-    }
-
-    10%,
-    90% {
-        top: 83%;
-        background-color: blue;
-        color: white;
-    }
-
-    19%,
-    99% {
-        background-color: blue;
-        color: white;
-    }
-
-    20%,
-    80% {
-        top: 0%;
-        background-color: green;
-        color: white;
-    }
-
-    29%,
-    89% {
-        background-color: green;
-        color: white;
-    }
-
-    30%,
-    70% {
-        top: 83%;
-        background-color: yellow;
-        color: black;
-    }
-
-    39%,
-    79% {
-        background-color: yellow;
-        color: black;
-    }
-
-    40%,
-    60% {
-        top: 0%;
-        background-color: orange;
-        color: black;
-    }
-
-    49%,
-    69% {
-        background-color: orange;
-        color: black;
-    }
-
-    50% {
-        top: 83%;
-        background-color: purple;
-        color: white;
-    }
-
-    59% {
-        background-color: purple;
-        color: white;
-    }
-}
-
-@keyframes hor-movement {
-
-    0%,
-    100% {
-        left: 0%;
-        background-color: purple;
-        color: white;
-    }
-
-    0%,
-    9%,
-    100% {
-        background-color: purple;
-        color: white;
-    }
-
-    10%,
-    90% {
-        left: 68%;
-        background-color: orange;
-        color: black;
-    }
-
-    19%,
-    99% {
-        background-color: orange;
-        color: black;
-    }
-
-    20%,
-    80% {
-        left: 0%;
-        background-color: yellow;
-        color: black;
-    }
-
-    29%,
-    89% {
-        background-color: yellow;
-    }
-
-    30%,
-    70% {
-        left: 68%;
-        background-color: green;
-        color: white;
-    }
-
-    39%,
-    79% {
-        background-color: green;
-        color: white;
-    }
-
-    40%,
-    60% {
-        left: 0%;
-        background-color: blue;
-        color: white;
-    }
-
-    49%,
-    69% {
-        background-color: blue;
-        color: white;
-    }
-
-    50% {
-        left: 68%;
-        background-color: red;
-        color: white;
-    }
-
-    59% {
-        background-color: red;
-        color: white;
-    }
-}
-
-.movimiento {
-    position: absolute;
-    /*animation: cambioColor 5s infinite;
-    -webkit-animation: dvd-movement 15.705s infinite alternate;
-    -moz-animation: cambioColor 5s infinite;
-    -o-animation: cambioColor 5s infinite;
-    -ms-animation: cambioColor 5s infinite; */
-    animation-name: hor-movement, ver-movement;
-    -webkit-animation-name: hor-movement, ver-movement;
-    -moz-animation-name: hor-movement, ver-movement;
-    -o-animation-name: hor-movement, ver-movement;
-    -ms-animation-name: hor-movement, ver-movement;
-    animation-duration: 31.41s, 14.14s;
-    /*animation-duration: 3.141s, 1.414s; */
-    -webkit-animation-duration: 31.41s, 14.14s;
-    -moz-animation-duration: 31.41s, 14.14s;
-    -o-animation-duration: 31.41s, 14.14s;
-    -ms-animation-duration: 31.41s, 14.14s;
-    animation-iteration-count: infinite, infinite;
-    -webkit-animation-iteration-count: infinite, infinite;
-    -moz-animation-iteration-count: infinite, infinite;
-    -o-animation-iteration-count: infinite, infinite;
-    -ms-animation-iteration-count: infinite, infinite;
-    animation-direction: alternate, alternate;
-    -webkit-animation-direction: alternate, alternate;
-    -moz-animation-direction: alternate, alternate;
-    -o-animation-direction: alternate, alternate;
-    -ms-animation-direction: alternate, alternate;
-    animation-timing-function: linear, linear;
-    -webkit-animation-timing-function: linear, linear;
-    -moz-animation-timing-function: linear, linear;
-    -o-animation-timing-function: linear, linear;
-    -ms-animation-timing-function: linear, linear;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-
-@keyframes cambioColor {
-    0% {
-        background-color: black;
-    }
-
-    25% {
-        background-color: darkslategray;
-    }
-
-    50% {
-        background-color: grey;
-    }
-
-    75% {
-        background-color: darkgrey;
-    }
-
-    100% {
-        background-color: rgb(199, 199, 199);
-    }
-}
-
-.movimiento:hover,
-.movimiento:focus {
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transition: transform 0.3s ease-in-out;
-    -webkit-transition: transform 0.3s ease-in-out;
-    -moz-transition: transform 0.3s ease-in-out;
-    -ms-transition: transform 0.3s ease-in-out;
-    -o-transition: transform 0.3s ease-in-out;
-    animation-play-state: paused;
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -o-animation-play-state: paused;
-    -ms-animation-play-state: paused;
 }
 
 /* Sección de información: */
