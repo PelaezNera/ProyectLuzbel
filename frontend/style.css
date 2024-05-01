@@ -788,6 +788,7 @@ span[class="fondo"] {
     margin-top: 100px;
     width: 600px;
     height: 400px;
+    margin-left: 10px;
 }
 
 /* Sección de noticias: */
@@ -921,13 +922,10 @@ pre {
 /* Footer (pie de pagina): */
 
 footer {
-    position: fixed;
+    position: absolute;
     background-color: var(--color-headfoot);
     width: 100%;
     padding: 0 10px;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
