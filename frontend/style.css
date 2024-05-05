@@ -161,7 +161,7 @@ p {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 }
 
 :root {
@@ -681,19 +681,20 @@ span[class="fondo"] {
 .descarga button {
     display: flexbox;
     position: relative;
-    background-color: rgb(255, 0, 0);
-    border: 0.1px black solid;
+    background-color: rgb(184, 189, 255);
+    border: 2px rgb(111, 123, 255) solid;
     display: flex;
     position: relative;
     font-size: 40px;
     padding: 10px;
-    color: rgb(131, 131, 131);
+    color: rgb(255, 255, 255);
     margin-top: 10px;
     text-align: center;
     justify-self: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+    border-radius: 10px;
 }
 
 .descarga button:hover,
