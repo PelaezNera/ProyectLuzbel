@@ -8,9 +8,9 @@
 /* COLORES */
 
 :root {
-    --color-1: #9226ad;
+    --color-1: #55006a;
     --color-2: #25d366;
-    --color-3: #8a0081;
+    --color-3: #4a0045;
     --color-4: #1877f2;
     --color-5: #1877f2;
     --color-6: #1877f2;
@@ -36,6 +36,9 @@ header {
     background-color: var(--color-1);
     display: flex;
     justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .nav-header h1, a {
