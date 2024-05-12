@@ -5,26 +5,85 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* COLORES */
+
+:root {
+    --color-1: #9226ad;
+    --color-2: #25d366;
+    --color-3: #8a0081;
+    --color-4: #1877f2;
+    --color-5: #1877f2;
+    --color-6: #1877f2;
+    --color-7: #1877f2;
+    --color-8: #1877f2;
+    --color-9: #1877f2;
+}
+
+
+/* HEADER */
+
 header img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
 
+header {
+    box-shadow: 0 10px 60px #ca6be1;
+}
+
 .nav-header {
-    background-color: rgb(255, 0, 255);
+    background-color: var(--color-1);
     display: flex;
     justify-content: space-evenly;
-    box-shadow: 0 10px 10px rgba(218, 79, 184, 0.5);
 }
 
 .nav-header h1, a {
-    padding: 10px;
+    padding: 1rem;
+    transition: .5s;
+}
+
+.nav-header h1:hover {
+    color: rgb(252, 169, 255);
+    transform: scale(1.1);
+    transition: .5s;
 }
 
 .nav-header a {
-    color: white;
+    color: whitesmoke;
     text-decoration: none;
+    padding: 1rem;
+    margin-top: .3rem;
+}
+
+.nav-header a:hover {
+    color: white;
+    transition: 0.25s;
+    transform: scale(1.1);
+}
+
+.main-inicio {
+    text-align: center;
+    height: 700px;
+    background-color: var(--color-3);
+}
+
+.main-inicio p, button {
+    margin-top: 140px;
+}
+
+.main-inicio button {
+    background-color: var(--color-1);
+    color: white;
+    border: 3px solid white;
+    border-radius: 10px;
     padding: 10px;
-    margin-top: 5px;
+    font-size: 30px;
+    position: relative;
+    bottom: 90px;
+}
+
+.main-inicio button a {
+    text-decoration: none;
+    color: white;
 }
