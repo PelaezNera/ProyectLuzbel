@@ -5,9 +5,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 /* COLORES */
 
 :root {
+    --bg: #171717;
+    --text-color: #fff;
+    --accent: rgb(255, 255, 255);
     --color-1: #55006a;
     --color-2: #25d366;
     --color-3: #4a0045;
@@ -77,36 +81,54 @@ header {
     top: 5.6rem;
     font-size: 35px;
     color: var(--color-4);
+    transition: .3s;
+}
+
+.main-inicio h1:hover {
+    color: #edf2f9;
+    transition: .4s;
 }
 
 .main-inicio p {
     font-size: 20px;
     color: white;
-}
-
-.main-inicio p, button {
     margin-top: 100px;
 }
 
-
-
-.main-inicio button {
-    background-color: var(--color-6);
-    border: 3px solid white;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 30px;
-    position: relative;
-    bottom: 30px;
-    transition: .4s;
-}
-
-.main-inicio button:hover {
-    background-color: rgb(161, 254, 252);
-    transition: 0.25s;
-}
-
-.main-inicio button a {
+.button {
+    display: inline-block;
+    max-width: 20rem;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
     text-decoration: none;
-    color: white;
+    position: relative;
+}
+
+.shape {
+    fill: transparent;
+    stroke: var(--accent);
+    stroke-dasharray: 120 500;
+    stroke-dashoffset: -454;
+    stroke-width: 8px;
+    transition:
+    stroke-width 0.9s,
+    stroke-dashoffset 0.9s,
+    stroke-dasharray 0.9s;
+}
+
+.text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0.3rem;
+    color: var(--text-color);
+    top: -3rem;
+    position: relative;
+    pointer-events: none;
+}
+
+.shape:hover {
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
 }
