@@ -5,6 +5,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 
 /* COLORES */
 
@@ -133,3 +140,28 @@ header {
     stroke-dasharray: 760;
 }
 
+
+.main-info {
+    background-color: #55006a;
+    position: relative;
+    top: 230px;
+}
+
+.main-info h2 {
+    margin-top: 100px;
+}
+
+.main-info img {
+    width: 100px;
+    height: 100px;
+}
+
+.main-info p {
+    position: relative;
+    bottom: 50px;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
