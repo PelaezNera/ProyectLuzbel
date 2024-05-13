@@ -73,8 +73,115 @@ header {
 
 .nav-header a:hover {
     color: white;
-    transition: 0.25s;
-    transform: scale(1.1);
+}
+
+.header-main a:visited {
+    text-decoration: none;
+    color: rgb(197, 197, 197);
+}
+
+.header-main button:not(.switch) {
+    padding: 10px 20px;
+    border: hidden;
+    border-radius: 0;
+    background-color: var(--color-headfoot);
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.header-main button:link:not(.switch) {
+    background-color: rgb(184, 184, 184);
+    color: bisque;
+}
+
+.header-main button:visited:not(.switch) {
+    background-color: rgb(104, 104, 104);
+    color: rgb(255, 218, 173);
+}
+
+.header-main button:focus:not(.switch) {
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.header-main button:hover:not(.switch) {
+    background-color: rgb(86, 3, 93);
+    color: rgb(225, 225, 225);
+    border-radius: 0.9rem;
+    transition: 0.5s ease;
+    -webkit-border-radius: 0.9rem;
+    -ms-border-radius: 0.9rem;
+    -o-border-radius: 0.9rem;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.header-main button:active:not(.switch) {
+    background-color: rgb(255, 123, 0);
+    color: rgb(119, 37, 23);
+    border-radius: 2rem;
+    transition: 0.5s ease;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.header-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    list-style: none;
+}
+
+.header-main ul li ul {
+    display: none;
+}
+
+.desplegable-noticias {
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    width: fit-content;
+}
+
+.desplegable-menu {
+    z-index: 1;
+    box-sizing: border-box;
+    display: hidden;
+    position: absolute;
+    top: 100%;
+    background-color: rgba(232, 236, 212, 0.8);
+    padding: 1px;
+    margin: 0px;
+    padding-left: 0%;
+    padding-right: 0%;
+    box-shadow: green 5px;
+    list-style: none;
+}
+
+.desplegable-menu button:not(.switch) {
+    width: 140px;
 }
 
 .main-inicio {
