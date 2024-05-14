@@ -6,9 +6,10 @@
 }
 
 :root {
-    --principal-color: #7797ff;
-    --secudario-color: #c565f1;
+    --principal-color: rgba(119, 151, 255, 0.753);
+    --secudario-color: rgba(197, 101, 241, 0.753);
     --fondo-color: #867af0; 
+    --blaco: rgb(237, 197, 255);
   }
   
 
@@ -38,27 +39,11 @@ h3{
 }
 
 .signIn{
-    background-color: rgba(155, 140, 241, 0.692);
+    background-color: rgba(155, 140, 241, 0.753);
     border: 0.2rem solid black;
     position: relative;
 }
 
-@media (max-width: 600px) {
-    body{
-        background-image: none;
-        background-color: var(--fondo-color);
-    }
-
-    .signUp{
-        background-color: var(--principal-color);
-        border: 0.2rem solid black;
-    }
-    
-    .signIn{
-        background-color: var(--secudario-color);
-        border: 0.2rem solid black;
-    }
-}
 
 form{
     text-align: center;
@@ -75,6 +60,8 @@ input{
     padding: 0.5rem;
     border: none;
     border-radius: 1rem;
+    font-size: 1.6rem;
+    width: 18rem;
 }
 
 .form2{
@@ -90,4 +77,26 @@ input{
     background-color: #ee6a4a;
     font-size: 1.5rem;
     transition: 1s;
+}
+
+@media (max-width: 600px) {
+    body{
+        background-image: linear-gradient(to top, var(--fondo-color) 0%, var(--blaco) 100%);
+        height: 46rem;
+    }
+
+    .signUp{
+        background-color: var(--principal-color);
+        border: 0.2rem solid black;
+    }
+    
+    .signIn{
+        background-color: var(--secudario-color);
+        border: 0.2rem solid black;
+    }
+
+    input{
+        width: 10rem;
+        font-size: 1rem;
+    }
 }

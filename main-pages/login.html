@@ -5,24 +5,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="../normalize.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
             <h3>Registrate o inicia sesion</h3>
 
             <div class="form">
-                <form class="signUp">
+                <form class="signUp" action="logear.php" method="post">
                     <p>Crear cuenta</p><br>
-                    <input class="w100" type="email" placeholder="Inserta tu email" reqired autocomplete='off' /><br><br>
-                    <input type="text" placeholder="Ingresa un usuario" required><br><br>
-                    <input type="password" placeholder="Inserta tu contraseña" reqired /><br><br>
-                    <input type="password" placeholder="Verifica tu contraseña" reqired /><br><br>
+                    <input class="w100" name="email" type="email" placeholder="Inserta tu email" reqired autocomplete='off' /><br><br>
+                    <input type="text" name="user" placeholder="Ingresa un usuario" required><br><br>
+                    <input type="password" name="pass" placeholder="Inserta tu contraseña" reqired /><br><br>
+                    <input type="password" name="verify_pass" placeholder="Verifica tu contraseña" reqired /><br><br>
                     <input class="form-btn dx" type="submit" value="Crear cuenta"/>
                 </form>
-                <form class="signIn">
+                <form class="signIn" action="login.php" method="post">
                     <p class="form2">Iniciar sesion</p><br>
-                    <input type="email" placeholder="Inserta tu email" autocomplete='off' class="form2" reqired /><br><br>
-                    <input type="password" placeholder="Inserta tu contraseña" class="form2" reqired /><br><br>
+                    <input type="email" name="email" placeholder="Inserta tu email" autocomplete='off' class="form2" reqired /><br><br>
+                    <input type="password" name="pass" placeholder="Inserta tu contraseña" class="form2" reqired /><br><br>
                     <input class="form-btn dx form2" type="submit" value="Iniciar sesion"/>
                 </form>
             </div>
