@@ -39,10 +39,6 @@ header img {
     border-radius: 50%;
 }
 
-header {
-    box-shadow: 0 10px 60px #ca6be1;
-}
-
 .nav-header {
     background-color: var(--color-1);
     display: flex;
@@ -51,30 +47,32 @@ header {
     position: fixed;
     width: 100%;
     height: auto;
+    top: 0rem;
 }
 
 .nav-header h1, a {
-    padding: 1rem;
-    transition: .5s;
+    padding: 0.3rem;
 }
 
 .nav-header h1:hover {
     color: rgb(252, 169, 255);
     transform: scale(1.1);
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .nav-header a {
     color: whitesmoke;
     text-decoration: none;
-    padding: 1rem;
-    margin-top: .3rem;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    position: relative;
+    top: 1.5rem;
 }
 
 .nav-header a:hover {
     color: white;
     transform: scale(1.1);
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .main-inicio {
