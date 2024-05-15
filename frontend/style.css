@@ -7,10 +7,13 @@
 
 html {
     box-sizing: border-box;
-  }
-  *, *:before, *:after {
+}
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
+}
 
 
 /* COLORES */
@@ -50,7 +53,8 @@ header img {
     top: 0rem;
 }
 
-.nav-header h1, a {
+.nav-header h1,
+a {
     padding: 1rem;
     transition: .5s;
 }
@@ -117,9 +121,9 @@ header img {
     stroke-dashoffset: -454;
     stroke-width: 8px;
     transition:
-    stroke-width 0.9s,
-    stroke-dashoffset 0.9s,
-    stroke-dasharray 0.9s;
+        stroke-width 0.9s,
+        stroke-dashoffset 0.9s,
+        stroke-dasharray 0.9s;
 }
 
 .text {
@@ -143,6 +147,43 @@ header img {
     background-color: #55006a;
     position: relative;
     top: 230px;
+    width: 100%;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.info {
+    display: grid;
+    gap: 1rem;
+    padding: 0 10px;
+}
+
+@media (min-width: 40em) {
+    .info {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+        row-gap: 0rem;
+        grid-auto-row: 50%;
+    }
+
+    .info_cajas {
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+@media (min-width: 60em) {
+    .info {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 0;
+        row-gap: 0;
+        gap: 0;
+    }
+
+    .info_cajas {
+        padding: 0px;
+        margin: 0px;
+    }
 }
 
 .main-info h2 {
@@ -150,16 +191,12 @@ header img {
 }
 
 .main-info img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 .main-info p {
     position: relative;
     bottom: 50px;
-}
-
-.info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
 }
