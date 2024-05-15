@@ -39,10 +39,6 @@ header img {
     border-radius: 50%;
 }
 
-header {
-    box-shadow: 0 10px 60px #ca6be1;
-}
-
 .nav-header {
     background-color: var(--color-1);
     display: flex;
@@ -54,7 +50,6 @@ header {
 }
 
 .nav-header h1, a {
-    padding: 1rem;
     transition: .5s;
 }
 
@@ -79,7 +74,6 @@ header {
 
 .main-inicio {
     text-align: center;
-    height: 700px;
     background-color: var(--color-3);
 }
 
