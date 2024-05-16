@@ -144,6 +144,7 @@ a {
 }
 
 
+
 .main-info {
     background-color: #55006a;
     color: #ffffff;
@@ -153,51 +154,47 @@ a {
 .main-info img {
     width: 150px;
     height: 150px;
-    align-items: center;
+}
+
+.main-info p {
+    position: relative;
+    bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .info {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 10px 10px;
-    width: 100%;
+    padding: 0 10px;
+    padding-top: 80px;
+    padding-bottom: 60px;
 }
 
-.main-info h2 {
-    margin-top: 100px;
-    text-align: center;
+.info {
+    grid-template-columns: none;
+    gap: 0;
 }
-
-.main-info p {
-    margin-top: 10px;
-    text-align: center;
-}
-
 
 @media (min-width: 40rem) {
     .info {
         grid-template-columns: repeat(2fr, 1fr);
         column-gap: 1rem;
-        row-gap: 0rem;
-        grid-auto-rows: 50%;
+        row-gap: 0;
     }
 
-    .info_cajas {
-        padding: 0px;
-        margin: 0px;
+    .main-info p {
+        bottom: 25px;
+        margin-bottom: 25px;
     }
 }
 
 @media (min-width: 60rem) {
     .info {
-        grid-template-columns: repeat(4fr, 1fr);
-        column-gap: 0;
-        row-gap: 0;
-        gap: 0;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
     }
 
-    .info_cajas {
-        padding: 0px;
-        margin: 0px;
+    .main-info p {
+        bottom: 0;
+        margin-bottom: 0;
     }
 }
