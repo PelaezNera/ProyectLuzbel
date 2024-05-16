@@ -1,1 +1,4 @@
-//general php script
+<!-- general php page -->
+<?php
+// general php script
+?>
