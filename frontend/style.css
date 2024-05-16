@@ -83,6 +83,7 @@ a {
 .main-inicio {
     text-align: center;
     background-color: var(--color-3);
+    height: 700px;
 }
 
 .main-inicio h1 {
@@ -145,25 +146,40 @@ a {
 
 .main-info {
     background-color: #55006a;
-    position: relative;
-    top: 230px;
-    width: 100%;
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
 }
 
-.info {
-    display: grid;
-    gap: 1rem;
-    padding: 0 10px;
+.main-info img {
+    width: 150px;
+    height: 150px;
+    align-items: center;
 }
 
-@media (min-width: 40em) {
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+.main-info h2 {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.main-info p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+@media (min-width: 40rem) {
     .info {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2fr, 1fr);
         column-gap: 1rem;
         row-gap: 0rem;
-        grid-auto-row: 50%;
+        grid-auto-rows: 50%;
     }
 
     .info_cajas {
@@ -172,9 +188,9 @@ a {
     }
 }
 
-@media (min-width: 60em) {
+@media (min-width: 60rem) {
     .info {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4fr, 1fr);
         column-gap: 0;
         row-gap: 0;
         gap: 0;
@@ -184,25 +200,4 @@ a {
         padding: 0px;
         margin: 0px;
     }
-}
-
-.main-info h2 {
-    margin-top: 100px;
-}
-
-.main-info img {
-    width: 150px;
-    height: 150px;
-}
-
-.main-info p {
-    position: relative;
-    bottom: 50px;
-    margin-bottom: 50px;
-}
-
-.info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
 }
