@@ -32,7 +32,7 @@ if (mysqli_num_rows($admin) > 0) {
     $_SESSION['email'] = $email;
     $_SESSION['usuario'] = $usuario;
 
-    header("Location: ../pagina.html");
+    header("Location: ../pagina.php");
 } else {
     echo "<script>window.alert('Error de autenticacion'); window.history.go(-1);</script>";
 }
