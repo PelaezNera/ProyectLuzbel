@@ -1,1 +1,9 @@
+CREATE DATABASE juego
 
+CREATE TABLE usuarios(
+    id_usuarios INT(5) PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(100) NOT NULL,
+    usuario VARCHAR(50) NOT NULL,
+    pass VARCHAR(20) NOT NULL,
+    tipo VARCHAR(10) NOT NULL
+)
