@@ -1,4 +1,14 @@
-<!-- Cuando la pagina ya este completa le podemos poner index.html -->
+<?php
+include 'main-pages/conexion.php';
+
+session_start();
+$var_session = $_SESSION['usuario'];
+if ($var_session == null || $var_session == " ") {
+    echo "<script>window.alert('No tienes autorizacion para ingresar'); window.location.href = './main-pages/login.html'</script>";
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,43 +23,21 @@
 <body>
 
   <header>
-
     <nav class="nav-header">
-
       <img src="img/logotest.png" alt="">
-
       <h1>
-
         Hallucination Studios
-
       </h1>
-
-    <li class="submenu-minwht"><div class="subwht">|||</div>
-
-        <ul><a href="#Inicio">Inicio</a></ul>
-        <ul><a href="#Info">Information</a></ul>
-        <ul><a href="#Noticias">Noticias</a></ul>
-        <ul><a href="#User">Usuario</a></ul>
-    </li>
-      <div class="resumen-header">
-
       <a href="#Inicio">Inicio</a>
       <a href="#Info">Information</a>
       <a href="#Noticias">Noticias</a>
       <a href="#User">Usuario</a>
-
-      </div>
+      <a href="backend/cerrar_sesion.php">Cerrar sesion</a>
     </nav>
   </header>
 
   <main class="main-inicio" id="Inicio">
-
-    <div class="url-inicio">
-
     <section id="inicio">
-
-
-
       <h1>Unheaven</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores dignissimos quis aperiam eaque quod cumque
         officia sunt magni sapiente impedit porro, iste consectetur quasi velit nostrum molestiae repellat deleniti ut.
@@ -64,9 +52,6 @@
         </svg>
       </a>
     </section>
-
-    </div>
-
     </main>
     <hr class="divisor">
     <section class="info" id="Info">

@@ -5,6 +5,7 @@ $email = $_REQUEST["email"];
 $user = $_REQUEST["user"];
 $pass = $_REQUEST["pass"];
 $verify_pass = $_REQUEST["verify_pass"];
+$tipo = "user";
 
 session_start();
 $_SESSION['usuario'] = $user;
@@ -23,7 +24,7 @@ if (mysqli_num_rows($verificar) > 0) {
 
 $resultado = mysqli_query($conexion,$insertar);
 if ($resultado) {
-    echo "<script>alert('El usuario $user se a registrado con exito'); window.location.href = '../pagina.html'</script>";
+    echo "<script>alert('El usuario $user se a registrado con exito'); window.location.href = '../pagina.php'</script>";
 } else {
     echo "<script>alert('Problema al insertar el usuario por favor intente otra vez'); window.location.href = 'login.html'</script>";
 }
