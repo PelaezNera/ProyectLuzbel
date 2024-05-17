@@ -52,9 +52,22 @@ header img {
     top: 0rem;
 }
 
-@media (max-width: 692px){
+.submenu-minwht{
+    display: none;
+}
 
-    .nav-header {
+.subwht{
+font-size:45px ;
+}
+
+@media (max-width: 706px){
+
+ul {
+    font-size: 20px;
+    background-color:rgba(152, 24, 137, 0.5) ;
+}    
+
+.nav-header {
         background-color: var(--color-2);
         display: flex;
         justify-content: space-evenly;
@@ -64,7 +77,20 @@ header img {
         height: 60px;
         top: 0rem;
     }
+   
+ .submenu-minwht:hover{
+        display: block;
+        list-style-type: none;
+        list-style: none;
+    }
+    
+.resumen-header{
+    display: none;
+}
 
+.submenu-minwht:hover{
+    display: block;
+ } 
     
 .main-inicio h1 {
     position: relative;
@@ -144,10 +170,6 @@ a {
     background-size: cover;
     border: solid 20px var(--color-1);
     height: 700px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
 }
 
 .main-inicio h1 {
