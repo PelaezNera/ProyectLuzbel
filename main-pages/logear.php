@@ -5,6 +5,7 @@ $email = $_REQUEST["email"];
 $user = $_REQUEST["user"];
 $pass = $_REQUEST["pass"];
 $verify_pass = $_REQUEST["verify_pass"];
+$tipo = "user";
 
 session_start();
 $_SESSION['usuario'] = $user;
