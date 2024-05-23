@@ -48,7 +48,9 @@ h3{
 form{
     text-align: center;
     font-size: 1.8rem;
-    padding: 1rem;
+    padding: 3rem;
+    position: relative;
+    top: 3.5rem;
 }
 
 .form{
@@ -57,10 +59,10 @@ form{
 }
 
 input{
-    padding: 0.5rem;
+    padding: 0.7rem;
     border: none;
     border-radius: 1rem;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     width: 18rem;
     text-transform: capitalize;
 }
@@ -100,4 +102,9 @@ input{
         width: 10rem;
         font-size: 1rem;
     }
+}
+
+.error{
+    display: none;
+    color: red;
 }
