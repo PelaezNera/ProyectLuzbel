@@ -1,0 +1,313 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* COLORES */
+
+:root {
+    --bg: #171717;
+    --text-color: #fff;
+    --accent: rgb(255, 255, 255);
+    --color-1: #55006a;
+    --color-2: #25d366;
+    --color-3: #4a0045;
+    --color-4: #a2caff;
+    --color-5: #1877f2;
+    --color-6: #009488;
+    --color-7: #1877f2;
+    --color-8: #1877f2;
+    --color-9: #1877f2;
+    --color-10: rgb(5, 0, 0);
+}
+
+/* HEADER */
+
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.nav-header {
+    background-color: var(--color-10);
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0rem;
+}
+
+.submenu-minwht{
+    display: none;
+}
+
+.subwht{
+font-size:45px ;
+}
+
+@media (max-width: 706px){
+
+ul {
+    font-size: 20px;
+    background-color:rgba(152, 24, 137, 0.5) ;
+}    
+
+.nav-header {
+        background-color: var(--color-2);
+        display: flex;
+        justify-content: space-evenly;
+        z-index: 3;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        top: 0rem;
+    }
+   
+ .submenu-minwht:hover{
+        display: block;
+        list-style-type: none;
+        list-style: none;
+    }
+    
+.resumen-header{
+    display: none;
+}
+
+.submenu-minwht:hover{
+    display: block;
+ } 
+    
+.main-inicio h1 {
+    position: relative;
+    top: 5.6rem;
+    font-size: 20px;
+    color: var(--color-4);
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.main-inicio h1:hover {
+    color: #edf2f9;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+}
+
+h1{
+    color: white;
+}
+.nav-header h1,
+a {
+    position: relative;
+    bottom: 10px;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.nav-header h1:hover {
+    color: rgb(252, 169, 255);
+    transform: scale(1.1);
+    transition: 0.5s;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.nav-header a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 0.5rem;
+    position: relative;
+    top: .8rem;
+}
+
+.nav-header a:hover {
+    color: white;
+    transform: scale(1.1);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.main-inicio {
+    text-align: center;
+    background-color: var(--color-3);
+    background-image: url(../img/cielo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid 20px var(--color-1);
+    height: 700px;
+}
+
+.main-inicio h1 {
+    position: relative;
+    top: 5.6rem;
+    font-size: 35px;
+    color: var(--color-4);
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.main-inicio h1:hover {
+    color: #edf2f9;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.main-inicio p {
+    font-size: 20px;
+    color: white;
+    margin-top: 100px;
+}
+
+.button {
+    display: inline-block;
+    max-width: 20rem;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+}
+
+.shape {
+    fill: transparent;
+    stroke: var(--accent);
+    stroke-dasharray: 120 500;
+    stroke-dashoffset: -454;
+    stroke-width: 8px;
+    transition:
+        stroke-width 0.9s,
+        stroke-dashoffset 0.9s,
+        stroke-dasharray 0.9s;
+}
+
+.text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0.3rem;
+    color: var(--text-color);
+    top: -3rem;
+    position: relative;
+    pointer-events: none;
+}
+
+.shape:hover {
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+}
+
+
+/* DIVISOR */
+
+.divisor {
+    width: 100%;
+    height: 5px;
+    border: none;
+    background-color: var(--color-2);
+}
+
+/* MAIN INFO */
+
+.info {
+    background-color: var(--color-9);
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 1200px;
+    gap: 1.5rem;
+    padding-top: 6rem;
+}
+
+.articles article {
+    max-width: 20rem;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: rgba(247, 153, 240, 0.2) 0px 7px 29px 0px;
+}
+
+.articles article h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease-out;
+}
+
+
+.articles article img {
+    max-width: 100%;
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.articles article:hover img {
+    transform: scale(1.5);
+}
+
+.article-preview {
+    padding: 1.5rem;
+    background: var(--color-1);
+}
+
+.articles figure {
+    width: 100%;
+    height: 14rem;
+    overflow: hidden;
+}
