@@ -1,4 +1,14 @@
-<!-- Cuando la pagina ya este completa le podemos poner index.html -->
+<?php
+include 'main-pages/conexion.php';
+
+session_start();
+$var_session = $_SESSION['usuario'];
+if ($var_session == null || $var_session == " ") {
+    echo "<script>window.alert('No tienes autorizacion para ingresar'); window.location.href = './main-pages/login.html'</script>";
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +32,7 @@
       <a href="#Info">Information</a>
       <a href="#Noticias">Noticias</a>
       <a href="#User">Usuario</a>
+      <a href="backend/cerrar_sesion.php">Cerrar sesion</a>
     </nav>
   </header>
 

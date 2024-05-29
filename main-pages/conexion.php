@@ -1,2 +1,3 @@
 <?php
-$conexion = mysqli_connect('localhost' ,'root','','proyecto') or die ("Error connecting");
+$conexion = mysqli_connect('localhost' ,'root','','juego') or die ("Error connecting");
+?>
