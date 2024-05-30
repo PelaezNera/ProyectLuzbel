@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -35,6 +36,10 @@ html {
 }
 
 /* HEADER */
+
+body {
+    background-color: var(--color-1);
+}
 
 header img {
     width: 60px;
@@ -252,6 +257,7 @@ a {
 
 .info {
     background-color: var(--color-1);
+    height: auto;
 }
 
 .articles {
@@ -262,6 +268,7 @@ a {
     max-width: 1200px;
     gap: 1.5rem;
     padding-top: 6rem;
+    margin-bottom: 50px;
 }
 
 .articles article {
@@ -372,7 +379,7 @@ a {
     justify-content: space-between;
 }
 
-.latest-article {
+.ToA {
     height: 2.25rem;
     padding: 0.25rem 0.75rem;
     border-radius: 0.5rem;

@@ -120,10 +120,9 @@ if ($var_session == null || $var_session == " ") {
       </article>
     </div>
     </section>
-
     <hr class="divisor">
 
-    <section class="noticias">
+    <section class="noticias" id="Noticias">
         <div class="container">
             <article class="card">
                 <div class='background'>
@@ -134,7 +133,7 @@ if ($var_session == null || $var_session == " ") {
                         <div class="card-type">
                             Noticias
                         </div>
-                        <div class="latest-article">
+                        <div class="ToA">
                             Importante
                         </div>
                     </div>
@@ -157,7 +156,7 @@ if ($var_session == null || $var_session == " ") {
                         <div class="card-type">
                             Noticias
                         </div>
-                        <div class="latest-article">
+                        <div class="ToA">
                             Ultimo Articulo
                         </div>
                     </div>
