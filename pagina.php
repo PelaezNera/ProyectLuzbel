@@ -132,28 +132,16 @@ if ($var_session == null || $var_session == " ") {
                 <div class='content'>
                     <div class="card-header">
                         <div class="card-type">
-                            Web Dev
+                            Noticias
                         </div>
                         <div class="latest-article">
-                            Latest Article
+                            Importante
                         </div>
                     </div>
                     <div class="card-content">
-                        <h2>Using Fetch API For Executing GraphQL Queries And Mutations</h2>
+                        <h2>Proyecto Luzbel</h2>
                         <p>
-                            GraphQL is a powerful tool for querying data from remote servers and my preferred way of
-                            building APIs (Application
-                            Programming Interface). For some people, it might be difficult to learn as the tutorials are
-                            usually written using tools
-                            such as Apollo or Relay. These tools are great but often suited for more complicated projects.
-                            In certain scenarios,
-                            there might be better to choose a more lightweight approach and not increase bundle size with
-                            additional libraries. In
-                            these cases, you can work directly with the tools available in the browser. In this quick
-                            tutorial, we will use fetch,
-                            commonly available in your browser. Let’s first quickly revise what fetch is and how it is
-                            usually used with REST API,
-                            then we can move to simple GraphQL queries execution.
+                           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupti quas voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!
                         </p>
                     </div>
                 </div>
@@ -162,33 +150,21 @@ if ($var_session == null || $var_session == " ") {
         <div class="container">
             <article class="card">
                 <div class='background'>
-                    <img src="img/4.jpg" alt="Fetch API GraphQL Preview">
+                    <img src="img/6.jpg" alt="Fetch API GraphQL Preview">
                 </div>
                 <div class='content'>
                     <div class="card-header">
                         <div class="card-type">
-                            Web Dev
+                            Noticias
                         </div>
                         <div class="latest-article">
-                            Latest Article
+                            Ultimo Articulo
                         </div>
                     </div>
                     <div class="card-content">
-                        <h2>Using Fetch API For Executing GraphQL Queries And Mutations</h2>
+                        <h2>Progreso en la creación de personajes</h2>
                         <p>
-                            GraphQL is a powerful tool for querying data from remote servers and my preferred way of
-                            building APIs (Application
-                            Programming Interface). For some people, it might be difficult to learn as the tutorials are
-                            usually written using tools
-                            such as Apollo or Relay. These tools are great but often suited for more complicated projects.
-                            In certain scenarios,
-                            there might be better to choose a more lightweight approach and not increase bundle size with
-                            additional libraries. In
-                            these cases, you can work directly with the tools available in the browser. In this quick
-                            tutorial, we will use fetch,
-                            commonly available in your browser. Let’s first quickly revise what fetch is and how it is
-                            usually used with REST API,
-                            then we can move to simple GraphQL queries execution.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus tenetur nesciunt molestias voluptas? Magni provident dicta fuga inventore. Praesentium delectus sint debitis, odit, quos dignissimos, deserunt voluptas enim corporis reiciendis eum. Illum sit dolore libero reprehenderit mollitia. Natus temporibus maiores delectus quae eveniet voluptatibus id voluptatum, iure dicta tempore nemo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum suscipit nobis adipisci voluptates! Repellendus voluptatem eum quo alias non quaerat.
                         </p>
                     </div>
                 </div>
