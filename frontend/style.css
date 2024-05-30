@@ -336,14 +336,17 @@ a {
     background-color: var(--sec-primary);
     cursor: pointer;
     overflow: hidden;
-    min-height: 24rem;
+    min-height: 18rem;
+    width: 500px;
     flex-direction: column;
     margin-left: 50px;
     margin-top: 50px;
+    transition: .5s;
 }
 
 .card:hover {
-    box-shadow: 0 24px 72px 0 rgba(96, 93, 255, .1);
+    box-shadow: 0 24px 72px 0 rgba(96, 93, 255, .5);
+    transition: .4s;
 }
 
 .content {
