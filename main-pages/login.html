@@ -10,21 +10,39 @@
     </head>
     <body>
             <h3>Registrate o inicia sesion</h3>
-
+    
             <div class="form">
-                <form class="signUp" action="logear.php" method="post">
-                    <p>Crear cuenta prueba</p><br>
-                    <input class="w100" name="email" type="email" placeholder="Inserta tu email" reqired autocomplete='off' /><br><br>
-                    <input type="text" name="user" placeholder="Ingresa un usuario" required><br><br>
-                    <input type="password" name="pass" placeholder="Inserta tu contraseña" reqired /><br><br>
-                    <input type="password" name="verify_pass" placeholder="Verifica tu contraseña" reqired /><br><br>
-                    <input class="form-btn dx" type="submit" value="Crear cuenta"/>
+                <form class="signUp" action="logear.php" method="post" onsubmit="return validar()">
+                    <p>Crear cuenta</p><br>
+                    <p class="error" id="error_datos">Faltan datos</p>
+
+                    <input class="w100" name="email" id="email" type="email" placeholder="Inserta tu email"><br>
+                    <div class="error" id="email_error">Correo muy corto</div><br>
+
+                    <input type="text" name="user" id="user" placeholder="Ingresa un usuario"><br>
+                    <div class="error" id="user_error">nombre de usuario muy corto</div><br>
+
+                    <input type="password" name="pass" id="pass" placeholder="Inserta tu contraseña" ><br>
+                    <div class="error" id="pass_error">contraseña muy corta</div><br>
+
+                    <input type="password" name="verify_pass" id="verify_pass" placeholder="Verifica tu contraseña" ><br><br>
+                    <div class="error" id="verify_error">contraseña muy corta</div><br>
+
+                    <input class="form-btn dx" type="submit" value="Crear cuenta">
                 </form>
                 <form class="signIn" action="login.php" method="post">
                     <p class="form2">Iniciar sesion</p><br>
-                    <input type="text" name="user" placeholder="Inserta tu usuario" class="form2" reqired /><br><br>
-                    <input type="password" name="pass" placeholder="Inserta tu contraseña" class="form2" reqired /><br><br>
-                    <input class="form-btn dx form2" type="submit" value="Iniciar sesion"/>
+                    <p class="error" id="error_datos">Faltan datos</p>
+
+                    <input type="text" name="user" id="user" placeholder="Inserta tu usuario" class="form2" reqired ><br>
+                    <div class="error" id="user_error">nombre de usuario muy corto</div><br>
+
+                    <input type="password" name="pass" id="pass" placeholder="Inserta tu contraseña" class="form2" reqired ><br>
+                    <div class="error" id="pass_error">contraseña muy corta</div><br>
+
+                    <input class="form-btn dx form2" type="submit" value="Iniciar sesion">
                 </form>
             </div>
+            <script src="validar.js"></script>
+            <script src="../sweetalert2@11.js"></script>
     </html>
