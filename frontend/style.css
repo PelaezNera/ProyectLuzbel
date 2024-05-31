@@ -16,11 +16,6 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    padding-top: 2rem;
-    overflow-x: hidden;
-}
-
 /* COLORES */
 
 :root {
@@ -43,6 +38,8 @@ body {
 
 body {
     background-color: var(--color-1);
+    padding-top: 2rem;
+    overflow-x: hidden;
 }
 
 header img {
