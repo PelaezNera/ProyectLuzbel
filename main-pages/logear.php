@@ -20,7 +20,7 @@ if ($pass != $verify_pass) {
 if (mysqli_num_rows($verificar) > 0) {
     echo "<script>alert('Ese usuario ya se encuentra registrado'); window.location.href = 'login.html'</script>";
     exit();
-} 
+}
 
 $resultado = mysqli_query($conexion,$insertar);
 if ($resultado) {
@@ -28,4 +28,3 @@ if ($resultado) {
 } else {
     echo "<script>alert('Problema al insertar el usuario por favor intente otra vez'); window.location.href = 'login.html'</script>";
 }
-

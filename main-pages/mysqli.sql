@@ -53,9 +53,10 @@ TRUNCATE TABLE `usuarios`;
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT DELAYED IGNORE INTO `usuarios` (`id_usuario`, `email`, `usuario`, `pass`, `tipo`) VALUES
+INSERT IGNORE INTO `usuarios` (`id_usuario`, `email`, `usuario`, `pass`, `tipo`) VALUES
 (1, 'fernandezjosemanuel524@gmail.com', 'Jose Manuel', '11111', 'user'),
-(2, 'marina@Basquetball.com', 'marina Grande ', '12345', 'user');
+(2, 'marina@Basquetball.com', 'marina Grande ', '12345', 'user'),
+(3, 'lujan@Music.com', 'Lujan Music', 'abcde', 'admin');
 
 
 --
@@ -77,6 +78,8 @@ TRUNCATE TABLE `pma__column_info`;
 --
 
 TRUNCATE TABLE `pma__table_uiprefs`;
+INSERT INTO `pma__table_uiprefs` (`username`, `db_name`, `table_name`, `prefs`, `last_update`) VALUES
+('root', 'juego', 'usuarios', '[]', '30-05-2024 22:15:38');
 --
 -- Truncar tablas antes de insertar `pma__tracking`
 --
