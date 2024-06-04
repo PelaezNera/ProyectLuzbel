@@ -207,15 +207,13 @@ $var_session = $_SESSION['usuario'];
                         </div>
                     </div>
                     <div class="card-content">
-                        <h2>Progreso en la creación de personajes</h2>
+                        <h2>Progreso...</h2>
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus tenetur nesciunt molestias
-                            voluptas? Magni provident dicta fuga inventore. Praesentium delectus sint debitis, odit,
-                            quos dignissimos, deserunt voluptas enim corporis reiciendis eum. Illum sit dolore libero
-                            reprehenderit mollitia. Natus temporibus maiores delectus quae eveniet voluptatibus id
-                            voluptatum, iure dicta tempore nemo? Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Earum suscipit nobis adipisci voluptates! Repellendus voluptatem eum quo alias non
-                            quaerat.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupti
+                            quas voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum
+                            facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est
+                            obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!
                         </p>
                     </div>
                 </div>
