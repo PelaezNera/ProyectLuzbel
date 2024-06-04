@@ -34,6 +34,6 @@ if (mysqli_num_rows($admin) > 0) {
 
     header("Location: ../pagina.php");
 } else {
-    echo "<script>window.alert('Error de autenticacion'); window.history.go(-1);</script>";
+    echo "<script>window.alert('Error de autentificación'); window.history.go(-1);</script>";
 }
 
