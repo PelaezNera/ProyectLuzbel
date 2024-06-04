@@ -3,10 +3,6 @@ include 'main-pages/conexion.php';
 
 session_start();
 $var_session = $_SESSION['usuario'];
-if ($var_session == null || $var_session == " ") {
-    echo "<script>window.alert('No tienes autorizacion para ingresar'); window.location.href = './main-pages/login.html'</script>";
-    die();
-}
 ?>
 
 <!DOCTYPE html>
