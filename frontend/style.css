@@ -537,3 +537,150 @@ a {
         align-items: stretch;
     }
 } */
+
+
+
+
+/*? footer containers */
+footer {
+    position: relative;
+    bottom: 0;
+    background-color: var(--color-3);
+    width: 100%;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    margin-top: 20px;
+}
+
+*::selection {
+    background: var(--primary);
+    color: var(--color-3);
+}
+
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--footer-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.footer-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+}
+
+.footer-logo-column {
+    padding-right: 10%;
+}
+
+.footer-logo {
+    margin-bottom: 1.5rem;
+    width: 14rem;
+}
+
+/*? socials */
+.social-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.social-links svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    stroke: var(--text-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.social-links svg:hover {
+    stroke: var(--color-2);
+}
+
+.social-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style-type: none;
+}
+
+/* columns with links */
+
+.link-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex-grow: 1;
+}
+
+.link-columns>div {
+    flex-grow: 1;
+    display: flex;
+    gap: 2rem;
+}
+
+.link-columns>div>section {
+    min-width: 8rem;
+    width: 50%;
+}
+
+.link-columns ul {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+.link-columns ul a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.link-columns ul a:hover {
+    color: var(--color-4);
+}
+
+.link-columns h3 {
+    color: var(--headline-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/*? Footer bottom */
+.footer-bottom {
+    margin-top: 8rem;
+    width: 100%;
+    color: var(--color-4);
+}
+
+.footer-bottom-wrapper {
+    max-width: var(--footer-width);
+    margin: 0 auto;
+    width: 100%;
+    padding: 2.5rem 1rem;
+    border-top: 1px solid var(--footer-border);
+}
