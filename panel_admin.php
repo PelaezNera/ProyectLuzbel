@@ -116,7 +116,7 @@ $var_rank = $_SESSION['tipo'];
             <div class="footer-columns">
                 <div class="footer-logo-column">
                     <a href="/" aria-label="Go to Supabase homepage" title="Go to Supabase Homepage">
-                        <img src="assets/logo.png" loading="lazy" alt="Supabase logo" class="footer-logo" width="200">
+                        <img src="img/logotest.png" loading="lazy" alt="Supabase logo" class="footer-logo" width="200">
                     </a>
                     <div class="social-wrapper">
                         <div class='social-links'>

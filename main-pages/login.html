@@ -16,16 +16,16 @@
                     <p>Crear cuenta</p><br>
                     <p class="error" id="error_datos">Faltan datos</p>
 
-                    <input class="w100" name="email" id="email" type="email" placeholder="Inserta tu email"><br>
+                    <input class="w100" name="email" id="email" type="email" placeholder="Inserta tu email" required minlength="5" maxlength="100"><br>
                     <div class="error" id="email_error">Correo muy corto</div><br>
 
-                    <input type="text" name="user" id="user" placeholder="Ingresa un usuario"><br>
+                    <input type="text" name="user" id="user" placeholder="Ingresa un usuario" required minlength="3" maxlength="20" pattern="[A-Za-z0-9 ]+"><br>
                     <div class="error" id="user_error">nombre de usuario muy corto</div><br>
 
-                    <input type="password" name="pass" id="pass" placeholder="Inserta tu contraseña" ><br>
+                    <input type="password" name="pass" id="pass" placeholder="Inserta tu contraseña" required minlength="5" maxlength="20" ><br>
                     <div class="error" id="pass_error">contraseña muy corta</div><br>
 
-                    <input type="password" name="verify_pass" id="verify_pass" placeholder="Verifica tu contraseña" ><br><br>
+                    <input type="password" name="verify_pass" id="verify_pass" placeholder="Verifica tu contraseña" required minlength="5" maxlength="20" ><br><br>
                     <div class="error" id="verify_error">contraseña muy corta</div><br>
 
                     <input class="form-btn dx" type="submit" value="Crear cuenta">
