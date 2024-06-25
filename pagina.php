@@ -273,62 +273,8 @@ $var_session = $_SESSION['usuario'];
                 </div>
             </article>
         </div>
-        <div class="container">
-            <article class="card">
-                <div class='background'>
-                    <img src="img/estatuas6.jpeg" alt="Fetch API GraphQL Preview">
-                </div>
-                <div class='content'>
-                    <div class="card-header">
-                        <div class="card-type">
-                            Noticias
-                        </div>
-                        <div class="ToA">
-                            Importante
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h2>Progreso...</h2>
-                        <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupti
-                            quas voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur
-                            adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum
-                            facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est
-                            obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!
-                        </p>
-                    </div>
-                </div>
-            </article>
-        </div>
-        <div class="container">
-            <article class="card">
-                <div class='background'>
-                    <img src="img/door-heaven2.jpg" alt="Fetch API GraphQL Preview">
-                </div>
-                <div class='content'>
-                    <div class="card-header">
-                        <div class="card-type">
-                            Noticias
-                        </div>
-                        <div class="ToA">
-                            Importante
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h2>Progreso...</h2>
-                        <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupti
-                            quas voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur
-                            adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum
-                            facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est
-                            obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!
-                        </p>
-                    </div>
-                </div>
-            </article>
-        </div>
     </section>
-
+    <hr class="divisor dvf">
     <footer>
         <div class="footer-wrapper">
             <div class="footer-columns">
