@@ -277,14 +277,23 @@ a {
     transition: all 0.4s ease-in-out;
     overflow: hidden;
     border-radius: 1rem;
-    box-shadow: rgba(247, 153, 240, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.536) 0 0 20px;
 }
 
 .articles article h2 {
     margin: 0 0 0.5rem 0;
     font-size: 1.6rem;
-    color: rgb(255, 255, 255);
+    color: rgb(227, 227, 227);
     transition: color 0.3s ease-out;
+}
+
+.articles article h2:hover {
+    color: rgb(255, 255, 255);
+    transition: .3s;
+}
+
+.articles article p {
+    color: white;
 }
 
 
