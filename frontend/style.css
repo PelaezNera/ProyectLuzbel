@@ -23,12 +23,12 @@ html {
     --text-color: #fff;
     --sec-primary: rgb(241, 241, 241);
     --accent: rgb(255, 255, 255);
-    --color-1: #55006a;
-    --color-2: #25d366;
-    --color-3: #4a0045;
-    --color-4: #a2caff;
-    --color-5: #1877f2;
-    --color-6: #009488;
+    --color-1: #10141b;
+    --color-2: #3c4047;
+    --color-3: #2d3139;
+    --color-4: #1f232a;
+    --color-5: #4a4e56;
+    --color-6: #000;
     --color-7: #1877f2;
     --color-8: #1877f2;
     --color-9: #1877f2;
@@ -131,10 +131,11 @@ a {
     -moz-transition: .5s;
     -ms-transition: .5s;
     -o-transition: .5s;
+    color: rgb(216, 216, 216);
 }
 
 .nav-header h1:hover {
-    color: rgb(252, 169, 255);
+    color: rgb(255, 255, 255);
     transform: scale(1.1);
     transition: 0.5s;
     -webkit-transform: scale(1.1);
