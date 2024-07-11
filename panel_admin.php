@@ -84,6 +84,7 @@ $var_rank = $_SESSION['tipo'];
           </div>
       </article>
       <article>
+        <a href="panel_admin/gestion_foro.php">
           <figure>
               <img src="img/foro.png" alt="Freezing Forest">
           </figure>
@@ -94,6 +95,7 @@ $var_rank = $_SESSION['tipo'];
                   <br><br><br>
               </p>
           </div>
+        </a>
       </article>
 
       <article>
