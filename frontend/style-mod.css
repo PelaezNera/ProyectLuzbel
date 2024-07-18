@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+form {
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: linear-gradient(rgb(23, 23, 23), gray);
+    width: 370px;
+    height: 600px;
+    text-align: center;
+    margin-right: 7px;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}
+
+input {
+    color: black;
+}

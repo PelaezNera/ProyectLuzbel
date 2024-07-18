@@ -1,0 +1,62 @@
+<?php
+session_start();
+
+error_reporting(0);
+$var_session = $_SESSION['email'];
+if ($var_session == null || $var_session = "") {
+    echo "<script>alert('No tiene permiso para ingresar a este sitio'); window.location='../main-pages/login.php'</script>";
+    die();
+}
+include '../main-pages/conexion.php';
+?>
+
+<?php
+$edit = $_GET['modificar'];
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar</title>
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../frontend/style-mod.css">
+    <link rel="stylesheet" href="../frontend/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"
+        integrity="sha256-4lhPGIWv8kmCP7JRGJE4IdRod2IdQEZPui6f0uICZ6w=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css"
+        integrity="sha256-h2Gkn+H33lnKlQTNntQyLXMWq7/9XI2rlPCsLsVcUBs=" crossorigin="anonymous">
+    
+</head>
+<body>
+    <h2>Actualizar Tarjeta</h2>
+    
+    <?php
+            $registros = mysqli_query($conexion,"SELECT * FROM informacion where id_noticia") or die("Error en la consulta".mysqli_error($conexion));
+            while ($row = mysqli_fetch_array($registros)) { ?>
+                <form action="actualizar_tarjeta.php" method="post">
+ 
+            <label>id_tarjeta</label><br>
+            <input type='text' name='id_tarjeta' value="<?php echo $row['id_noticia']; ?>" disabled><br><br>
+    
+            <label><img src="../img/<?php echo $row['imagen'];?>" alt='Lavender Fields'></label><br>
+            <input type='file' name='imagen' value='$row[imagen]'><br><br>
+            
+            <label>Titulo</label><br>
+            <input type='text' name='titulo' value="<?php echo $row['titulo'];?>"><br><br>
+    
+            <label>informacion</label><br>
+            <input type='text' name='informacion' value="<?php echo $row['informacion'];?>" class="txtarea"><br><br>
+
+            <input type="hidden" name="codigo" value="<?php echo $edit?>">
+      
+          <input type="submit" name="" value="Actualizar"><br><br>
+          <a href="./gestion_foro.php"><input type="button" value="Cancelar"></a>
+          </form>
+            <?php
+            }
+            ?>
+
+
+</body>
+</html>
