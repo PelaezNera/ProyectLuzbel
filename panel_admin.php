@@ -1,5 +1,5 @@
 <?php
-include 'main-pages/conexion.php';
+require_once 'main-pages/conexion.php';
 
 session_start();
 error_reporting(0);
@@ -16,9 +16,13 @@ $var_rank = $_SESSION['tipo'];
   <title>Admin</title>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="frontend/style2.css">
+  <script src="sweetalert2@11.js"></script>
 </head>
 
 <body>
+    <?php
+        include_once "panel_admin/validacion_admin.php";
+    ?>
 
   <header>
     <nav class="nav-header">
