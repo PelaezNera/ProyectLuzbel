@@ -1,9 +1,10 @@
 <?php
-include 'main-pages/conexion.php';
+require_once 'main-pages/conexion.php';
 
 session_start();
 error_reporting(0);
 $var_session = $_SESSION['usuario'];
+$var_rank = $_SESSION['tipo'];
 ?>
 
 <!DOCTYPE html>
@@ -15,64 +16,29 @@ $var_session = $_SESSION['usuario'];
     <title>Luzbel</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="frontend/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"
-        integrity="sha256-4lhPGIWv8kmCP7JRGJE4IdRod2IdQEZPui6f0uICZ6w=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css"
-        integrity="sha256-h2Gkn+H33lnKlQTNntQyLXMWq7/9XI2rlPCsLsVcUBs=" crossorigin="anonymous">
+    <script src="sweetalert2@11.js"></script>
 </head>
 
 <body>
     <?php
-    if (isset($var_session) && $var_session != NULL && $var_session != "" && $var_session != " ") {
-    echo '<script>
-        Swal.fire({
-            icon: "success",
-            title: "Bienvenido",
-            text: "Sesión iniciada con éxito 👌, Usuario/a '.$_SESSION['usuario'].' ",
-            showConfirmButton: false,
-            timer: 1500
-        });
-    </script>';
-}elseif ($var_session == NULL || $var_session = "" || $var_session == " ") {
-    echo '<script>
-    Swal.fire({
-        icon: "error",
-        title: "ERROR",
-        text: "NO HAS INICIADO SESIÓN",
-        showConfirmButton: false,
-        timer: 1500
-    }).then(function() {
-        window.location = "./backend/cerrar_sesion.php";
-    });
-</script>';
-    print 'ERROR ❌❗ <br> No tienes autorización para ingresar a este sitio <br>';
-    die('<br><a href="./backend/cerrar_sesion.php"><input type="reset" value="Vuelva al login"></a>');
-}else{
-    echo '<script>
-        Swal.fire({
-            icon: "error",
-            title: "UN RARO ERROR HA OCURRIDO",
-            text: "NO HAS INICIADO SESIÓN",
-            showConfirmButton: false,
-            timer: 1500
-        });
-    </script>';
-    print 'ERROR 401 🩻🏴‍☠️ <br> No tienes autorización para ingresar a este sitio <br>';
-    die('<br><a href="./backend/cerrar_sesion.php"><input type="reset" value="Vuelva al login"></a>');
-}
-?>
-
+        include_once 'backend/validaciones.php';
+    ?>
     <header>
         <nav class="nav-header">
             <img src="img/logotest.png" alt="">
             <h1>
                 Hallucination Studios
             </h1>
-            <a href="#Inicio">Inicio</a>
-            <a href="#Info">Information</a>
-            <a href="#Noticias">Noticias</a>
-            <a href="#User">Usuario</a>
-            <a href="backend/cerrar_sesion.php">Cerrar sesion</a>
+            <a href="#Inicio" title="Inicio">Inicio</a>
+            <a href="#Info" title="Information">Information</a>
+            <a href="#Noticias" title="Noticias">Noticias</a>
+            <a href="#User" title="Usuario">Usuario</a>
+            <a href="backend/cerrar_sesion.php" title="Cerrar sesion">Cerrar sesion</a>
+            <?php
+                if (isset($var_session) && $var_session != NULL && $var_session != "" && $var_session != " " && $var_rank != "user" && $var_rank != " " && $var_rank == "admin") {
+                    echo ('<a href="panel_admin.php" title="Panel Administrador"><b>Panel Administrador</b></a>');
+                }
+            ?>
         </nav>
     </header>
 
@@ -100,60 +66,179 @@ $var_session = $_SESSION['usuario'];
 
     <section class="info" id="Info">
         <div class="articles">
-        <?php
-            $registros = mysqli_query($conexion,"SELECT * FROM informacion") or die("Error en la consulta".mysqli_error($conexion));
-            while ($row = mysqli_fetch_array($registros)) { ?>
             <article>
                 <figure>
-                    <img src="img/<?php echo $row['imagen']?>" alt="Lavender Fields">
+                    <img src="img/6.jpg" alt="Lavender Fields">
                 </figure>
                 <div class="article-preview">
-                    <h2>
-                        <?php echo $row['titulo'] ?>
-                    </h2>
+                    <h2>La Nada</h2>
                     <p>
-                        <?php echo $row['informacion'] ?>
-
-                    </p><br>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Praesent in mauris eu tortor porttitor accumsan.
+                    </p>
                 </div>
             </article>
-            <?php } 
-            ?>
+            <article>
+                <figure>
+                    <img src="img/5.jpg" alt="Snowy Mountains">
+                </figure>
+                <div class="article-preview">
+                    <h2>El Divisor</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Praesent in mauris eu tortor porttitor accumsan.
+                    </p>
+                </div>
+            </article>
+            <article>
+                <figure>
+                    <img src="img/2.jpg" alt="Wooden Bridge">
+                </figure>
+                <div class="article-preview">
+                    <h2>El Suplente</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Praesent in mauris eu tortor porttitor accumsan.
+                    </p>
+                </div>
+            </article>
+            <article>
+                <figure>
+                    <img src="img/3.jpg" alt="Autumn Forest">
+                </figure>
+                <div class="article-preview">
+                    <h2>Common Protector</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor
+                        accumsan.
+                    </p>
+                </div>
+            </article>
+            <article>
+                <figure>
+                    <img src="img/4.jpg" alt="Freezing Forest">
+                </figure>
+                <div class="article-preview">
+                    <h2>Gate Protector</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor
+                        accumsan.
+                    </p>
+                </div>
+            </article>
         </div>
     </section>
     <hr class="divisor">
 
     <section class="noticias" id="Noticias">
-    <?php
-            $registros = mysqli_query($conexion,"SELECT * FROM noticias") or die("Error en la consulta".mysqli_error($conexion));
-            while ($row = mysqli_fetch_array($registros)) { ?>
-                <div class="container">
-                    <article class="card">
-                        <div class='background'>
-                            <img src="img/<?php echo $row['imagen']?>" alt="Fetch API GraphQL Preview">
-                        </div>
-                        <div class='content'>
-                            <div class="card-header">
-                                <div class="card-type">
-                                    Noticias
-                                </div>
-                                <div class="ToA">
-                                    Importante
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <h2><?php echo $row['titulo'] ?></h2>
-                                <p>
-                                    <?php echo $row['informacion'] ?>
-                                </p><br>
-                                <p class="noticias_modi"><a href="modificar_noticias.php?noticia=<?php echo $row['id_noticia']?>">Modificar</a></p>
-                
-                            </div>
-                        </div>
-                    </article>
+        <div class="container">
+            <article class="card">
+                <div class='background'>
+                    <img src="img/4.jpg" alt="Fetch API GraphQL Preview">
                 </div>
-    <?php } 
-    ?>
+                <div class='content'>
+                    <div class="card-header">
+                        <div class="card-type">
+                            Noticias
+                        </div>
+                        <div class="ToA">
+                            Importante
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2>Proyecto Luzbel</h2>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupti
+                            quas voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum
+                            facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est
+                            obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="container">
+            <article class="card">
+                <div class='background'>
+                    <img src="img/6.jpg" alt="Fetch API GraphQL Preview">
+                </div>
+                <div class='content'>
+                    <div class="card-header">
+                        <div class="card-type">
+                            Noticias
+                        </div>
+                        <div class="ToA">
+                            Ultimo Articulo
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2>Progreso...</h2>
+                        <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupti
+                            quas voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum
+                            facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est
+                            obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="container">
+            <article class="card">
+                <div class='background'>
+                    <img src="img/cielo1.jpeg" alt="Fetch API GraphQL Preview">
+                </div>
+                <div class='content'>
+                    <div class="card-header">
+                        <div class="card-type">
+                            Noticias
+                        </div>
+                        <div class="ToA">
+                            Importante
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2>Progreso...</h2>
+                        <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupti
+                            quas voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum
+                            facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est
+                            obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="container">
+            <article class="card">
+                <div class='background'>
+                    <img src="img/idea-arma5.jpg" alt="Fetch API GraphQL Preview">
+                </div>
+                <div class='content'>
+                    <div class="card-header">
+                        <div class="card-type">
+                            Noticias
+                        </div>
+                        <div class="ToA">
+                            Importante
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2>Progreso...</h2>
+                        <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupti
+                            quas voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum
+                            facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est
+                            obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
     </section>
     <hr class="divisor dvf">
     <footer>
