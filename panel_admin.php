@@ -34,6 +34,7 @@ $var_rank = $_SESSION['tipo'];
     <section class="info" id="Info">
     <div class="articles">
       <article>
+        <a href="panel_admin/mostrar_users.php">
           <figure>
               <img src="img/usu1.png" alt="Lavender Fields">
           </figure>
@@ -44,6 +45,7 @@ $var_rank = $_SESSION['tipo'];
                   <br><br><br><br>
               </p>
           </div>
+        </a>
       </article>
       <article>
           <figure>
