@@ -11,7 +11,8 @@ include '../main-pages/conexion.php';
 ?>
 
 <?php
-$edit = $_GET['modificar'];
+$edit = $_GET['tarjeta'];
+$registros = mysqli_query($conexion,"SELECT * FROM informacion where id_noticia = '$edit'") or die("Error en la consulta".mysqli_error($conexion));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,31 +32,30 @@ $edit = $_GET['modificar'];
 <body>
     <h2>Actualizar Tarjeta</h2>
     
+    <form action="actualizar_tarjetas.php" method="post">
     <?php
-            $registros = mysqli_query($conexion,"SELECT * FROM informacion where id_noticia") or die("Error en la consulta".mysqli_error($conexion));
-            while ($row = mysqli_fetch_array($registros)) { ?>
-                <form action="actualizar_tarjeta.php" method="post">
+            while ($row = mysqli_fetch_array($registros)) { 
  
-            <label>id_tarjeta</label><br>
-            <input type='text' name='id_tarjeta' value="<?php echo $row['id_noticia']; ?>" disabled><br><br>
-    
-            <label><img src="../img/<?php echo $row['imagen'];?>" alt='Lavender Fields'></label><br>
-            <input type='file' name='imagen' value='$row[imagen]'><br><br>
+            echo "<label>id_tarjeta</label><br>";
+            echo "<input type='text' name='id_tarjeta' value='$row[id_noticia]' disabled><br><br>";
             
-            <label>Titulo</label><br>
-            <input type='text' name='titulo' value="<?php echo $row['titulo'];?>"><br><br>
+            echo "<label><img src='../img/$row[imagen]' alt='Lavender Fields'></label><br>";
+            echo "<input type='file' name='imagen' value='$row[imagen]'><br><br>";
+            
+            echo "<label>Titulo</label><br>";
+            echo "<input type='text' name='titulo' value='$row[titulo]'><br><br>";
     
-            <label>informacion</label><br>
-            <input type='text' name='informacion' value="<?php echo $row['informacion'];?>" class="txtarea"><br><br>
-
-            <input type="hidden" name="codigo" value="<?php echo $edit?>">
+            echo "<label>informacion</label><br>";
+            echo "<input type='text' name='informacion' value='$row[informacion]' class='txtarea'><br><br>";
       
-          <input type="submit" name="" value="Actualizar"><br><br>
-          <a href="./gestion_foro.php"><input type="button" value="Cancelar"></a>
-          </form>
-            <?php
             }
             ?>
+
+            <input type="hidden" name="codigo" value="<?php echo $edit?>">
+
+            <input type="submit" name="" value="Actualizar"><br><br>
+            <a href="./gestion_foro.php"><input type="button" value="Cancelar"></a>
+          </form>
 
 
 </body>
