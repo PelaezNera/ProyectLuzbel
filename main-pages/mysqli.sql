@@ -1,71 +1,111 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
+-- version 4.1.14
+-- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-05-2024 a las 01:09:03
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 26-07-2024 a las 00:06:30
+-- Versión del servidor: 5.6.17
+-- Versión de PHP: 5.5.12
 
---
--- COMMENT 'Base de datos que usaremos para nuestro proyecto de juego y pagina'
---
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `juego`
 --
-CREATE DATABASE IF NOT EXISTS `juego` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE IF NOT EXISTS `juego` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `juego`;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `informacion`
+--
+-- Creación: 11-07-2024 a las 21:03:27
+--
+
+DROP TABLE IF EXISTS `informacion`;
+CREATE TABLE IF NOT EXISTS `informacion` (
+  `id_noticia` int(10) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(100) NOT NULL,
+  `informacion` mediumtext NOT NULL,
+  `imagen` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_noticia`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Volcado de datos para la tabla `informacion`
+--
+
+INSERT INTO `informacion` (`id_noticia`, `titulo`, `informacion`, `imagen`) VALUES
+(1, 'santiagodasda', 'Hola buenassadasd', '7.jpg'),
+(2, 'El Divisor', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan.', '5.jpg'),
+(3, 'El Suplente', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan.', '2.jpg'),
+(4, 'Common Protector', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan.', '3.jpg'),
+(5, 'Gate Protector', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan.', '4.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `noticias`
+--
+-- Creación: 18-07-2024 a las 18:48:31
+--
+
+DROP TABLE IF EXISTS `noticias`;
+CREATE TABLE IF NOT EXISTS `noticias` (
+  `id_noticia` int(5) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(100) NOT NULL,
+  `informacion` mediumtext NOT NULL,
+  `imagen` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_noticia`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Volcado de datos para la tabla `noticias`
+--
+
+INSERT INTO `noticias` (`id_noticia`, `titulo`, `informacion`, `imagen`) VALUES
+(1, 'Proyecto Luzbel', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupt voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!', '4.jpg'),
+(2, 'gereref', 'dlasdlflÃ±sdfjsdklÃ±fmsdlcvsdc', 'cielo2.jpeg'),
+(3, 'Progreso...', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupt voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!', 'cielo1.jpeg'),
+(4, 'Progreso...', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupt voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!', 'idea-arma5.jpg');
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `usuarios`
 --
--- Creación: 19-05-2024 a las 20:33:56
--- Última actualización: 30-05-2024 a las 22:15:38
+-- Creación: 17-05-2024 a las 19:04:25
 --
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id_usuario` int(5) NOT NULL AUTO_INCREMENT COMMENT 'El distintor e identificador irrepetible de cada usuario',
-  `email` varchar(100) NOT NULL COMMENT 'El correo electrónico de contacto del usuario',
-  `usuario` varchar(50) NOT NULL COMMENT 'El apodo y nombre cuenta del usuario',
-  `pass` varchar(20) NOT NULL COMMENT 'El verificador o código de ingreso de la cuenta del usuario',
-  `tipo` varchar(10) NOT NULL COMMENT 'El tipo de cuenta y Rol o Cargo del usuario dentro de la pagina, lo que definira su nivel de acceso',
-  PRIMARY KEY (`id_usuario`),
-  UNIQUE KEY `usuario` (`usuario`,`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf32 COLLATE=utf32_spanish_ci COMMENT='Tabla para guardar los datos de los usuarios';
+  `id_usuarios` int(5) NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) NOT NULL,
+  `usuario` varchar(50) NOT NULL,
+  `pass` varchar(20) NOT NULL,
+  `tipo` varchar(10) NOT NULL,
+  PRIMARY KEY (`id_usuarios`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
---
--- RELACIONES PARA LA TABLA `usuarios`:
---
-
---
--- Truncar tablas antes de insertar `usuarios`
---
-
-TRUNCATE TABLE `usuarios`;
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT IGNORE INTO `usuarios` (`id_usuario`, `email`, `usuario`, `pass`, `tipo`) VALUES
-(1, 'fernandezjosemanuel524@gmail.com', 'Jose Manuel', '11111', 'user'),
-(2, 'marina@Basquetball.com', 'marina Grande ', '12345', 'user'),
-(3, 'lujan@Music.com', 'Lujan Music', 'abcde', 'admin');
-
-
---
--- Metadatos
---
-USE `phpmyadmin`;
-
---
--- Metadatos para la tabla usuarios
---
-
+INSERT INTO `usuarios` (`id_usuarios`, `email`, `usuario`, `pass`, `tipo`) VALUES
+(1, 'juan@gmail.com', 'Rik', '123456', 'admin'),
+(2, 'juan1@gmail.com', 'rik1', '123456', 'user');
 COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

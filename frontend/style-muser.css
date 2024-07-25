@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* COLORES */
+
+:root {
+    --bg: #a5a5a5;
+    --text-color: #fff;
+    --sec-primary: rgb(241, 241, 241);
+    --accent: rgb(255, 255, 255);
+    --color-1: #ababab;
+    --color-2: #3c4047;
+    --color-3: #2d3139;
+    --color-4: #1f232a;
+    --color-5: #4a4e56;
+    --color-6: #000;
+    --color-7: #1877f2;
+    --color-8: #1877f2;
+    --color-9: #1877f2;
+}
+
+/* HEADER */
+
+body {
+    background-image: url(../img/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 2rem;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    background-color: white;
+    margin: auto;
+    width: 900px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.546);
+}
+
+td {
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+tr {
+    background-color: white;
+}
+
+.btn {
+    color: lime;
+    text-decoration: none;
+}
+
+.btn1 {
+    color: red;
+    text-decoration: none;
+}
