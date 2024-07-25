@@ -32,6 +32,7 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
 <body>
     <h2>Actualizar Tarjeta</h2>
     
+    
     <form action="actualizar_user.php" method="post">
         <?php
     while($row = mysqli_fetch_array($registros)){
@@ -48,7 +49,11 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
         echo "<input type='text' name='pass' value='$row[pass]'><br><br>";
 
         echo "<label>tipo</label><br>";
-        echo "<input type='text' name='tipo' value='$row[tipo]'><br><br>";
+        echo "<select name='tipo'>";
+        echo "<option value='#' disabled>Seleccionar user</option>";
+        echo "<option value='admin'>Administrador</option>";
+        echo "<option value='user'>Usuario</option>";
+        echo "</select><br><br><br>";
     }
     ?>
 
