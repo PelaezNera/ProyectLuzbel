@@ -1,6 +1,7 @@
 var email = document.querySelector('#email');
 var user = document.querySelector('#user');
 var pass = document.querySelector('#pass');
+var dato = document.querySelector('#dato');
 var verify_pass = document.querySelector('#verify_pass');
 
 var error_email = document.querySelector('#email_error');
@@ -8,10 +9,12 @@ var error_user = document.querySelector('#user_error');
 var error_pass = document.querySelector('#pass_error');
 var error_verify = document.querySelector('#verify_error');
 var error_datos = document.querySelector('#error_datos')
+var error_dato = document.querySelector('#error')
 
 email.addEventListener('textInput', email_Verify);
 user.addEventListener('textInput', user_Verify);
 pass.addEventListener('textInput', pass_Verify);
+dato.addEventListener('textInput', dato_Verify);
 verify_pass.addEventListener('textInput', verifyPass_Verify);
 
 function validar(){
@@ -43,6 +46,13 @@ function validar(){
         return false
     }
 
+    if (dato.value.length == 0) {
+        dato.style.border = "1px solid red";
+        error_dato.style.display = "block";
+        dato.focus();
+        return false
+    }
+
     if (email.value.length == 0 || user.value.length == 0 || pass.value.length == 0 || verify_pass.value.length == 0) {
         error_datos.style.display = "block";
         return false;
@@ -59,6 +69,19 @@ function email_Verify() {
 
     if (email.value.length == 0 || user.value.length == 0 || pass.value.length == 0 || verify_pass.value.length == 0) {
         error_datos.style.display = "none";
+        return true;
+    }
+}
+
+function dato_Verify() {
+    if (dato.value.length > 0) {
+    dato.style.border = "1px solid silver";
+    error_dato.style.display ="none";
+    return true;
+    }
+
+    if (dato.value.length == 0) {
+        error_dato.style.display = "none";
         return true;
     }
 }
