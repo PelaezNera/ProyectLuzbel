@@ -1,4 +1,4 @@
-    <?php
+<?php
 include '../main-pages/conexion.php';
 
 session_start();
@@ -20,6 +20,9 @@ $var_rank = $_SESSION['tipo'];
         integrity="sha256-h2Gkn+H33lnKlQTNntQyLXMWq7/9XI2rlPCsLsVcUBs=" crossorigin="anonymous">
 </head>
 <body>
+<?php
+        include_once "panel_admin/validacion_admin.php";
+    ?>
     <h1 class="informacion">
         Modificar Usuarios
     </h1>

@@ -32,7 +32,7 @@ $var_rank = $_SESSION['tipo'];
             <a href="#Inicio" title="Inicio">Inicio</a>
             <a href="#Info" title="Information">Information</a>
             <a href="#Noticias" title="Noticias">Noticias</a>
-            <a href="#User" title="Usuario">Usuario</a>
+            <a href="main-pages/cambio_pass.php" title="Usuario">Cambiar contraeña</a>
             <a href="backend/cerrar_sesion.php" title="Cerrar sesion">Cerrar sesion</a>
             <?php
                 if (isset($var_session) && $var_session != NULL && $var_session != "" && $var_session != " " && $var_rank != "user" && $var_rank != " " && $var_rank == "admin") {
