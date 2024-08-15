@@ -66,180 +66,59 @@ $var_rank = $_SESSION['tipo'];
 
     <section class="info" id="Info">
         <div class="articles">
+        <?php
+            $registros = mysqli_query($conexion,"SELECT * FROM informacion") or die("Error en la consulta".mysqli_error($conexion));
+            while ($row = mysqli_fetch_array($registros)) { ?>
             <article>
                 <figure>
-                    <img src="img/6.jpg" alt="Lavender Fields">
+                    <img src="img/<?php echo $row['imagen']?>" alt="Lavender Fields">
                 </figure>
                 <div class="article-preview">
-                    <h2>La Nada</h2>
+                    <h2>
+                        <?php echo $row['titulo'] ?>
+                    </h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                        Praesent in mauris eu tortor porttitor accumsan.
-                    </p>
-                </div>
+                        <?php echo $row['informacion'] ?>
+
+                    </p><br>
+                    </div>
             </article>
-            <article>
-                <figure>
-                    <img src="img/5.jpg" alt="Snowy Mountains">
-                </figure>
-                <div class="article-preview">
-                    <h2>El Divisor</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                        Praesent in mauris eu tortor porttitor accumsan.
-                    </p>
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="img/2.jpg" alt="Wooden Bridge">
-                </figure>
-                <div class="article-preview">
-                    <h2>El Suplente</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                        Praesent in mauris eu tortor porttitor accumsan.
-                    </p>
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="img/3.jpg" alt="Autumn Forest">
-                </figure>
-                <div class="article-preview">
-                    <h2>Common Protector</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor
-                        accumsan.
-                    </p>
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="img/4.jpg" alt="Freezing Forest">
-                </figure>
-                <div class="article-preview">
-                    <h2>Gate Protector</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor
-                        accumsan.
-                    </p>
-                </div>
-            </article>
+            <?php } 
+            ?>
         </div>
     </section>
     <hr class="divisor">
 
     <section class="noticias" id="Noticias">
-        <div class="container">
-            <article class="card">
-                <div class='background'>
-                    <img src="img/4.jpg" alt="Fetch API GraphQL Preview">
-                </div>
-                <div class='content'>
-                    <div class="card-header">
-                        <div class="card-type">
-                            Noticias
+    <?php
+            $registros = mysqli_query($conexion,"SELECT * FROM noticias") or die("Error en la consulta".mysqli_error($conexion));
+            while ($row = mysqli_fetch_array($registros)) { ?>
+                <div class="container">
+                    <article class="card">
+                        <div class='background'>
+                            <img src="img/<?php echo $row['imagen']?>" alt="Fetch API GraphQL Preview">
                         </div>
-                        <div class="ToA">
-                            Importante
+                        <div class='content'>
+                            <div class="card-header">
+                                <div class="card-type">
+                                    Noticias
+                                </div>
+                                <div class="ToA">
+                                    Importante
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2><?php echo $row['titulo'] ?></h2>
+                                <p>
+                                    <?php echo $row['informacion'] ?>
+                                </p><br>
+                
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-content">
-                        <h2>Proyecto Luzbel</h2>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupti
-                            quas voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur
-                            adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum
-                            facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est
-                            obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!
-                        </p>
-                    </div>
+                    </article>
                 </div>
-            </article>
-        </div>
-        <div class="container">
-            <article class="card">
-                <div class='background'>
-                    <img src="img/6.jpg" alt="Fetch API GraphQL Preview">
-                </div>
-                <div class='content'>
-                    <div class="card-header">
-                        <div class="card-type">
-                            Noticias
-                        </div>
-                        <div class="ToA">
-                            Ultimo Articulo
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h2>Progreso...</h2>
-                        <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupti
-                            quas voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur
-                            adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum
-                            facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est
-                            obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!
-                        </p>
-                    </div>
-                </div>
-            </article>
-        </div>
-        <div class="container">
-            <article class="card">
-                <div class='background'>
-                    <img src="img/cielo1.jpeg" alt="Fetch API GraphQL Preview">
-                </div>
-                <div class='content'>
-                    <div class="card-header">
-                        <div class="card-type">
-                            Noticias
-                        </div>
-                        <div class="ToA">
-                            Importante
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h2>Progreso...</h2>
-                        <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupti
-                            quas voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur
-                            adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum
-                            facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est
-                            obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!
-                        </p>
-                    </div>
-                </div>
-            </article>
-        </div>
-        <div class="container">
-            <article class="card">
-                <div class='background'>
-                    <img src="img/idea-arma5.jpg" alt="Fetch API GraphQL Preview">
-                </div>
-                <div class='content'>
-                    <div class="card-header">
-                        <div class="card-type">
-                            Noticias
-                        </div>
-                        <div class="ToA">
-                            Importante
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h2>Progreso...</h2>
-                        <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero corporis harum corrupti
-                            quas voluptatem perferendis architecto sed itaque? Lorem ipsum, dolor sit amet consectetur
-                            adipisicing elit. Inventore quisquam repellat blanditiis veniam illo aliquam? Quaerat cum
-                            facere exercitationem minus sint ea atque illum vero delectus ratione neque beatae est
-                            obcaecati eaque ex repellat fugiat consequuntur, ipsam sit harum. Iusto!
-                        </p>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
+    <?php } 
+    ?>
     <hr class="divisor dvf">
     <footer>
         <div class="footer-wrapper">
