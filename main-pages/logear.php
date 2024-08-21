@@ -7,8 +7,16 @@ $pass = $_REQUEST["pass"];
 $verify_pass = $_REQUEST["verify_pass"];
 $tipo = "user";
 
-session_start();
+if (isset($_SESSION)) {
+    session_unset();
+    session_destroy();
+    session_start();
+}
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 $_SESSION['usuario'] = $user;
+$_SESSION['tipo'] = $tipo;
 
 $insertar = "INSERT INTO usuarios(email,usuario,pass,tipo) VALUES ('$email','$user','$pass','$tipo')";
 $verificar = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$user'");

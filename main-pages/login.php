@@ -15,7 +15,14 @@ if (mysqli_num_rows($admin) > 0) {
     $pass = $fila[3];
     $tipo = $fila[4];
 
-    session_start();
+    if (isset($_SESSION)) {
+        session_unset();
+        session_destroy();
+        session_start();
+    }
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
     $_SESSION['id_usuario'] = $id;
     $_SESSION['email'] = $email;
     $_SESSION['usuario'] = $usuario;
@@ -27,13 +34,21 @@ if (mysqli_num_rows($admin) > 0) {
     $fila = mysqli_fetch_row($user);
     $email = $fila[1];
     $usuario = $fila[2];
+    $tipo = $fila[4];
 
-    session_start();
+    if (isset($_SESSION)) {
+        session_unset();
+        session_destroy();
+        session_start();
+    }
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
     $_SESSION['email'] = $email;
     $_SESSION['usuario'] = $usuario;
+    $_SESSION['tipo'] = $tipo;
 
     header("Location: ../pagina.php");
 } else {
     echo "<script>window.alert('Error de autentificación'); window.history.go(-1);</script>";
 }
-

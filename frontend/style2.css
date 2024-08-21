@@ -53,22 +53,22 @@ header img {
     top: 0rem;
 }
 
-.submenu-minwht{
+.submenu-minwht {
     display: none;
 }
 
-.subwht{
-font-size:45px ;
+.subwht {
+    font-size: 45px;
 }
 
-@media (max-width: 706px){
+@media (max-width: 706px) {
 
-ul {
-    font-size: 20px;
-    background-color:rgba(152, 24, 137, 0.5) ;
-}    
+    ul {
+        font-size: 20px;
+        background-color: rgba(152, 24, 137, 0.5);
+    }
 
-.nav-header {
+    .nav-header {
         background-color: var(--color-2);
         display: flex;
         justify-content: space-evenly;
@@ -78,47 +78,48 @@ ul {
         height: 60px;
         top: 0rem;
     }
-   
- .submenu-minwht:hover{
+
+    .submenu-minwht:hover {
         display: block;
         list-style-type: none;
         list-style: none;
     }
-    
-.resumen-header{
-    display: none;
+
+    .resumen-header {
+        display: none;
+    }
+
+    .submenu-minwht:hover {
+        display: block;
+    }
+
+    .main-inicio h1 {
+        position: relative;
+        top: 5.6rem;
+        font-size: 20px;
+        color: var(--color-4);
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+    }
+
+    .main-inicio h1:hover {
+        color: #edf2f9;
+        transition: .4s;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -ms-transition: .4s;
+        -o-transition: .4s;
+    }
+
 }
 
-.submenu-minwht:hover{
-    display: block;
- } 
-    
-.main-inicio h1 {
-    position: relative;
-    top: 5.6rem;
-    font-size: 20px;
-    color: var(--color-4);
-    transition: .3s;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
-}
-
-.main-inicio h1:hover {
-    color: #edf2f9;
-    transition: .4s;
-    -webkit-transition: .4s;
-    -moz-transition: .4s;
-    -ms-transition: .4s;
-    -o-transition: .4s;
-}
-
-}
-
-h1{
+h1 {
     color: white;
 }
+
 .nav-header h1,
 a {
     position: relative;
@@ -509,4 +510,26 @@ footer {
     width: 100%;
     padding: 2.5rem 1rem;
     border-top: 1px solid var(--footer-border);
+}
+
+
+/* Google Doc */
+main section iframe {
+    width: 80%;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    main section iframe {
+        width: 90%;
+        height: 400px;
+        padding: 10px;
+    }
 }
