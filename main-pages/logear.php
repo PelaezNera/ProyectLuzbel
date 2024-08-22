@@ -36,3 +36,5 @@ if ($resultado) {
 } else {
     echo "<script>alert('Problema al insertar el usuario por favor intente otra vez'); window.location.href = 'login.html'</script>";
 }
+
+?>
