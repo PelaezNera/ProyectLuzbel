@@ -1,5 +1,5 @@
 <?php
-require_once 'main-pages/conexion.php';
+require_once '../main-pages/conexion.php';
 
 session_start();
 error_reporting(0);
@@ -14,19 +14,19 @@ $var_rank = $_SESSION['tipo'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="frontend/style2.css">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../frontend/style2.css">
     <script src="sweetalert2@11.js"></script>
 </head>
 
 <body>
     <?php
-        include_once "panel_admin/validacion_admin.php";
+    include_once "validacion_admin.php";
     ?>
 
     <header>
         <nav class="nav-header">
-            <img src="img/logotest.png" alt="">
+            <img src="../img/logotest.png" alt="">
             <h1>
                 Hallucination Studios / Admin Panel
             </h1>
@@ -36,96 +36,20 @@ $var_rank = $_SESSION['tipo'];
     </header>
 
     <hr class="divisor">
-    <section class="info" id="Info">
-        <div class="articles">
-            <article>
-                <a href="panel_admin/mostrar_users.php">
-                    <figure>
-                        <img src="img/usu1.png" alt="Lavender Fields">
-                    </figure>
-                    <div class="article-preview">
-                        <h2>Usuarios</h2>
-                        <p>
-                            Añade, elimina y modifica los usuarios
-                            <br><br><br><br>
-                        </p>
-                    </div>
-                </a>
-            </article>
-            <article>
-                <figure>
-                    <img src="img/per1.jfif" alt="Snowy Mountains">
-                </figure>
-                <div class="article-preview">
-                    <h2> SOBRE LA COMPAÑIA </h2>
-                    <p>
-                        Actualiza informacion sobre la compañia.
-                        <br><br><br>
-                    </p>
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="img/sop1.png" alt="Wooden Bridge">
-                </figure>
-                <div class="article-preview">
-                    <h2>
-                        SOPORTE
-                    </h2>
-                    <p>
-                        Habla con el equipo de soporte
-                        <br><br><br><br>
-                    </p>
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="img/rep1.png" alt="Autumn Forest">
-                </figure>
-                <div class="article-preview">
-                    <h2> REPORTES </h2>
-                    <p>
-                        Registro de los reportes
-                        <br><br><br><br>
-                    </p>
-                </div>
-            </article>
-            <article>
-                <a href="panel_admin/gestion_foro.php">
-                    <figure>
-                        <img src="img/foro.png" alt="Freezing Forest">
-                    </figure>
-                    <div class="article-preview">
-                        <h2> GESTION FORO </h2>
-                        <p>
-                            Modificar y anunciar noticias en el foro
-                            <br><br><br>
-                        </p>
-                    </div>
-                </a>
-            </article>
-
-            <article>
-                <figure>
-                    <img style="font-size:100px;" src="img/ser1.png" alt="Freezing Forest">
-                </figure>
-                <div class="article-preview">
-                    <h2> SEGURIDAD </h2>
-                    <p>
-                        Administrar la seguridad
-                        <br><br><br><br>
-                    </p>
-                </div>
-            </article>
-        </div>
-    </section>
+    <main>
+        <section>
+            <iframe
+                src="https://docs.google.com/document/d/171OKLPLnZ5PftWva5NW00o0pMnzwtgqPX6OjWIoCFSw/pub?embedded=true"></iframe>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-wrapper">
             <div class="footer-columns">
                 <div class="footer-logo-column">
                     <a href="/" aria-label="Go to Supabase homepage" title="Go to Supabase Homepage">
-                        <img src="img/logotest.png" loading="lazy" alt="Supabase logo" class="footer-logo" width="200">
+                        <img src="../img/logotest.png" loading="lazy" alt="Supabase logo" class="footer-logo"
+                            width="200">
                     </a>
                     <div class="social-wrapper">
                         <div class='social-links'>
@@ -191,9 +115,6 @@ $var_rank = $_SESSION['tipo'];
                         <section>
                             <h3>Product</h3>
                             <ul>
-                                <li>
-                                    <a href="pagina.php" title="User Page"><b>User Page</b></a>
-                                </li>
                                 <li>
                                     <a href="#" title="Features">Database</a>
                                 </li>
@@ -269,11 +190,6 @@ $var_rank = $_SESSION['tipo'];
                         <section>
                             <h3>Company</h3>
                             <ul>
-                                <li>
-                                    <a href="panel_admin/document.php" title="Proyecto etapa practica">
-                                        Documento Proyecto etapa practica
-                                    </a>
-                                </li>
                                 <li>
                                     <a href="#" title="Terms and services">
                                         Blog

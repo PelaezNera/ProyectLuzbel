@@ -1,3 +1,5 @@
+-- ADVERTENCIA!‼️❕❗: SI LAS LINEAS DE "DROP TABLE" VAN A QUITAR LO QUE TENGAN ANTERIORMENTE EN LA TABLA AL MOMENTO DE PEGAR Y EJECUTAR EL CODIGO. SI NO QUIERES QUE PASE ESTO ANTES DE EJECUTAR QUITALAS O COMENTALAS.
+-- Gracias por su atencion.
 -- phpMyAdmin SQL Dump
 -- version 4.1.14
 -- http://www.phpmyadmin.net
@@ -19,8 +21,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `juego`
---
+-- Base de datos para el juego
+-- COMMENT='Base de datos que contiene la información relacionada con el juego.'
 CREATE DATABASE IF NOT EXISTS `juego` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `juego`;
 
@@ -34,12 +36,12 @@ USE `juego`;
 
 DROP TABLE IF EXISTS `informacion`;
 CREATE TABLE IF NOT EXISTS `informacion` (
-  `id_noticia` int(10) NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(100) NOT NULL,
-  `informacion` mediumtext NOT NULL,
-  `imagen` varchar(100) NOT NULL,
-  PRIMARY KEY (`id_noticia`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+  `id_noticia` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Identificador único y irrepetible para cada noticia.',
+  `titulo` varchar(100) NOT NULL COMMENT 'El título de la noticia.',
+  `informacion` mediumtext NOT NULL COMMENT 'El contenido o descripción de la noticia.',
+  `imagen` varchar(100) NOT NULL COMMENT 'El nombre del archivo de la imagen asociada a la noticia.',
+  PRIMARY KEY (`id_noticia`) COMMENT 'Clave primaria de digitos que incrementan con cada noticia.'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 COMMENT='Tabla para guardar la información de las noticias que se muestran en el juego.';
 
 --
 -- Volcado de datos para la tabla `informacion`
@@ -62,12 +64,12 @@ INSERT INTO `informacion` (`id_noticia`, `titulo`, `informacion`, `imagen`) VALU
 
 DROP TABLE IF EXISTS `noticias`;
 CREATE TABLE IF NOT EXISTS `noticias` (
-  `id_noticia` int(5) NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(100) NOT NULL,
-  `informacion` mediumtext NOT NULL,
-  `imagen` varchar(100) NOT NULL,
-  PRIMARY KEY (`id_noticia`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+  `id_noticia` int(5) NOT NULL AUTO_INCREMENT COMMENT 'Identificador único para cada noticia sobre el desarrollo del juego.',
+  `titulo` varchar(100) NOT NULL COMMENT 'Título de la noticia relacionada con el desarrollo.',
+  `informacion` mediumtext NOT NULL COMMENT 'Descripción o contenido de la noticia.',
+  `imagen` varchar(100) NOT NULL COMMENT 'Nombre del archivo de la imagen asociada a la noticia.',
+  PRIMARY KEY (`id_noticia`) COMMENT 'Clave primaria de digitos que incrementan con cada noticia del juego.'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 COMMENT='Tabla para almacenar las noticias sobre el progreso y desarrollo del juego.';
 
 --
 -- Volcado de datos para la tabla `noticias`
@@ -89,13 +91,15 @@ INSERT INTO `noticias` (`id_noticia`, `titulo`, `informacion`, `imagen`) VALUES
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id_usuarios` int(5) NOT NULL AUTO_INCREMENT,
-  `email` varchar(100) NOT NULL,
-  `usuario` varchar(50) NOT NULL,
-  `pass` varchar(20) NOT NULL,
-  `tipo` varchar(10) NOT NULL,
-  PRIMARY KEY (`id_usuarios`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+  `id_usuarios` int(5) NOT NULL AUTO_INCREMENT COMMENT 'Identificador único para cada usuario registrado.',
+  `email` varchar(100) NOT NULL COMMENT 'Correo electrónico del usuario, utilizado para contacto y autenticación.',
+  `usuario` varchar(50) NOT NULL COMMENT 'Nombre de usuario o apodo que utiliza el usuario para iniciar sesión.',
+  `pass` varchar(20) NOT NULL COMMENT 'Contraseña asociada a la cuenta del usuario para autenticación.',
+  `tipo` varchar(10) NOT NULL COMMENT 'Tipo de cuenta o rol del usuario (por ejemplo, admin o user), que determina su nivel de acceso en el sistema.',
+  PRIMARY KEY (`id_usuarios`) COMMENT 'Clave primaria de digitos que incrementan con cada usuario.',
+  UNIQUE KEY `unique_email` (`email`) COMMENT 'Asegura que el correo electrónico sea único entre los usuarios.',
+  UNIQUE KEY `unique_usuario` (`usuario`) COMMENT 'Asegura que el nombre de usuario sea único entre los usuarios.'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 COMMENT='Tabla para guardar la información de los usuarios registrados en el sistema.';
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -103,7 +107,9 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 INSERT INTO `usuarios` (`id_usuarios`, `email`, `usuario`, `pass`, `tipo`) VALUES
 (1, 'juan@gmail.com', 'Rik', '123456', 'admin'),
-(2, 'juan1@gmail.com', 'rik1', '123456', 'user');
+(2, 'juan1@gmail.com', 'rik1', '123456', 'user'),
+(3, 'lujanmusic@gmail.com', 'Lujan M', '111111', 'admin'),
+(4, 'lujanmusic@hotmail.com', 'Alejandro', '111111', 'user');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
