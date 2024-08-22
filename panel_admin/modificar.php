@@ -30,6 +30,7 @@ $registros = mysqli_query($conexion,"SELECT * FROM informacion where id_noticia 
     
 </head>
 <body>
+    <center>
     <h2>Actualizar Tarjeta</h2>
     
     <form action="actualizar_tarjetas.php" method="post">
@@ -53,9 +54,10 @@ $registros = mysqli_query($conexion,"SELECT * FROM informacion where id_noticia 
 
             <input type="hidden" name="codigo" value="<?php echo $edit?>">
 
-            <input type="submit" name="" value="Actualizar"><br><br>
-            <a href="./gestion_foro.php"><input type="button" value="Cancelar"></a>
+            <input type="submit" name="" value="Actualizar" class="actu"><br><br>
+            <a href="./gestion_foro.php"><input type="button" value="Cancelar" class="cance"></a>
           </form>
+    </center>
 
 
 </body>
