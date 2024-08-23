@@ -283,6 +283,7 @@ a {
     overflow: hidden;
     border-radius: 1rem;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 7px 29px 0px;
+    background-color: var(--color-3);
 }
 
 .articles article:hover {

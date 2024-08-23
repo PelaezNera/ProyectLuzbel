@@ -30,6 +30,7 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
     
 </head>
 <body>
+    <center>
     <h2>Actualizar Tarjeta</h2>
     
     
@@ -37,18 +38,18 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
             <h1>Cambiar contraseña</h1><br>
             <label>Confirmar contraseña antigua</label>
             <input type="password" name="pass" placeholder="Ingrese su antigua contraseña" id="password"><br><br>
-            <input type="checkbox" name="" onclick="mostrar_password()">Mostrar contraseña <br><br>
-            <label>Contraseña nueva</label>
+            <input type="checkbox" name="" onclick="mostrar_password()">Mostrar contraseña<br><br>
+            <label>Contraseña nueva</label><br>
             <input type="password" name="pass1" placeholder="Ingrese su contraseña"><br><br>
             <label>Confirmar contraseña nueva</label>
             <input type="password" name="pass2" placeholder="Ingrese su contraseña"><br><br>
-            <input type="submit" value="Cambiar" class="btn">
+            <input type="submit" value="Cambiar" class="actu"><br><br>
 
             <a href="panel_user.php">
-                <input type="button" value="Cancelar" class="btn"><br>
+                <input type="button" value="Cancelar" class="cance"><br>
             </a>
         </form>
-
+        </center>
         <script>
             function mostrar_password(){
                 var password_input = document.getElementById("password");

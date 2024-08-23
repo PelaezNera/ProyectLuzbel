@@ -44,7 +44,8 @@ $var_rank = $_SESSION['tipo'];
                         <?php echo $row['informacion'] ?>
 
                     </p><br>
-                    <p><a href="modificar.php?tarjeta=<?php echo $row['id_noticia']?>">Modificar</a></p>                </div>
+                    <p><a href="modificar.php?tarjeta=<?php echo $row['id_noticia']?>">Modificar</a></p>
+                </div>
             </article>
             <?php } 
             ?>

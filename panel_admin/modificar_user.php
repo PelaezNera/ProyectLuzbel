@@ -23,6 +23,7 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
     <link rel="stylesheet" href="../normalize.css">
     <link rel="stylesheet" href="../frontend/style-mod.css">
     <link rel="stylesheet" href="../frontend/style.css">
+    <link rel="stylesheet" href="../frontend/style-contrac.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"
         integrity="sha256-4lhPGIWv8kmCP7JRGJE4IdRod2IdQEZPui6f0uICZ6w=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css"
@@ -30,6 +31,7 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
     
 </head>
 <body>
+    <center>
     <h2>Actualizar Tarjeta</h2>
     
     
@@ -59,9 +61,11 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
 
     <input type="hidden" name="codigo" value="<?php echo $edit?>">
 
-    <input type="submit" name="" value="Actualizar">
-    <a href="mostrar_users.php"><input type="button" value="Cancelar"></a>
-        </form>
+    <input type="submit" name="" value="Actualizar" class="actu"><br><br>
+    <a href="mostrar_users.php"><input type="button" value="Cancelar" class="cance"></a>
+    </form>
+    </center>
+<button><a href="panel_admin.php" class="volver">Volver</a></button>
 </body>
 
 </body>
