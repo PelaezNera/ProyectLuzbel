@@ -412,6 +412,7 @@ a {
     font-weight: 400;
     margin: 0.3rem 0;
     display: -webkit-box;
+    line-clamp: 3;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -506,6 +507,7 @@ a {
     }
 
     .card-content p {
+        line-clamp: 6;
         -webkit-line-clamp: 6;
     }
 }

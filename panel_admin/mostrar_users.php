@@ -55,5 +55,7 @@ $var_rank = $_SESSION['tipo'];
         </tbody>
     </table>
 
+    <a href="../panel_admin.php" title="Volver" class='cta-button' >Volver</a>
+
 </body>
 </html>
