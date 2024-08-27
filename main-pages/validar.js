@@ -1,126 +1,94 @@
 var email = document.querySelector('#email');
 var user = document.querySelector('#user');
 var pass = document.querySelector('#pass');
-var dato = document.querySelector('#dato');
 var verify_pass = document.querySelector('#verify_pass');
 
 var error_email = document.querySelector('#email_error');
 var error_user = document.querySelector('#user_error');
 var error_pass = document.querySelector('#pass_error');
 var error_verify = document.querySelector('#verify_error');
-var error_datos = document.querySelector('#error_datos')
-var error_dato = document.querySelector('#error')
+var error_datos = document.querySelector('#error_datos');
 
-email.addEventListener('textInput', email_Verify);
-user.addEventListener('textInput', user_Verify);
-pass.addEventListener('textInput', pass_Verify);
-dato.addEventListener('textInput', dato_Verify);
-verify_pass.addEventListener('textInput', verifyPass_Verify);
 
-function validar(){
+email.addEventListener('input', email_Verify);
+user.addEventListener('input', user_Verify);
+pass.addEventListener('input', pass_Verify);
+verify_pass.addEventListener('input', verifyPass_Verify);
+
+function validar() {
+    let valid = true;
+
     if (email.value.length < 6 && email.value.length > 0) {
         email.style.border = "1px solid red";
         error_email.style.display = "block";
-        email.focus();
-        return false
+        valid = false;
+    } else {
+        email.style.border = "1px solid lime";
+        error_email.style.display = "none";
     }
 
     if (user.value.length < 4 && user.value.length > 0) {
         user.style.border = "1px solid red";
         error_user.style.display = "block";
-        user.focus();
-        return false
+        valid = false;
+    } else {
+        user.style.border = "1px solid lime";
+        error_user.style.display = "none";
     }
 
     if (pass.value.length < 5 && pass.value.length > 0) {
         pass.style.border = "1px solid red";
         error_pass.style.display = "block";
-        pass.focus();
-        return false
+        valid = false;
+    } else {
+        pass.style.border = "1px solid lime";
+        error_pass.style.display = "none";
     }
 
+ 
     if (verify_pass.value.length < 5 && verify_pass.value.length > 0) {
         verify_pass.style.border = "1px solid red";
-        error_verify_pass.style.display = "block";
-        verify_pass.focus();
-        return false
+        error_verify.style.display = "block";
+        valid = false;
+    } else {
+        verify_pass.style.border = "1px solid lime";
+        error_verify.style.display = "none";
     }
 
-    if (dato.value.length == 0) {
-        dato.style.border = "1px solid red";
-        error_dato.style.display = "block";
-        dato.focus();
-        return false
-    }
-
-    if (email.value.length == 0 || user.value.length == 0 || pass.value.length == 0 || verify_pass.value.length == 0) {
+    if (email.value.length === 0 || user.value.length === 0 || pass.value.length === 0 || verify_pass.value.length === 0) {
         error_datos.style.display = "block";
-        return false;
+        valid = false;
+    } else {
+        error_datos.style.display = "none";
     }
 
+    return valid;
 }
 
 function email_Verify() {
-    if (email.value.length >= 5) {
-    email.style.border = "1px solid silver";
-    error_email.style.display ="none";
-    return true;
-    }
-
-    if (email.value.length == 0 || user.value.length == 0 || pass.value.length == 0 || verify_pass.value.length == 0) {
-        error_datos.style.display = "none";
-        return true;
-    }
-}
-
-function dato_Verify() {
-    if (dato.value.length > 0) {
-    dato.style.border = "1px solid silver";
-    error_dato.style.display ="none";
-    return true;
-    }
-
-    if (dato.value.length == 0) {
-        error_dato.style.display = "none";
-        return true;
+    if (email.value.length >= 6) {
+        email.style.border = "1px solid lime";
+        error_email.style.display = "none";
     }
 }
 
 function user_Verify() {
-    if (user.value.length >= 3) {
-    user.style.border = "1px solid silver";
-    error_user.style.display ="none";
-    return true;
-    }
-
-    if (email.value.length == 0 || user.value.length == 0 || pass.value.length == 0 || verify_pass.value.length == 0) {
-        error_datos.style.display = "none";
-        return true;
+    if (user.value.length >= 4) {
+        user.style.border = "1px solid lime";
+        error_user.style.display = "none";
     }
 }
 
 function pass_Verify() {
     if (pass.value.length >= 5) {
-    pass.style.border = "1px solid silver";
-    error_pass.style.display ="none";
-    return true;
-    }
-
-    if (email.value.length == 0 || user.value.length == 0 || pass.value.length == 0 || verify_pass.value.length == 0) {
-        error_datos.style.display = "none";
-        return true;
+        pass.style.border = "1px solid lime";
+        error_pass.style.display = "none";
     }
 }
 
 function verifyPass_Verify() {
     if (verify_pass.value.length >= 5) {
-    verify_pass.style.border = "1px solid silver";
-    error_verify.style.display ="none";
-    return true;
-    }
-
-    if (email.value.length == 0 || user.value.length == 0 || pass.value.length == 0 || verify_pass.value.length == 0) {
-        error_datos.style.display = "none";
-        return true;
+        verify_pass.style.border = "1px solid lime";
+        error_verify.style.display = "none";
     }
 }

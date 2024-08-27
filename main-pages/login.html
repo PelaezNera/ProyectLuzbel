@@ -9,40 +9,41 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-            <h3>Registrate o inicia sesion</h3>
-    
-            <div class="form">
-                <form class="signUp" action="logear.php" method="post" onsubmit="return validar()">
-                    <p>Crear cuenta</p><br>
-                    <p class="error" id="error_datos">Faltan datos</p>
+        <h3>Regístrate o inicia sesión</h3>
 
-                    <input class="w100" name="email" id="email" type="email" placeholder="Inserta tu email" ><br>
-                    <div class="error" id="email_error">Correo muy corto</div><br>
+        <div class="form">
+            <form class="signUp" action="logear.php" method="post" onsubmit="return validar()">
+                <p>Crear cuenta</p><br>
+                <p class="error" id="error_datos">Faltan datos</p>
 
-                    <input type="text" name="user" id="user" placeholder="Ingresa un usuario" ><br>
-                    <div class="error" id="user_error">nombre de usuario muy corto</div><br>
+                <input class="w100" name="email" id="email" type="email" placeholder="Inserta tu email"><br>
+                <div class="error" id="email_error">Correo muy corto</div><br>
 
-                    <input type="password" name="pass" id="pass" placeholder="Inserta tu contraseña" ><br>
-                    <div class="error" id="pass_error">contraseña muy corta</div><br>
+                <input type="text" name="user" id="user" placeholder="Ingresa un usuario"><br>
+                <div class="error" id="user_error">Nombre de usuario muy corto</div><br>
 
-                    <input type="password" name="verify_pass" id="verify_pass" placeholder="Verifica tu contraseña" ><br><br>
-                    <div class="error" id="verify_error">contraseña muy corta</div><br>
+                <input type="password" name="pass" id="pass" placeholder="Inserta tu contraseña"><br>
+                <div class="error" id="pass_error">Contraseña muy corta</div><br>
 
-                    <input class="form-btn dx" type="submit" value="Crear cuenta">
-                </form>
-                <form class="signIn" action="login.php" method="post">
-                    <p class="form2">Iniciar sesion</p><br>
-                    <p class="error" id="error_datos">Faltan datos</p>
+                <input type="password" name="verify_pass" id="verify_pass" placeholder="Verifica tu contraseña"><br><br>
+                <div class="error" id="verify_error">Contraseña muy corta</div><br>
 
-                    <input type="text" name="user" id="user" placeholder="Inserta tu usuario" class="form2" required ><br>
-                    <div class="error" id="user_error">nombre de usuario muy corto</div><br>
+                <input class="form-btn dx" type="submit" value="Crear cuenta">
+            </form>
+            <form class="signIn" action="login.php" method="post">
+                <p class="form2">Iniciar sesión</p><br>
+                <p class="error" id="error_datos">Faltan datos</p>
 
-                    <input type="password" name="pass" id="pass" placeholder="Inserta tu contraseña" class="form2" required ><br>
-                    <div class="error" id="pass_error">contraseña muy corta</div><br>
+                <input type="text" name="user" id="user_login" placeholder="Inserta tu usuario" class="form2" required><br>
+                <div class="error" id="user_login_error">Nombre de usuario muy corto</div><br>
 
-                    <input class="form-btn dx form2" type="submit" value="Iniciar sesion">
-                </form>
-            </div>
-            <script defer src="validar.js"></script>
-            <script src="../sweetalert2@11.js"></script>
-    </html>
+                <input type="password" name="pass" id="pass_login" placeholder="Inserta tu contraseña" class="form2" required><br>
+                <div class="error" id="pass_login_error">Contraseña muy corta</div><br>
+
+                <input class="form-btn dx form2" type="submit" value="Iniciar sesión">
+            </form>
+        </div>
+        <script defer src="validar.js"></script>
+        <script src="../sweetalert2@11.js"></script>
+    </body>
+</html>
