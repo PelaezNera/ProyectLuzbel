@@ -29,13 +29,13 @@ while ($row = mysqli_fetch_array($resultado)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="../frontend/style-eliminar.css">
 </head>
 <body>
     <form method="post" class="confir">
-        <p>Estas seguro que quieres eliminar el registro</p><br><br>
+        <h1>¿Estás seguro que quieres eliminar el registro?</h1><br><br>
         <?php
-        echo "cuyo codigo es: ". $codigo . " y su nombre es: " . $nombre;
+        echo "<p>Cuyo codigo es: ". $codigo . " y su nombre es: " . $nombre . "</p>";
         ?><br><br>
 
         <input type="hidden" name="codi" value="<?php echo $cod; ?>">

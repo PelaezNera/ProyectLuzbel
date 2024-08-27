@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: red;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+}
+
+input {
+    position: relative;
+    left: 46%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+.btn1 {
+    background-color: lime;
+}
+
+.btn {
+    background-color: red;
+}
