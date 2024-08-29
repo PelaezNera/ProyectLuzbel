@@ -46,8 +46,8 @@ $var_rank = $_SESSION['tipo'];
                     <td> <?php echo $row['email']; ?> </td>
                     <td> <?php echo $row['tipo']; ?> </td>
 
-                    <td class="btn"><a href="modificar_user.php?editar= <?php echo $row['id_usuarios']; ?>">Actualizar</a></td>
-                    <td class="btn1"><a href="eliminar_users.php?del= <?php echo $row['id_usuarios']; ?>">Eliminar</a></td>
+                    <td class="btn"><a class="ctb-button" href="modificar_user.php?editar= <?php echo $row['id_usuarios']; ?>">Actualizar</a></td>
+                    <td class="btn1"><a class="ctb-button" href="eliminar_users.php?del= <?php echo $row['id_usuarios']; ?>">Eliminar</a></td>
 
                 </tr>
             <?php } 
