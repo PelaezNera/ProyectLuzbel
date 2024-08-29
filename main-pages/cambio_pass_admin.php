@@ -55,7 +55,7 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
             <p class="error" id="verifyPass_error">Pocos caracteres</p><br><br>
             <input type="submit" value="Cambiar" class="actu"><br><br>
 
-            <a href="../pagina.php">
+            <a href="../panel_admin.php">
                 <input type="button" value="Cancelar" class="cance"><br>
             </a>
         </form>

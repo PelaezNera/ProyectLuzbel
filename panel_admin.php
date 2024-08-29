@@ -30,7 +30,7 @@ $var_rank = $_SESSION['tipo'];
             <h1>
                 Hallucination Studios / Admin Panel
             </h1>
-            <a href="main-pages/cambio_pass.php">Cambio contraseña</a>
+            <a href="main-pages/cambio_pass_admin.php">Cambio contraseña</a>
             <a href="backend/cerrar_sesion.php">Cerrar sesion</a>
         </nav>
     </header>

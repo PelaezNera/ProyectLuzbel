@@ -31,4 +31,4 @@ if ($imagen == "" || $titulo == "" || $informacion == "") {
     } else {
         echo "<script>alert('Problemas para actualizar los datos'); window.location='./gestion_foro.php'</script>";
     }
-}
+} ?>
