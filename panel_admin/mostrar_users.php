@@ -27,33 +27,97 @@ $var_rank = $_SESSION['tipo'];
         Modificar Usuarios
     </h1>
 
-    <table>
-        <tr>
-            <th>id_usuario</th>
-            <th>Nombre de usuario</th>
-            <th>correo de usuarios</th>
-            <th>tipo de usuario</th>
-            <th colspan="2">botones de accion</th>
-        </tr>
+    <header>
+        <h1>Mi sitio web</h1>
 
-        <tbody>
-            <?php
-            $registros = mysqli_query($conexion,"SELECT * FROM usuarios") or die("Error en la consulta".mysqli_error($conexion));
-            while ($row = mysqli_fetch_array($registros)) { ?>
+        <form action="mostrar_users.php" method="get" id="search-form">
+            <input type="text" name="search" id="search" placeholder="Buscar">
+            <button type="submit" name="buscador" value="buscar">Buscar</button>
+        </form>
+    </header>
+
+    <main>
+        <?php
+        include"../main-pages/conexion.php";
+
+        if (isset($_GET['buscador'])) {
+            $buscar= $_GET['search'];
+            
+            if (empty($buscar)) {
+                echo "<p>Ingrese un dato, el campo esta vacio.</p>";
+            } else {
+                $buscar = mysqli_real_escape_string($conexion,$buscar);
+
+                $consulta = "SELECT * FROM usuarios where usuario LIKE '%$buscar%'";
+                $mostrar = mysqli_query($conexion, $consulta);
+                $var_total = mysqli_num_rows($mostrar);
+
+                if ($var_total > 0) {
+                    echo "<p>Los resultados para esta busqueda son: <strong>$buscar</strong></p>";
+                    echo "El total de datos encontrados fueron: <strong>$var_total</strong>";
+                    echo "<hr>";
+                    
+                    echo"<table>";
+                    echo"<tr>";
+                    echo"<th>id_usuario</th>";
+                    echo"<th>Nombre de usuario</th>";
+                    echo"<th>correo de usuarios</th>";
+                    echo"<th>tipo de usuario</th>";
+                    echo"<th colspan='2'>botones de accion</th>";
+                    echo"</tr>";
+                    echo"<tbody>";
+                    while ($row = mysqli_fetch_array($mostrar)) {
+                        echo "<tr></tr>";
+                        echo "<td>".htmlspecialchars($row['id_usuarios'])."</td>";
+                        echo "<td>".htmlspecialchars($row['usuario'])."</td>";
+                        echo "<td>".htmlspecialchars($row['email'])."</td>";
+                        echo "<td>".htmlspecialchars($row['tipo'])."</td>";
+
+                        echo "<td class='btn'><a class='ctb-button' href='modificar_user.php?editar=$row[id_usuarios]'>Actualizar</a></td>";
+                        echo "<td class='btn1'><a class='ctb-button' href='eliminar_users.php?del=$row[id_usuarios]'>Eliminar</a></td>";
+                        echo "</tr>";
+                    }
+                        echo "</tbody>";
+                        echo "</table>";
+                }else {
+                    echo"No hay datos para esta busqueda<strong>$buscar</strong>";
+                    ?>
+                <table>
                 <tr>
-                    <td> <?php echo $row['id_usuarios']; ?> </td>
-                    <td> <?php echo $row['usuario']; ?> </td>
-                    <td> <?php echo $row['email']; ?> </td>
-                    <td> <?php echo $row['tipo']; ?> </td>
-
-                    <td class="btn"><a class="ctb-button" href="modificar_user.php?editar= <?php echo $row['id_usuarios']; ?>">Actualizar</a></td>
-                    <td class="btn1"><a class="ctb-button" href="eliminar_users.php?del= <?php echo $row['id_usuarios']; ?>">Eliminar</a></td>
-
+                <th>id_usuario</th>
+                <th>Nombre de usuario</th>
+                <th>correo de usuarios</th>
+                <th>tipo de usuario</th>
+                <th colspan="2">botones de accion</th>
                 </tr>
-            <?php } 
-            ?>
-        </tbody>
-    </table>
+                
+                <tbody>
+                <?php
+                $registros = mysqli_query($conexion,"SELECT * FROM usuarios") or die("Error en la consulta".mysqli_error($conexion));
+                while ($row = mysqli_fetch_array($registros)) { ?>
+                <tr>
+                <td> <?php echo $row['id_usuarios']; ?> </td>
+                <td> <?php echo $row['usuario']; ?> </td>
+                <td> <?php echo $row['email']; ?> </td>
+                <td> <?php echo $row['tipo']; ?> </td>
+                
+                <td class="btn"><a class="ctb-button" href="modificar_user.php?editar= <?php echo $row['id_usuarios']; ?>">Actualizar</a></td>
+                <td class="btn1"><a class="ctb-button" href="eliminar_users.php?del= <?php echo $row['id_usuarios']; ?>">Eliminar</a></td>
+                
+                </tr>
+                <?php } 
+                ?>
+                </tbody>
+                </table>
+                    <?php
+                }
+            }
+        }
+        
+        ?>
+    </main>
+
+    
 
     <a href="../panel_admin.php" title="Volver" class='cta-button' >Volver</a>
 
