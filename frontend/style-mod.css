@@ -23,8 +23,8 @@ form {
 }
 
 img {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -65,6 +65,8 @@ p{
     padding-top: 5px;
     font-size: 20px;
 }
+
+
 
 .cancel {
     margin-top: 14px;
