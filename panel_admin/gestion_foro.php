@@ -15,6 +15,7 @@ $var_rank = $_SESSION['tipo'];
     <title>Gestion de noticias</title>
     <link rel="stylesheet" href="../normalize.css">
     <link rel="stylesheet" href="../frontend/style.css">
+    <link rel="stylesheet" href="../frontend/btn-style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"
         integrity="sha256-4lhPGIWv8kmCP7JRGJE4IdRod2IdQEZPui6f0uICZ6w=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css"
@@ -26,7 +27,7 @@ $var_rank = $_SESSION['tipo'];
     </h1>
 
     <!-- Tarjetas -->
-
+    <a href="../panel_admin.php" title="Volver" class='cta-button' >Volver</a>
     <section class="info" id="Info">
         <div class="articles">
         <?php

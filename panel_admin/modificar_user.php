@@ -65,7 +65,7 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
     <a href="mostrar_users.php"><input type="button" value="Cancelar" class="cance"></a>
     </form>
     </center>
-<button><a href="panel_admin.php" class="volver">Volver</a></button>
+
 </body>
 
 </body>
