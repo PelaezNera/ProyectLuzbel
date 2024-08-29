@@ -27,28 +27,36 @@ $registros = mysqli_query($conexion,"SELECT * FROM noticias where id_noticia = '
         integrity="sha256-4lhPGIWv8kmCP7JRGJE4IdRod2IdQEZPui6f0uICZ6w=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css"
         integrity="sha256-h2Gkn+H33lnKlQTNntQyLXMWq7/9XI2rlPCsLsVcUBs=" crossorigin="anonymous">
-    
+
+        <style>
+            .error{
+                display: none;
+            }
+        </style>
 </head>
 <body>
     <center>
     <h2>Actualizar noticia</h2>
     
     
-    <form action="actualizar_noticia.php" method="post">
+    <form action="actualizar_noticia.php" method="post" onsubmit="return validar()">
     <?php
             while ($row = mysqli_fetch_array($registros)) { 
- 
+
+            echo "<p class='error' id='error_datos'>Faltan datos</p><br>";
             echo "<label>id_noticia</label><br>";
             echo "<input type='text' name='id_noticia' value='$row[id_noticia]' disabled><br><br>";
             
             echo "<label><img src='../img/$row[imagen]' alt='Lavender Fields'></label><br>";
-            echo "<input type='file' name='imagen' value='$row[imagen]'><br><br>";
+            echo "<input type='file' name='imagen' id='img' value='$row[imagen]'><br><br>";
             
             echo "<label>Titulo</label><br>";
-            echo "<input type='text' name='titulo' value='$row[titulo]'><br><br>";
+            echo "<input type='text' name='titulo' id='titulo' value='$row[titulo]'><br><br>";
+            echo "<p id='error_titulo' class='error'>Falta el titulo</p><br>";
     
             echo "<label>informacion</label><br>";
-            echo "<input type='text' name='informacion' value='$row[informacion]' class='txtarea'><br><br>";
+            echo "<input type='text' name='informacion' id='info' value='$row[informacion]' class='txtarea'><br><br>";
+            echo "<p id='error_info' class='error'>Falta la informacion</p><br>";
       
             }
             ?>
@@ -60,5 +68,6 @@ $registros = mysqli_query($conexion,"SELECT * FROM noticias where id_noticia = '
           </form>
     </center>
 
+    <script defer src="../backend/validar_form_tarjet.js"></script>
 </body>
 </html>

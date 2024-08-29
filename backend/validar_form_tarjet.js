@@ -12,7 +12,7 @@ info.addEventListener('input', info_Verify);
 function validar() {
     let valid = true;
 
-    if (title.value.length < 5 && title.value.length >= 0) {
+    if (title.value.length < 3 && title.value.length >= 0) {
         title.style.border = "1px solid red";
         error_title.style.display = "block";
         valid = false;
@@ -21,7 +21,7 @@ function validar() {
         error_title.style.display = "none";
     }
 
-    if (info.value.length < 20 && info.value.length >= 0) {
+    if (info.value.length < 5 && info.value.length >= 0) {
         info.style.border = "1px solid red";
         error_info.style.display = "block";
         valid = false;

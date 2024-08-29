@@ -48,7 +48,7 @@ $registros = mysqli_query($conexion,"SELECT * FROM informacion where id_noticia 
             echo "<input type='text' name='id_tarjeta' value='$row[id_noticia]' disabled><br><br>";
             
             echo "<label><img src='../img/$row[imagen]' alt='Lavender Fields'></label><br>";
-            echo "<input type='file' name='imagen' value='$row[imagen]'><br><br>";
+            echo "<input type='file' name='imagen' id='img' value='$row[imagen]'><br><br>";
             
             echo "<label>Titulo</label><br>";
             echo "<input type='text' name='titulo' id='titulo' value='$row[titulo]'><br><br>";
