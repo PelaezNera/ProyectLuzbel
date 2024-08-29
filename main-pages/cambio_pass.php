@@ -27,6 +27,12 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
         integrity="sha256-4lhPGIWv8kmCP7JRGJE4IdRod2IdQEZPui6f0uICZ6w=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css"
         integrity="sha256-h2Gkn+H33lnKlQTNntQyLXMWq7/9XI2rlPCsLsVcUBs=" crossorigin="anonymous">
+
+        <style>
+            .error{
+                display: none;
+            }
+        </style>
     
 </head>
 <body>
@@ -34,15 +40,19 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
     <h2>Actualizar Tarjeta</h2>
     
     
-    <form action="../backend/codigo_pass.php" method="post">
+    <form action="../backend/codigo_pass.php" method="post" onsubmit="return validar_pass()">
             <h1>Cambiar contraseña</h1><br>
+            <p class="error" id="oldPass_error">Faltan datos</p><br><br>
             <label>Confirmar contraseña antigua</label>
-            <input type="password" name="pass" placeholder="Ingrese su antigua contraseña" id="password"><br><br>
+            <input type="password" name="pass" placeholder="Ingrese su antigua contraseña" id="pass"><br>
+            <p class="error" id="oldPass_error">Pocos caracteres</p><br><br>
             <input type="checkbox" name="" onclick="mostrar_password()">Mostrar contraseña<br><br>
             <label>Contraseña nueva</label><br>
-            <input type="password" name="pass1" placeholder="Ingrese su contraseña"><br><br>
+            <input type="password" name="pass1" id="new_pass" placeholder="Ingrese su contraseña"><br>
+            <p class="error" id="newPass_error">Pocos caracteres</p><br><br>
             <label>Confirmar contraseña nueva</label>
-            <input type="password" name="pass2" placeholder="Ingrese su contraseña"><br><br>
+            <input type="password" name="pass2" id="verify_pass" placeholder="Ingrese su contraseña"><br>
+            <p class="error" id="verifyPass_error">Pocos caracteres</p><br><br>
             <input type="submit" value="Cambiar" class="actu"><br><br>
 
             <a href="panel_user.php">
@@ -50,6 +60,7 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
             </a>
         </form>
         </center>
+        <script defer src="../backend/validar_cambio_pass.js"></script>
         <script>
             function mostrar_password(){
                 var password_input = document.getElementById("password");
@@ -60,7 +71,6 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
                 }
             }
         </script>
-</body>
 
 </body>
 </html>

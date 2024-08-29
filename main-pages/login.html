@@ -30,14 +30,14 @@
 
                 <input class="form-btn dx" type="submit" value="Crear cuenta">
             </form>
-            <form class="signIn" action="login.php" method="post">
+            <form class="signIn" action="login.php" method="post" onsubmit="return validar_login()">
                 <p class="form2">Iniciar sesión</p><br>
-                <p class="error" id="error_datos">Faltan datos</p>
+                <p class="error" id="error_login_datos">Faltan datos</p>
 
-                <input type="text" name="user" id="user_login" placeholder="Inserta tu usuario" class="form2" required><br>
+                <input type="text" name="user" id="user_login" placeholder="Inserta tu usuario" class="form2"><br>
                 <div class="error" id="user_login_error">Nombre de usuario muy corto</div><br>
 
-                <input type="password" name="pass" id="pass_login" placeholder="Inserta tu contraseña" class="form2" required><br>
+                <input type="password" name="pass" id="pass_login" placeholder="Inserta tu contraseña" class="form2"><br>
                 <div class="error" id="pass_login_error">Contraseña muy corta</div><br>
 
                 <input class="form-btn dx form2" type="submit" value="Iniciar sesión">
