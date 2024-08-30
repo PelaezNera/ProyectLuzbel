@@ -101,7 +101,7 @@ tr {
     display: flex;
     top: 20px;
     justify-content: center;
-    transition: all .2s cubic-bezier(.36, .63, .5, .73);
+    transition: all .7s cubic-bezier(.36, .63, .5, .73);
     margin: auto;
     background-color: rgb(240, 240, 240);
 }
@@ -111,9 +111,10 @@ tr {
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 15px;
     color: black;
-    transition: .2s;
+    transition: .7s;
 }
 
+/* BOTON DISTINTO, NO CAMBIAR */
 .ctb-button {
     outline: 2px solid;
     color: 0, 0, 0, 0.1 var(--color-6);

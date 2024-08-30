@@ -18,7 +18,7 @@
     display: flex;
     top: 20px;
     justify-content: center;
-    transition: all .2s cubic-bezier(.36, .63, .5, .73);
+    transition: all .7s cubic-bezier(.36, .63, .5, .73);
     margin: auto;
     background-color: black;
 }
@@ -28,5 +28,6 @@
     outline-color: rgb(240, 240, 240, 0);
     outline-offset: 15px;
     color: rgb(240, 240, 240);
-    transition: .2s;
+    background-color: rgb(32, 32, 32);
+    transition: .7s;
 }
