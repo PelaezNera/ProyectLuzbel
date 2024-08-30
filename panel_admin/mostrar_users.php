@@ -37,12 +37,41 @@ $var_rank = $_SESSION['tipo'];
     </header>
 
     <main>
+        <div id="tabla">
+    <table>
+                <tr>
+                <th>id_usuario</th>
+                <th>Nombre de usuario</th>
+                <th>correo de usuarios</th>
+                <th>tipo de usuario</th>
+                <th colspan="2">botones de accion</th>
+                </tr>
+                
+                <tbody>
+                <?php
+                $registros = mysqli_query($conexion,"SELECT * FROM usuarios") or die("Error en la consulta".mysqli_error($conexion));
+                while ($row = mysqli_fetch_array($registros)) { ?>
+                <tr>
+                <td> <?php echo $row['id_usuarios']; ?> </td>
+                <td> <?php echo $row['usuario']; ?> </td>
+                <td> <?php echo $row['email']; ?> </td>
+                <td> <?php echo $row['tipo']; ?> </td>
+                
+                <td class="btn"><a class="ctb-button" href="modificar_user.php?editar= <?php echo $row['id_usuarios']; ?>">Actualizar</a></td>
+                <td class="btn1"><a class="ctb-button" href="eliminar_users.php?del= <?php echo $row['id_usuarios']; ?>">Eliminar</a></td>
+                
+                </tr>
+                <?php } 
+                ?>
+                </tbody>
+                </table>
+                </div>
         <?php
         include"../main-pages/conexion.php";
 
         if (isset($_GET['buscador'])) {
             $buscar= $_GET['search'];
-            
+
             if (empty($buscar)) {
                 echo "<p>Ingrese un dato, el campo esta vacio.</p>";
             } else {
@@ -53,6 +82,14 @@ $var_rank = $_SESSION['tipo'];
                 $var_total = mysqli_num_rows($mostrar);
 
                 if ($var_total > 0) {
+                    ?>
+
+                    <script>
+                        var tabla = document.getElementById('tabla');
+                        tabla.style.display = "none";
+                    </script>
+
+                    <?php
                     echo "<p>Los resultados para esta busqueda son: <strong>$buscar</strong></p>";
                     echo "El total de datos encontrados fueron: <strong>$var_total</strong>";
                     echo "<hr>";
