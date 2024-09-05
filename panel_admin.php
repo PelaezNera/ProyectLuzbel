@@ -53,44 +53,6 @@ $var_rank = $_SESSION['tipo'];
                 </a>
             </article>
             <article>
-                <figure>
-                    <img src="img/per1.jfif" alt="Snowy Mountains">
-                </figure>
-                <div class="article-preview">
-                    <h2> SOBRE LA COMPAÑIA </h2>
-                    <p>
-                        Actualiza informacion sobre la compañia.
-                        <br><br><br>
-                    </p>
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="img/sop1.png" alt="Wooden Bridge">
-                </figure>
-                <div class="article-preview">
-                    <h2>
-                        SOPORTE
-                    </h2>
-                    <p>
-                        Habla con el equipo de soporte
-                        <br><br><br><br>
-                    </p>
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="img/rep1.png" alt="Autumn Forest">
-                </figure>
-                <div class="article-preview">
-                    <h2> REPORTES </h2>
-                    <p>
-                        Registro de los reportes
-                        <br><br><br><br>
-                    </p>
-                </div>
-            </article>
-            <article>
                 <a style="text-decoration: none;" href="panel_admin/gestion_foro.php">
                     <figure>
                         <img src="img/foro.png" alt="Freezing Forest">
@@ -103,19 +65,6 @@ $var_rank = $_SESSION['tipo'];
                         </p>
                     </div>
                 </a>
-            </article>
-
-            <article>
-                <figure>
-                    <img style="font-size:100px;" src="img/ser1.png" alt="Freezing Forest">
-                </figure>
-                <div class="article-preview">
-                    <h2> SEGURIDAD </h2>
-                    <p>
-                        Administrar la seguridad
-                        <br><br><br><br>
-                    </p>
-                </div>
             </article>
         </div>
     </section>
