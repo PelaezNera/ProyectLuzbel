@@ -268,7 +268,6 @@ a {
     max-width: 1200px;
     gap: 1.5rem;
     padding-top: 6rem;
-    text-decoration: none;
 }
 
 .articles article {
@@ -283,6 +282,7 @@ a {
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.536) 0 0 20px;
     text-decoration: none;
+    background-color: var(--color-1);
 }
 
 .articles article h2 {
