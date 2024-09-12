@@ -26,44 +26,35 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"
         integrity="sha256-4lhPGIWv8kmCP7JRGJE4IdRod2IdQEZPui6f0uICZ6w=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css"
-        integrity="sha256-h2Gkn+H33lnKlQTNntQyLXMWq7/9XI2rlPCsLsVcUBs=" crossorigin="anonymous">
-
-        <style>
-            .error{
-                display: none;
-            }
-        </style>
-    
+        integrity="sha256-h2Gkn+H33lnKlQTNntQyLXMWq7/9XI2rlPCsLsVcUBs=" crossorigin="anonymous"> 
 </head>
 <body>
-    <center>
-    <h2>Actualizar Tarjeta</h2>
-    
+    <h2>Actualizar Tarjeta</h2>    
     
     <form action="../backend/codigo_pass.php" method="post" onsubmit="return validar_pass()">
-            <h1>Cambiar contraseña</h1><br>
-            <p class="error" id="error_datos">Faltan datos</p><br><br>
+            <h1>Cambiar contraseña</h1>
+            <p class="error" id="error_datos">Faltan datos</p><br>
             <label>Confirmar contraseña antigua</label>
-            <input type="password" name="pass" placeholder="Ingrese su antigua contraseña" id="pass"><br>
-            <p class="error" id="oldPass_error">Pocos caracteres</p><br><br>
-            <input type="checkbox" name="" onclick="mostrar_password()">Mostrar contraseña<br><br>
+            <input type="password" name="pass" placeholder="Ingrese su antigua contraseña" id="pass">
+            <p class="error" id="oldPass_error">Pocos caracteres</p><br><p>Mostrar contraseña</p>
+            <input type="checkbox" name="" onclick="mostrar_password()"><br>
             <label>Contraseña nueva</label><br>
             <input type="password" name="pass1" id="new_pass" placeholder="Ingrese su contraseña"><br>
-            <p class="error" id="newPass_error">Pocos caracteres</p><br><br>
+            <p class="error" id="newPass_error">Pocos caracteres</p><br>
             <label>Confirmar contraseña nueva</label>
             <input type="password" name="pass2" id="verify_pass" placeholder="Ingrese su contraseña"><br>
-            <p class="error" id="verifyPass_error">Pocos caracteres</p><br><br>
+            <p class="error" id="verifyPass_error">Pocos caracteres</p><br>
             <input type="submit" value="Cambiar" class="actu"><br><br>
 
             <a href="../panel_admin.php">
                 <input type="button" value="Cancelar" class="cance"><br>
             </a>
         </form>
-        </center>
+
         <script defer src="../backend/validar_cambio_pass.js"></script>
         <script>
             function mostrar_password(){
-                var password_input = document.getElementById("password");
+                var password_input = document.getElementById("pass");
                 if (password_input.type === "password") {
                     password_input.type = "text";
                 } else {
