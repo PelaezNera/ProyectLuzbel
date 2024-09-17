@@ -20,6 +20,7 @@ html {
 
 :root {
     --bg: #171717;
+    --carlos: #282828;
     --text-color: #fff;
     --accent: rgb(255, 255, 255);
     --color-1: #55006a;
@@ -51,6 +52,7 @@ header img {
     width: 100%;
     height: 60px;
     top: 0rem;
+    text-decoration: none;
 }
 
 .submenu-minwht {
@@ -77,6 +79,7 @@ header img {
         width: 100%;
         height: 60px;
         top: 0rem;
+        text-decoration: none;
     }
 
     .submenu-minwht:hover {
@@ -255,7 +258,7 @@ a {
 /* MAIN INFO */
 
 .info {
-    background-color: var(--accent);
+    background-color: var(--bg);
 }
 
 .articles {
@@ -270,6 +273,8 @@ a {
 
 .articles article {
     margin: 10px 0 0;
+    margin-bottom: 200px;
+    margin-top: 100px;
     max-width: 20rem;
     width: 100%;
     cursor: pointer;
@@ -279,6 +284,8 @@ a {
     overflow: hidden;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.536) 0 0 20px;
+    text-decoration: none;
+    background-color: var(--carlos);
 }
 
 .articles article h2 {
@@ -286,6 +293,7 @@ a {
     font-size: 1.6rem;
     color: rgb(227, 227, 227);
     transition: color 0.3s ease-out;
+    text-decoration: none;
 }
 
 .articles article h2:hover {
@@ -324,7 +332,8 @@ a {
 
 .article-preview {
     padding: 1.5rem;
-    background: var(--color-1);
+    background: var(--carlos);
+    text-decoration: none;
 }
 
 .articles figure {
@@ -533,3 +542,4 @@ main section iframe {
         padding: 10px;
     }
 }
+

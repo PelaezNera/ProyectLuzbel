@@ -32,6 +32,7 @@ while ($row = mysqli_fetch_array($resultado)) {
     <link rel="stylesheet" href="../frontend/style-eliminar.css">
 </head>
 <body>
+    <center>
     <form method="post" class="confir">
         <h1>¿Estás seguro que quieres eliminar el registro?</h1><br><br>
         <?php
@@ -42,5 +43,6 @@ while ($row = mysqli_fetch_array($resultado)) {
         <input type="submit" value="Aceptar" class="btn1">
         <a href="mostrar_users.php"><input type="button" value="Cancelar" class="btn"></a>
     </form>
+    </center>
 </body>
 </html>

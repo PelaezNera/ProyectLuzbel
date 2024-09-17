@@ -1,34 +1,56 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.confir {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
-    text-align: center;
-    font-size: 40px;
-    color: red;
+.confir h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-p {
-    text-align: center;
-    font-size: 30px;
+.confir p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-input {
-    position: relative;
-    left: 46%;
-    transform: translateX(-50%);
-    font-size: 30px;
-    padding: 0 10px;
+
+.confir .btn1 {
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    border-radius: 10px;
-    margin: 0 10px;
-}
-.btn1 {
-    background-color: lime;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-.btn {
-    background-color: red;
+/* Estilo para el botón "Cancelar" */
+.confir .btn {
+    background-color: #f44336; /* Rojo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Estilo para el enlace del botón "Cancelar" */
+.confir .btn + a {
+    text-decoration: none;
 }

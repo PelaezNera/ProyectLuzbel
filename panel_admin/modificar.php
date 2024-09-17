@@ -27,16 +27,9 @@ $registros = mysqli_query($conexion,"SELECT * FROM informacion where id_noticia 
         integrity="sha256-4lhPGIWv8kmCP7JRGJE4IdRod2IdQEZPui6f0uICZ6w=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css"
         integrity="sha256-h2Gkn+H33lnKlQTNntQyLXMWq7/9XI2rlPCsLsVcUBs=" crossorigin="anonymous">
-
-        <style>
-            .error{
-                display: none;
-            }
-        </style>
     
 </head>
 <body>
-    <center>
     <h2>Actualizar Tarjeta</h2>
     
     <form action="actualizar_tarjetas.php" method="post" onsubmit="return validar()">
@@ -45,17 +38,17 @@ $registros = mysqli_query($conexion,"SELECT * FROM informacion where id_noticia 
  
             echo "<p class='error' id='error_datos'>Faltan datos</p><br>";
             echo "<label>id_tarjeta</label><br>";
-            echo "<input type='text' name='id_tarjeta' value='$row[id_noticia]' disabled><br><br>";
+            echo "<input type='text' name='id_tarjeta' value='$row[id_noticia]' disabled><br>";
             
-            echo "<label><img src='../img/$row[imagen]' alt='Lavender Fields'></label><br>";
-            echo "<input type='file' name='imagen' id='img' value='$row[imagen]'><br><br>";
+            echo "<label><img src='../img/$row[imagen]' alt='Lavender Fields'></label>";
+            echo "<input type='file' name='imagen' id='img' value='$row[imagen]'><br>";
             
             echo "<label>Titulo</label><br>";
-            echo "<input type='text' name='titulo' id='titulo' value='$row[titulo]'><br><br>";
+            echo "<input type='text' name='titulo' id='titulo' value='$row[titulo]'>";
             echo "<p id='error_titulo' class='error'>Falta el titulo</p><br>";
     
             echo "<label>informacion</label><br>";
-            echo "<input type='text' name='informacion' id='info' value='$row[informacion]' class='txtarea'><br><br>";
+            echo "<input type='text' name='informacion' id='info' value='$row[informacion]' class='txtarea'>";
             echo "<p id='error_info' class='error'>Falta la informacion</p><br>";
       
             }
@@ -66,7 +59,6 @@ $registros = mysqli_query($conexion,"SELECT * FROM informacion where id_noticia 
             <input type="submit" name="" value="Actualizar" class="actu"><br><br>
             <a href="./gestion_foro.php"><input type="button" value="Cancelar" class="cance"></a>
           </form>
-    </center>
     <script defer src="../backend/validar_form_tarjet.js"></script>
 
 </body>

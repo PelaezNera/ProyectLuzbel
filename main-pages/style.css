@@ -1,110 +1,111 @@
-*{
-    margin: 0;
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-:root {
-    --principal-color: rgba(119, 151, 255, 0.753);
-    --secudario-color: rgba(197, 101, 241, 0.753);
-    --fondo-color: #867af0; 
-    --blaco: rgb(237, 197, 255);
-  }
-  
-
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
-body{
-    background-image: url(../img/11.jpg);
-    background-size: cover;
+body {
+    background-image: url(../img/iglesia1.jpeg);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-h3{
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 20px 18px rgba(255, 255, 255, 0.1);
     text-align: center;
-    margin: 3rem;
-    font-size: 2rem;
-    color: rgb(0, 0, 0);
+    background-color: rgba(41, 25, 48, 0.705);
+    color: white;
 }
 
-.signUp{
-    background-color: rgba(252, 215, 93, 0.753);
-    border: 0.2rem solid black;
-}
-
-.signIn{
-    background-color: rgba(155, 140, 241, 0.753);
-    border: 0.2rem solid black;
-    position: relative;
-}
-
-
-form{
+h3 {
     text-align: center;
-    font-size: 1.8rem;
-    padding: 3rem;
-    position: relative;
-    top: 3.5rem;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: white;
 }
 
-.form{
-    display: grid;
-    grid-template-columns: 50% 50%;
+.form-buttons {
+    margin-bottom: 20px;
 }
 
-input{
-    padding: 0.7rem;
-    border: none;
-    border-radius: 1rem;
-    font-size: 1.5rem;
-    width: 18rem;
-    text-transform: capitalize;
-}
-
-.form2{
-    position: relative;
-    top: 4rem;
-}
-
-.form-btn{
+.switch-form {
+    padding: 10px 20px;
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #007BFF;
     cursor: pointer;
+    margin: 0 10px;
+    transition: .3s;
 }
 
-.form-btn:hover{
-    background-color: #ee6a4a;
-    font-size: 1.5rem;
-    transition: 1s;
+.switch-form:hover {
+    background-color: #007BFF;
+    color: #fff;
+    transition: .3s;
 }
 
-@media (max-width: 600px) {
-    body{
-        background-image: linear-gradient(to top, var(--fondo-color) 0%, var(--blaco) 100%);
-        height: 46rem;
-    }
-
-    .signUp{
-        background-color: var(--principal-color);
-        border: 0.2rem solid black;
-    }
-    
-    .signIn{
-        background-color: var(--secudario-color);
-        border: 0.2rem solid black;
-    }
-
-    input{
-        width: 10rem;
-        font-size: 1rem;
-    }
-}
-
-.error{
+form {
     display: none;
+    margin-top: 20px;
+}
+
+form.active {
+    display: block;
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.error {
     color: red;
+    font-size: 0.9em;
+    display: none;
+}
+
+.error.show {
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.form-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.form-btn:hover {
+    background-color: #0056b3;
+    transition: .3s;
 }

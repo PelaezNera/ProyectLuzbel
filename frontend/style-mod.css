@@ -2,72 +2,86 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: rgb(0, 0, 0);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
 h2 {
-    color: white;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    bottom: 30px;
+}
+form {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 600px;
+    flex-direction: column;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    bottom: 30px;
 }
 
-form {
-    color: black;
-    display: inline-block;
-    border: 1px solid white;
-    border-radius: 6px;
-    background-color: white;
-    width: 370px;
-    height: 640px;
+label {
+    font-weight: bold;
+    color: #555;
     text-align: center;
-    margin-right: 7px;
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.343);
+}
+
+input[type="password"],
+input[type="text"],
+input[type="submit"],
+input[type="button"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"], input[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="checkbox"] {
+    display: flex;
 }
 
 img {
-    width: 220px;
-    height: 220px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    height: 200px;
+    width: 200px;
 }
 
-input {
-    color: black;
-    border: 1px solid gray;
-    border-radius: 10px;
-    font-size: 15px;
-    padding: 5px;
-    background-color: ghostwhite;
-    transition: 0.5s;
-}
-
-input:hover {
-    background-color: rgb(189, 189, 189);
-    transition: 0.5s;
-}
-
-p{
-    color: red;
-}
-
-.actu {
-    background-color: lime;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    padding-top: 5px;
-    font-size: 20px;
+.error {
+    color: #d9534f;
+    font-size: 14px;
+    display: none;
 }
 
 .cance {
-    background-color: red;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    padding-top: 5px;
-    font-size: 20px;
+    background-color: #6c757d;
 }
 
+.cance:hover {
+    background-color: #5a6268;
+}
 
-
-.cancel {
-    margin-top: 14px;
+p {
+    text-align: center;
 }

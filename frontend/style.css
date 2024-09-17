@@ -20,6 +20,7 @@ html {
 
 :root {
     --bg: #171717;
+    --carlos: #282828;
     --text-color: #fff;
     --sec-primary: rgb(241, 241, 241);
     --accent: rgb(255, 255, 255);
@@ -271,6 +272,7 @@ a {
     gap: 1.5rem;
     padding-top: 6rem;
     margin-bottom: 50px;
+    color: white;
 }
 
 .articles article {
@@ -319,6 +321,10 @@ a {
     overflow: hidden;
 }
 
+.articles a {
+    color: lime;
+}
+
 /* SECCION DE NOTICIAS */
 
 .noticias {
@@ -337,18 +343,20 @@ a {
     display: flex;
     border: 2px solid black;
     border-radius: 0.75rem;
-    background-color: var(--sec-primary);
+    background-color: var(--carlos);
     height: 45rem;
     width: 400px;
     flex-direction: column;
-    margin-left: 50px;
     margin-top: 50px;
     transition: .5s;
     border-radius: 10px;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .card:hover {
-    box-shadow: 0 24px 72px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0 20px 52px 0 rgba(255, 255, 255, 0.5);
     transition: .4s;
 }
 
@@ -377,7 +385,7 @@ a {
     justify-content: center;
     border-radius: 0.5rem;
     gap: 0.5rem;
-    color: black;
+    color: var(--text-color);
     background-color: var(--secondary);
 }
 
@@ -385,6 +393,8 @@ a {
     display: flex;
     justify-content: space-between;
 }
+
+
 
 .ToA {
     height: 2.25rem;
@@ -664,12 +674,16 @@ footer {
 }
 
 .noticias_modi a{
-    color: black;
+    color: lime;
     position: relative;
     top: 2px;
     text-decoration: none;
     transition: 1s;
     font-size: 25px;
+}
+
+.noticias_modi a:hover {
+    color: red;
 }
 .informacion{
     color: #fff;
@@ -682,6 +696,5 @@ footer {
 }
 
 .info a:hover{
-    color: #802121;
-    font-size: 20px;
+    color: #ff0000;
 }

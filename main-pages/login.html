@@ -1,15 +1,20 @@
-<!--Log In html-->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="../normalize.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h3>Regístrate o inicia sesión</h3>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Regístrate o inicia sesión</h3>
+
+    <div class="form-container">
+        <div class="form-buttons">
+            <button class="switch-form" data-form="signUp">Crear cuenta</button>
+            <button class="switch-form" data-form="signIn">Iniciar sesión</button>
+        </div>
 
         <div class="form">
             <form class="signUp" action="logear.php" method="post" onsubmit="return validar()">
@@ -30,6 +35,7 @@
 
                 <input class="form-btn dx" type="submit" value="Crear cuenta">
             </form>
+
             <form class="signIn" action="login.php" method="post" onsubmit="return validar_login()">
                 <p class="form2">Iniciar sesión</p><br>
                 <p class="error" id="error_login_datos">Faltan datos</p>
@@ -43,7 +49,9 @@
                 <input class="form-btn dx form2" type="submit" value="Iniciar sesión">
             </form>
         </div>
-        <script defer src="validar.js"></script>
-        <script src="../sweetalert2@11.js"></script>
-    </body>
+    </div>
+    <script defer src="validar.js"></script>
+    <script src="../sweetalert2@11.js"></script>
+    <script src="switchForms.js"></script>
+</body>
 </html>
