@@ -35,33 +35,32 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
             }
         </style>
 </head>
-    <center>
     <h2>Actualizar Tarjeta</h2>
     
     
     <form action="actualizar_user.php" method="post" onsubmit="return validar()">
         <?php
     while($row = mysqli_fetch_array($registros)){
-        echo "<p class='error' id='error_datos'>Faltan datos</p><br>";
-        echo "<label>Id_usuario</label><br>";
-        echo "<input type='text' name='id_usuario' id='usuario' value='$row[id_usuarios]' disabled><br><br>";
+        echo "<p class='error' id='error_datos'>Faltan datos</p>";
+        echo "<label>Id_usuario</label>";
+        echo "<input type='text' name='id_usuario' id='usuario' value='$row[id_usuarios]' disabled><br>";
 
-        echo "<label>Usuario</label><br>";
-        echo "<input type='text' name='nombre' id='user' value='$row[usuario]'><br><br>";
+        echo "<label>Usuario</label>";
+        echo "<input type='text' name='nombre' id='user' value='$row[usuario]'>";
         echo "<p id='error_name' class='error'>Usuario no permitido</p><br>";
 
 
-        echo "<label>email</label><br>";
-        echo "<input type='text' name='email' id='email' value='$row[email]'><br><br>";
+        echo "<label>email</label>";
+        echo "<input type='text' name='email' id='email' value='$row[email]'>";
         echo "<p id='error_email' class='error'>Correo no aceptable</p><br>";
 
 
-        echo "<label>password</label><br>";
-        echo "<input type='text' name='pass' id='pass' value='$row[pass]'><br><br>";
+        echo "<label>password</label>";
+        echo "<input type='text' name='pass' id='pass' value='$row[pass]'>";
         echo "<p id='error_pass' class='error'>Contraseña no aceptada</p><br>";
 
 
-        echo "<label>tipo</label><br>";
+        echo "<label>tipo</label>";
         echo "<select name='tipo' id='tipo'>";
         echo "<option value='#' disabled>Seleccionar user</option>";
         echo "<option value='admin'>Administrador</option>";
@@ -77,7 +76,6 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
     <input type="submit" name="" value="Actualizar" class="actu"><br><br>
     <a href="mostrar_users.php"><input type="button" value="Cancelar" class="cance"></a>
     </form>
-    </center>
 <script defer src="../backend/validar_mod_user.js"></script>
 </body>
 </html>
