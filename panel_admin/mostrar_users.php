@@ -90,8 +90,13 @@ $var_rank = $_SESSION['tipo'];
                     </script>
 
                     <?php
+<<<<<<< HEAD
+                    echo "<p>Los resultados para esta busqueda son: <strong>$buscar</strong></p>";
+                    echo "El total de datos encontrados fueron: <strong>$var_total</strong>";
+=======
                     echo "<div class='ssearch'><p>Los resultados para esta busqueda son: <strong>$buscar</strong></p>";
                     echo "<p>El total de datos encontrados fueron: <strong>$var_total</strong></p></div>";
+>>>>>>> 2865fbdd322fe24e3a350f15ced2c51f69c039e6
                     echo "<hr>";
                     
                     echo"<table>";
