@@ -1,22 +1,31 @@
+body {
+    background-image: url(../img/door-heaven2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .confir {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #000000;
     font-family: Arial, sans-serif;
+    margin-top: 200px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.614);
 }
 
 .confir h1 {
     font-size: 24px;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
 .confir p {
     font-size: 16px;
-    color: #555;
+    color: #e6e6e6;
     margin-bottom: 20px;
 }
 

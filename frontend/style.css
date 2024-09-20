@@ -30,7 +30,7 @@ html {
     --color-4: #1f232a;
     --color-5: #4a4e56;
     --color-6: #000;
-    --color-7: #1877f2;
+    --color-7: #f21818;
     --color-8: #1877f2;
     --color-9: #1877f2;
 }
@@ -542,6 +542,8 @@ footer {
     margin-top: 20px;
 }
 
+
+
 *::selection {
     background: var(--primary);
     color: var(--color-3);
@@ -601,8 +603,20 @@ footer {
     transition: all 0.2s ease-in-out;
 }
 
-.social-links svg:hover {
-    stroke: var(--color-2);
+.icon-tabler-brand-x:hover {
+    stroke: #000000;
+}
+
+.icon-tabler-brand-github:hover {
+    stroke: #000000;
+}
+
+.icon-tabler-brand-discord:hover {
+    stroke: #7b7ef4;
+}
+
+.icon-tabler-brand-youtube:hover {
+    stroke: red;
 }
 
 .social-links ul {
