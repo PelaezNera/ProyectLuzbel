@@ -37,7 +37,7 @@ html {
 /* HEADER */
 
 body {
-    background-image: url(../img/background2.jpg);
+    background-image: url(../img/estatuas2.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 2rem;
@@ -47,6 +47,7 @@ body {
 
 h1 {
     text-align: center;
+    color: white;
 }
 
 table {
@@ -204,8 +205,25 @@ hr {
 }
 
 .ssearch {
-    border: 1px solid black;
+    border: 1px solid white;
+    border-radius: 10px;
     width: 400px;
     margin: auto;
     background-color: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.253);
+    position: relative;
+    bottom: 10px;
+}
+
+.vcampo {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 15px;
 }
