@@ -38,7 +38,7 @@ html {
 /* HEADER */
 
 body {
-    background-color: var(--color-1);
+    background-color: var(--bg);
     padding-top: 2rem;
     overflow-x: hidden;
 }
@@ -123,6 +123,15 @@ header img {
 
 }
 
+.logo {
+    transition: .3s;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    transition: .4s;
+}
+
 .nav-header h1,
 a {
     position: relative;
@@ -174,7 +183,7 @@ a {
 .main-inicio {
     text-align: center;
     background-color: var(--color-3);
-    background-image: url(../img/cielo.gif);
+    background-image: url(../img/wantitall.gif);
     background-repeat: no-repeat;
     background-size: cover;
     border: solid 20px var(--color-1);
@@ -538,11 +547,13 @@ footer {
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
-    height: 90%;
     margin-top: 20px;
+    color: white;
 }
 
-
+small {
+    color: var(--color-7);
+}
 
 *::selection {
     background: var(--primary);
