@@ -73,7 +73,7 @@ $var_rank = $_SESSION['tipo'];
             $buscar= $_GET['search'];
 
             if (empty($buscar)) {
-                echo "<p>Ingrese un dato, el campo esta vacio.</p>";
+                echo "<p class='vcampo'>Ingrese un dato, el campo esta vacio.</p>";
             } else {
                 $buscar = mysqli_real_escape_string($conexion,$buscar);
 
@@ -92,7 +92,10 @@ $var_rank = $_SESSION['tipo'];
                     <?php
                     echo "<div class='ssearch'><p>Los resultados para esta busqueda son: <strong>$buscar</strong></p>";
                     echo "<p>El total de datos encontrados fueron: <strong>$var_total</strong></p></div>";
+<<<<<<< HEAD
                     echo "<hr>";
+=======
+>>>>>>> 312a70c12e8dce89d51a3195c247b158cae5983d
                     
                     echo"<table>";
                     echo"<tr>";

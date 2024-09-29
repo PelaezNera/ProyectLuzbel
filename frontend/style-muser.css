@@ -37,7 +37,7 @@ html {
 /* HEADER */
 
 body {
-    background-image: url(../img/background2.jpg);
+    background-image: url(../img/estatuas2.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 2rem;
@@ -47,28 +47,30 @@ body {
 
 h1 {
     text-align: center;
+    color: white;
 }
 
 table {
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     margin: auto;
     width: 900px;
     height: 300px;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.546);
+    box-shadow: 0 0 20px rgba(215, 215, 215, 0.546);
 }
 
 td {
     text-align: center;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(95, 95, 95);
     border-radius: 10px;
     width: 150px;
     height: 50px;
 }
 
 tr {
-    background-color: white;
+    background-color: black;
+    color: white;
 }
 
 .btn {
@@ -134,7 +136,6 @@ tr {
     text-transform: uppercase;
     display: flex;
     justify-content: center;
-    border-radius: 10px;
 }
 
 #search-form {
@@ -204,8 +205,25 @@ hr {
 }
 
 .ssearch {
-    border: 1px solid black;
+    border: 1px solid white;
+    border-radius: 10px;
     width: 400px;
     margin: auto;
     background-color: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.253);
+    position: relative;
+    bottom: 10px;
+}
+
+.vcampo {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 15px;
 }

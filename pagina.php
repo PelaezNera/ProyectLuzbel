@@ -13,7 +13,7 @@ $var_rank = $_SESSION['tipo'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luzbel</title>
+    <title>UnHeaven</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="frontend/style.css">
     <script src="sweetalert2@11.js"></script>
@@ -25,7 +25,7 @@ $var_rank = $_SESSION['tipo'];
     ?>
     <header>
         <nav class="nav-header">
-            <img src="img/logotest.png" alt="">
+            <img src="img/logo.png" alt="" class="logo">
             <h1>
                 Hallucination Studios
             </h1>
@@ -39,7 +39,7 @@ $var_rank = $_SESSION['tipo'];
 
     <main class="main-inicio" id="Inicio">
         <section id="inicio">
-            <h1>Unheaven</h1>
+            <h1>UnHeaven</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores dignissimos quis aperiam eaque quod
                 cumque
                 officia sunt magni sapiente impedit porro, iste consectetur quasi velit nostrum molestiae repellat
@@ -49,7 +49,7 @@ $var_rank = $_SESSION['tipo'];
             <p>Lorem ipsum dolor sit amet consectetur.</p><br>
 
             <a class="button" href="#" title="Descargar">
-                <svg height="60" width="300" xmlns="http://www.w3.org/2000/svg">
+                <svg height="60" width="300" xmlns="">
                     <rect class="shape" height="60" width="300" />
                     <div class="text">Descargar</div>
                 </svg>
@@ -120,7 +120,7 @@ $var_rank = $_SESSION['tipo'];
                 <div class="footer-columns">
                     <div class="footer-logo-column">
                         <a href="/" aria-label="Go to Supabase homepage" title="Go to Supabase Homepage">
-                            <img src="img/cielo3.jpeg" loading="lazy" alt="Supabase logo" class="footer-logo"
+                            <img src="img/logo.png" loading="lazy" alt="Supabase logo" class="footer-logo"
                                 width="200">
                         </a>
                         <div class="social-wrapper">
@@ -183,10 +183,6 @@ $var_rank = $_SESSION['tipo'];
                         </div>
                     </div>
                     <div class="link-columns">
-                        <div>
-                            <section>
-                                <h3>Product</h3>
-                                <ul>
                                     <?php
                                     if (isset($var_session) && $var_session != NULL && $var_session != "" && $var_session != " " && $var_rank != "user" && $var_rank != " " && $var_rank == "admin") { ?>
                                     <li>
@@ -195,75 +191,51 @@ $var_rank = $_SESSION['tipo'];
                                     </li>
                                     <?php }
                                 ?>
-                                    <li>
-                                        <a href="#" title="Features">Database</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Auth">Auth</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Functions">Functions</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Realtime">Realtime</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Storage">Storage</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Vector">Vector</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Pricing">Pricing</a>
-                                    </li>
-                                </ul>
-                            </section>
 
-                            <section>
-                                <h3>Resources</h3>
-                                <ul>
-                                    <li>
-                                        <a href="#" title="Support">Support</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Sitemap">System Status</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Newsletter">Become a Partner</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Help Centre">Integrations</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Investor">Experts</a>
-                                    </li>
-                                </ul>
-                            </section>
-                        </div>
                         <div>
                             <section>
                                 <h3>Developers</h3>
                                 <ul>
                                     <li>
-                                        <a href="#" title="Documentation">Documentation</a>
+                                        <strong><p>This game was developed by:</p></strong>
                                     </li>
                                     <li>
-                                        <a href="#" title="Changelog">Changelog</a>
+                                        <p>Santiago Peláez Correa</p>
                                     </li>
                                     <li>
-                                        <a href="#" title="Contributing">Contributing</a>
+                                        <p>Jose Manuel Muñoz Fernandez</p>
                                     </li>
                                     <li>
-                                        <a href="#" title="OpenSource">Open Source</a>
+                                        <p>Juan Manuel Gutierrez Velasquez</p>
                                     </li>
                                     <li>
-                                        <a href="#" title="SupaSquad">SupaSquad</a>
+                                        <p>Juan Manuel Manrique Tabares</p>
                                     </li>
                                     <li>
-                                        <a href="#" title="DevTo">DevTo</a>
+                                        <p>Miguel Angel Herrera Giraldo</p>
                                     </li>
                                     <li>
-                                        <a href="#" title="RSS">RSS</a>
+                                        <p>Miguel Angel Herrera Garces</p>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h3>Rights</h3>
+                                <ul>
+                                    <li>
+                                        <strong><p>All rights reserverd</p></strong>
+                                    </li>
+                                    <li>
+                                        <p>If you use our game as a product, sell it or make illegal profit of it</p>
+                                    </li>
+                                    <li>
+                                        <p>If you pirate, clone or traffict through the internet illicitly</p>
+                                    </li>
+                                    <li>
+                                        <p>You can mention our game, make videos about it and upload gameplays unless it's for illicit things</p>
+                                    </li>
+                                    <li>
+                                        <p>If you don't respect this Terms Of Condition you'll be sue or you'll be asked to delet the content</p>
                                     </li>
                                 </ul>
                             </section>
@@ -271,34 +243,7 @@ $var_rank = $_SESSION['tipo'];
                                 <h3>Company</h3>
                                 <ul>
                                     <li>
-                                        <a href="#" title="Terms and services">
-                                            Blog
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Privacy Policy">
-                                            Customer Stories
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Careers">
-                                            Careers
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Company">
-                                            Company
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Terms Of Service">
-                                            Terms of Service
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Privacy Policy">
-                                            Privacy Policy
-                                        </a>
+                                        <p>This is a fictional company <br> made for SENA project.</p>
                                     </li>
                                 </ul>
                             </section>
@@ -309,7 +254,7 @@ $var_rank = $_SESSION['tipo'];
             <!-- bottom part section -->
             <div class="footer-bottom">
                 <div class="footer-bottom-wrapper">
-                    <small>© <span id="year"></span> ProyectLuzbel</small>
+                    <small>© <span id="year"></span> UnHeaven</small>
                 </div>
             </div>
         </footer>
