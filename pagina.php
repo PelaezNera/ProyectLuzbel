@@ -60,6 +60,7 @@ $var_rank = $_SESSION['tipo'];
     <hr class="divisor">
 
     <section class="info" id="Info">
+        <h1>Información</h1>
         <div class="articles">
             <?php
             $registros = mysqli_query($conexion,"SELECT * FROM informacion") or die("Error en la consulta".mysqli_error($conexion));
@@ -114,6 +115,7 @@ $var_rank = $_SESSION['tipo'];
         </div>
         <?php }
     ?>
+    </section>
         <hr class="divisor dvf">
         <footer>
             <div class="footer-wrapper">

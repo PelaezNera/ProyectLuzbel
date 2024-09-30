@@ -43,6 +43,7 @@ h3 {
     cursor: pointer;
     margin: 0 10px;
     transition: .3s;
+    margin-top: 30px;
 }
 
 .switch-form:hover {
@@ -110,3 +111,4 @@ input[type="password"]:focus {
     background-color: #303030;
     transition: .3s;
 }
+

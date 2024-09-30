@@ -38,7 +38,7 @@ html {
 /* HEADER */
 
 body {
-    background-color: var(--bg);
+    background-color: var(--color-1);
     padding-top: 2rem;
     overflow-x: hidden;
 }
@@ -272,6 +272,13 @@ a {
     height: auto;
 }
 
+.info h1 {
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 30px;
+}
+
 .articles {
     display: flex;
     flex-wrap: wrap;
@@ -279,7 +286,7 @@ a {
     justify-content: center;
     max-width: 1200px;
     gap: 1.5rem;
-    padding-top: 6rem;
+    padding-top: 2rem;
     margin-bottom: 50px;
     color: white;
 }
@@ -339,29 +346,35 @@ a {
 .noticias {
     background-color: var(--color-1);
     margin-bottom: 2rem;
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.container {
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    
 }
 
 .card {
-    display: flex;
-    border: 2px solid black;
+    display: grid;
+    border: 2px solid white;
     border-radius: 0.75rem;
     background-color: var(--carlos);
-    height: 45rem;
+    height: 42rem;
     width: 400px;
     flex-direction: column;
     margin-top: 50px;
     transition: .5s;
     border-radius: 10px;
     color: white;
-    margin-left: 20px;
-    margin-right: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 15px 15px 10px black;
+}
+
+.card img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
 }
 
 .card:hover {
@@ -542,7 +555,7 @@ a {
 footer {
     position: relative;
     bottom: 0;
-    background-color: var(--color-3);
+    background-color: var(--color-6);
     width: 100%;
     padding-top: 1rem;
     display: flex;
@@ -563,8 +576,7 @@ small {
 
 .footer-wrapper {
     display: flex;
-    flex-direction: column;
-    max-width: var(--footer-width);
+    max-width: var(--color-5);
     width: 100%;
     margin: 0 auto;
     padding: 1rem;
@@ -574,7 +586,7 @@ small {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 2rem;
     flex-wrap: wrap;
     padding-top: 1rem;
 }
@@ -640,20 +652,20 @@ small {
 /* columns with links */
 
 .link-columns {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     flex-grow: 1;
 }
 
 .link-columns>div {
     flex-grow: 1;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .link-columns>div>section {
-    min-width: 8rem;
+    min-width: 2rem;
     width: 50%;
 }
 
@@ -685,7 +697,7 @@ small {
 
 /*? Footer bottom */
 .footer-bottom {
-    margin-top: 8rem;
+    margin-top: 2rem;
     width: 100%;
     color: var(--color-4);
 }
@@ -722,4 +734,36 @@ small {
 
 .info a:hover{
     color: #ff0000;
+}
+
+@media (max-width: 807px) {
+    .noticias {
+        background-color: var(--color-1);
+        margin-bottom: 2rem;
+        display: grid;
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-template-columns:1fr;
+        
+    } 
+}
+
+@media (max-width: 400px) {
+    .card {
+        display: grid;
+        border: 2px solid white;
+        border-radius: 0.75rem;
+        background-color: var(--carlos);
+        height: 32rem;
+        width: 300px;
+        flex-direction: column;
+        margin-top: 50px;
+        transition: .5s;
+        border-radius: 10px;
+        color: white;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 15px 15px 10px black;
+    }
 }
