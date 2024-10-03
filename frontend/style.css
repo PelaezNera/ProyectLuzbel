@@ -69,12 +69,6 @@ header img {
 }
 
 @media (max-width: 706px) {
-
-    ul {
-        font-size: 20px;
-        background-color: rgba(152, 24, 137, 0.5);
-    }
-
     .nav-header {
         background-color: var(--color-2);
         display: flex;
@@ -587,7 +581,6 @@ small {
     flex-direction: row;
     justify-content: space-between;
     gap: 2rem;
-    flex-wrap: wrap;
     padding-top: 1rem;
 }
 
@@ -652,7 +645,7 @@ small {
 /* columns with links */
 
 .link-columns {
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     flex-grow: 1;
@@ -662,6 +655,14 @@ small {
     flex-grow: 1;
     display: flex;
     gap: 1rem;
+}
+
+footer section ul{
+    list-style: none;
+}
+
+footer section p {
+    padding: 10px;
 }
 
 .link-columns>div>section {

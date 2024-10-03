@@ -184,17 +184,7 @@ $var_rank = $_SESSION['tipo'];
                             </div>
                         </div>
                     </div>
-                    <div class="link-columns">
-                                    <?php
-                                    if (isset($var_session) && $var_session != NULL && $var_session != "" && $var_session != " " && $var_rank != "user" && $var_rank != " " && $var_rank == "admin") { ?>
-                                    <li>
-                                        <a href="panel_admin.php" title="Panel Administrador"><b>Panel
-                                                Administrador</b></a>
-                                    </li>
-                                    <?php }
-                                ?>
-
-                        <div>
+                        <!-- <div> -->
                             <section>
                                 <h3>Developers</h3>
                                 <ul>
@@ -249,7 +239,7 @@ $var_rank = $_SESSION['tipo'];
                                     </li>
                                 </ul>
                             </section>
-                        </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
