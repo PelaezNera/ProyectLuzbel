@@ -768,3 +768,12 @@ footer section p {
         box-shadow: 15px 15px 10px black;
     }
 }
+
+@media (min-width: 730px) {
+    .footer-columns {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-top: 1rem;
+    }
+}
