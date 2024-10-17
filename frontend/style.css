@@ -611,7 +611,7 @@ small {
     color: var(--text-color);
     text-decoration: none;
 }
-
+do
 .social-links svg {
     width: 2.5rem;
     height: 2.5rem;
@@ -769,7 +769,7 @@ footer section p {
     }
 }
 
-@media (min-width: 730px) {
+@media (max-width: 730px) {
     .footer-columns {
     flex-direction: row;
     justify-content: space-between;
