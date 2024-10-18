@@ -36,7 +36,6 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
     
 </head>
 <body>
-    <center>
     <h2>Actualizar Tarjeta</h2>
     
     
@@ -59,11 +58,10 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
                 <input type="button" value="Cancelar" class="cance"><br>
             </a>
         </form>
-        </center>
         <script defer src="../backend/validar_cambio_pass.js"></script>
         <script>
             function mostrar_password(){
-                var password_input = document.getElementById("password");
+                var password_input = document.getElementById("pass");
                 if (password_input.type === "password") {
                     password_input.type = "text";
                 } else {

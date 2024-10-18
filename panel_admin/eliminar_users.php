@@ -4,12 +4,44 @@ include "../main-pages/conexion.php";
 if (!empty($_POST)) {
     $codusua = $_POST['codi'];
     $consulta = mysqli_query($conexion, "DELETE FROM usuarios WHERE id_usuarios = '$codusua'");
+  
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar usuario</title>
+    <script src="../sweetalert2@11.js"></script>
+</head>
+<body>
+    <?php
+if ($consulta) {
+    echo '<script>
+        Swal.fire({
+        icon: "success",
+        title: "Eliminado",
+        text: "Se ha eliminado correctamente",
+        showConfirmButton: false,
+        timer: 2000
+        }).then(function() {
+        window.location = "../panel_admin/mostrar_users.php";});
+        </script>';
+} else {
+    echo '<script>
+    Swal.fire({
+    icon: "error",
+    title: "ERROR",
+    text: "Ha ocurrido un error",
+    showConfirmButton: false,
+    timer: 2000
+    }).then(function() {
+    window.location = "../panel_admin/mostrar_users.php";});
+</script>';
+}
+?>
 
-    if ($consulta) {
-        echo "<script>window.alert('Usuario eliminado correctamente'); window.location.href = 'mostrar_users.php';</script>";
-    }else {
-        echo "<script>window.alert('Problemas al eliminar el usuario'); window.location.href = 'mostrar_users.php';</script>";
-    }
+<?php
 }
 
 $cod = $_GET['del'];
@@ -21,17 +53,11 @@ while ($row = mysqli_fetch_array($resultado)) {
 }
 
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="../frontend/style-eliminar.css">
 </head>
-<body>
     <center>
     <form method="post" class="confir">
         <h1>¿Estás seguro que quieres eliminar el registro?</h1><br><br>

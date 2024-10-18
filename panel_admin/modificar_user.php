@@ -77,5 +77,6 @@ $registros = mysqli_query($conexion,"SELECT * FROM usuarios where id_usuarios = 
     <a href="mostrar_users.php"><input type="button" value="Cancelar" class="cance"></a>
     </form>
 <script defer src="../backend/validar_mod_user.js"></script>
+
 </body>
 </html>
