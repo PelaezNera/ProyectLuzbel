@@ -31,10 +31,43 @@ if (mysqli_num_rows($verificar) > 0) {
 }
 
 $resultado = mysqli_query($conexion,$insertar);
-if ($resultado) {
-    echo "<script>alert('El usuario $user se a registrado con exito'); window.location.href = '../pagina.php'</script>";
-} else {
-    echo "<script>alert('Problema al insertar el usuario por favor intente otra vez'); window.location.href = 'login.html'</script>";
-}
-
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <script src="../sweetalert2@11.js"></script>
+</head>
+<body>
+<?php    
+
+if ($resultado) {
+    echo '<script>
+        Swal.fire({
+        icon: "success",
+        title: "Actualizado",
+        text: "Se ha actualizado correctamente",
+        showConfirmButton: false,
+        timer: 2000
+        }).then(function() {
+        window.location = "../main-pages/login.html";});
+        </script>';
+} else {
+    echo '<script>
+    Swal.fire({
+    icon: "error",
+    title: "ERROR",
+    text: "Ha ocurrido un error",
+    showConfirmButton: false,
+    timer: 2000
+    }).then(function() {
+    window.location = "../main-pages/login.html";});
+</script>';
+}
+?>
+</body>
+</html>
+
+
