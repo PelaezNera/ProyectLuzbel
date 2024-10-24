@@ -51,7 +51,7 @@ $var_rank = $_SESSION['tipo'];
             <a class="button" href="#" title="Descargar">
                 <svg height="60" width="300" xmlns="">
                     <rect class="shape" height="60" width="300" />
-                    <div class="text">Descargar</div>
+                    <div class="text">¡Juega ahora!</div>
                 </svg>
             </a>
         </section>
@@ -84,11 +84,12 @@ $var_rank = $_SESSION['tipo'];
         </div>
     </section>
     <hr class="divisor">
-
+    <h1 class="hnoticias">Noticias</h1>
     <section class="noticias" id="Noticias">
         <?php
             $registros = mysqli_query($conexion,"SELECT * FROM noticias") or die("Error en la consulta".mysqli_error($conexion));
             while ($row = mysqli_fetch_array($registros)) { ?>
+            
         <div class="container">
             <article class="card">
                 <div class='background'>

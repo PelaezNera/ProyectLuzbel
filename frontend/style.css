@@ -349,6 +349,11 @@ a {
     
 }
 
+.hnoticias {
+    text-align: center;
+    color: white;
+}
+
 .card {
     display: grid;
     border: 2px solid white;
