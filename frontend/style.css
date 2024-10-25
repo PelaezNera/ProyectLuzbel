@@ -68,6 +68,12 @@ header img {
     font-size: 45px;
 }
 
+.main-inicio h2 {
+    color: white;
+    position: relative;
+    top: 20px;
+}
+
 .main-header {
     display: none;
 }
@@ -88,7 +94,7 @@ header img {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: var(--color-2);
+        background-color: var(--color-1);
         padding: 0 0.4rem;
       }
       
@@ -186,6 +192,7 @@ header img {
         display: none;
       }
       
+
       @media screen and (min-width: 768px) {
         .button-menu {
           display: none;
@@ -221,7 +228,7 @@ header img {
     
 
     .nav-header {
-        background-color: var(--color-2);
+        background-color: var(--color-1);
         display: flex;
         justify-content: space-evenly;
         z-index: 3;
@@ -266,6 +273,10 @@ header img {
         -o-transition: .4s;
     }
 
+    .main-inicio h2 {
+        position: relative;
+        top: 4rem;
+    }
 }
 
 .logo {
@@ -399,7 +410,6 @@ a {
     stroke-dashoffset: 0;
     stroke-dasharray: 760;
 }
-
 
 /* DIVISOR */
 
@@ -958,5 +968,27 @@ footer section p {
     .footer-columns section{
         width: 18rem;
         margin: 5rem 6rem;
+    }
+}
+
+@media (max-width: 881px) {
+    .nav-header h1 {
+        font-size: 20px;
+        position: relative;
+        top: 5px;
+    }
+}
+
+@media (max-width: 706px) {
+    .nav-header h1 {
+        font-size: 25px;
+        position: relative;
+        top: 10px;
+    }
+    .logo {
+        position: relative;
+        top: 8px;
+        width: 70px;
+        height: 70px;
     }
 }

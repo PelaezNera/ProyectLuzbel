@@ -56,6 +56,7 @@ $var_rank = $_SESSION['tipo'];
 
     <main class="main-inicio" id="Inicio">
         <section id="inicio">
+            <h2>¡Bienvenido, <?php echo $_SESSION['usuario']; ?>!</h2>
             <h1>UnHeaven</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores dignissimos quis aperiam eaque quod
                 cumque
@@ -147,7 +148,7 @@ $var_rank = $_SESSION['tipo'];
                             <div class='social-links'>
                                 <ul>
                                     <li>
-                                        <a href="#" title="Twitter">
+                                        <a href="#" title="Twitter/X">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-brand-x" width="24" height="24"
                                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
@@ -159,7 +160,7 @@ $var_rank = $_SESSION['tipo'];
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" title="GitHub">
+                                        <a href="https://github.com/PelaezNera/ProyectLuzbel" title="GitHub">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-brand-github" width="24" height="24"
                                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
@@ -171,7 +172,7 @@ $var_rank = $_SESSION['tipo'];
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" title="Discord">
+                                        <a href="https://discord.gg/wcSRDKQCPJ" title="Discord">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-brand-discord" width="24"
                                                 height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
