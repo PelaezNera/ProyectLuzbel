@@ -29,11 +29,28 @@ $var_rank = $_SESSION['tipo'];
             <h1>
                 Hallucination Studios
             </h1>
-            <a href="#Inicio" title="Inicio">Inicio</a>
-            <a href="#Info" title="Information">Information</a>
-            <a href="#Noticias" title="Noticias">Noticias</a>
-            <a href="main-pages/cambio_pass.php" title="Usuario">Cambiar contraeña</a>
-            <a href="backend/cerrar_sesion.php" title="Cerrar sesion">Cerrar sesion</a>
+            <a class="menu" href="#Inicio" title="Inicio">Inicio</a>
+            <a class="menu" href="#Info" title="Information">Information</a>
+            <a class="menu" href="#Noticias" title="Noticias">Noticias</a>
+            <a class="menu" href="main-pages/cambio_pass.php" title="Usuario">Cambiar contraeña</a>
+            <a class="menu" href="backend/cerrar_sesion.php" title="Cerrar sesion">Cerrar sesion</a>
+
+            <div class="main-header">
+                <nav id="nav" class="main-nav">
+                    <div class="nav-links">
+                    <a class="burger" href="#Inicio" title="Inicio">Inicio</a>
+                    <a class="burger" href="#Info" title="Information">Information</a>
+                    <a class="burger" href="#Noticias" title="Noticias">Noticias</a>
+                    <a class="burger" href="main-pages/cambio_pass.php" title="Usuario">Cambiar contraeña</a>
+                    <a class="burger" href="backend/cerrar_sesion.php" title="Cerrar sesion">Cerrar sesion</a>
+                    </div>
+                </nav>
+                <button id="button-menu" class="button-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -252,7 +269,7 @@ $var_rank = $_SESSION['tipo'];
             </div>
         </footer>
 
-
+<script src="./frontend/menu_responsive.js"></script>
 </body>
 
 </html>

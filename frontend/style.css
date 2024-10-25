@@ -68,9 +68,158 @@ header img {
     font-size: 45px;
 }
 
-
+.main-header {
+    display: none;
+}
 
 @media (max-width: 706px) {
+
+    .menu{
+        display: none;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+      }
+      
+      .main-header {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-2);
+        padding: 0 0.4rem;
+      }
+      
+      .main-logo {
+        color: black;
+        font-size: 32px;
+        text-decoration: none;
+      }
+      
+      .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        margin-left: -100%;
+        transition: all 0.2s linear;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+      }
+      
+      .main-nav.show {
+        margin-left: 0;
+      }
+      
+      .nav-links {
+        background-color: #421653;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      
+      .link-item {
+        margin-top: 2rem;
+        color: #444444;
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+      }
+      
+      .link-item::after {
+        position: absolute;
+        content: "";
+        background-color: black;
+        bottom: -5px;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        transition: 0.3s ease all;
+      }
+      
+      .link-item:hover::after {
+        width: 100%;
+      }
+      
+      .button-menu {
+        z-index: 200;
+        width: 40px;
+        height: 40px;
+        border: none;
+        display: flex;
+        background: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      
+      .button-menu span {
+        width: 37px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        top: 1rem;
+        background: #ffffff;
+        border-radius: 3px;
+        transform-origin: 4px 0px;
+        transition: all 0.2s linear;
+      }
+      
+      .button-menu.close span {
+        opacity: 1;
+        transform: rotate(45deg) translate(0px, 0px);
+        background: #ffffff;
+      }
+      
+      .button-menu.close span:nth-child(2) {
+        transform: rotate(-45deg) translate(-8px, 5px);
+      }
+      
+      .button-menu.close span:nth-child(3) {
+        display: none;
+      }
+      
+      @media screen and (min-width: 768px) {
+        .button-menu {
+          display: none;
+        }
+      
+        .main-logo {
+          flex-basis: 30%;
+        }
+      
+        .main-nav {
+          position: static;
+          margin-left: 0;
+          flex-basis: 70%;
+          height: 100%;
+        }
+      
+        .nav-links {
+          width: 100%;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: flex-end;
+          background: white;
+        }
+      
+        .link-item {
+          display: inline-block;
+          margin-top: 0;
+          margin-right: 2rem;
+        }
+      }
+
+    
+
     .nav-header {
         background-color: var(--color-2);
         display: flex;
@@ -556,7 +705,7 @@ a {
 footer {
     position: relative;
     bottom: 0;
-    background-color: var(--color-6);
+    background-color: var(--color-1);
     width: 100%;
     padding-top: 1rem;
     display: flex;
@@ -612,11 +761,16 @@ small {
     display: inline-flex;
     gap: 0.5rem;
     align-items: center;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .social-links a {
     color: var(--text-color);
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
 }
 do
 .social-links svg {
@@ -628,18 +782,22 @@ do
 
 .icon-tabler-brand-x:hover {
     stroke: #000000;
+    transition: all 0.2s ease-in-out;
 }
 
 .icon-tabler-brand-github:hover {
     stroke: #000000;
+    transition: all 0.2s ease-in-out;
 }
 
 .icon-tabler-brand-discord:hover {
     stroke: #7b7ef4;
+    transition: all 0.2s ease-in-out;
 }
 
 .icon-tabler-brand-youtube:hover {
     stroke: red;
+    transition: all 0.2s ease-in-out;
 }
 
 .social-links ul {
@@ -784,10 +942,13 @@ footer section p {
         display: block;
         text-align: center;
     }
-
+    .footer-logo-column {
+        padding-right: 10%;
+    }
     .social-wrapper{
         display: block;
-        text-align: center;
+        position: relative;
+        right: 140px;
     }
     
     footer{
